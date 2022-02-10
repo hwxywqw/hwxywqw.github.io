@@ -13,13 +13,14 @@
 <meta property="og:site_name" content="Hwxywqw">
 <meta property="og:description" content="​    籍由这篇博客，简单总结上学期计算机组成原理课设。 ​    计组课设一共有P0~P7七个阶段，P0~P2分别是对Logisim、Verilog和MIPS的预习内容，P3用Logisim实现单周期CPU，P4用Verilog实现单周期CPU，P5用Verilog实现流水线CPU，P6将指令集增加到四十余条，P7加入中断和异常。我做到P6，而博客只写到P3。后续~P6 Verilog部分的C">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://raw.githubusercontent.com/hwxywqw/pic/master/image-20211214195222077.png">
-<meta property="og:image" content="https://github.com/hwxywqw/pic/blob/master/4_FSM.png">
+<meta property="og:image" content="http://example.com/2022/01/09/Computer-Organization/image-20220210134014295.png">
+<meta property="og:image" content="http://example.com/2022/01/09/Computer-Organization/image-20220210133653414.png">
+<meta property="og:image" content="http://example.com/2022/01/09/Computer-Organization/image-20220210134525298.png">
 <meta property="article:published_time" content="2022-01-09T15:05:31.000Z">
-<meta property="article:modified_time" content="2022-02-09T15:19:06.888Z">
+<meta property="article:modified_time" content="2022-02-10T05:56:52.866Z">
 <meta property="article:author" content="hwxywqw">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://raw.githubusercontent.com/hwxywqw/pic/master/image-20211214195222077.png">
+<meta name="twitter:image" content="http://example.com/2022/01/09/Computer-Organization/image-20220210134014295.png">
 
 
 <link rel="icon" href="/img/avatar.jpg">
@@ -235,7 +236,7 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2022-02-09 23:19:06'>2022-01-09 23:05</time>
+            发布时间 : <time class="date" title='最后更新: 2022-02-10 13:56:52'>2022-01-09 23:05</time>
         
     </div>
     <div class="article-meta">
@@ -257,7 +258,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#P1-Verilog%E9%83%A8%E4%BB%B6%E8%AE%BE%E8%AE%A1%E4%B8%8E%E6%9C%89%E9%99%90%E7%8A%B6%E6%80%81%E6%9C%BA"><span class="toc-text">P1_Verilog部件设计与有限状态机</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93%EF%BC%9A"><span class="toc-text">知识总结：</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BB%84%E5%90%88%E9%80%BB%E8%BE%91%E5%BB%BA%E6%A8%A1%EF%BC%9A"><span class="toc-text">组合逻辑建模：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%98%BB%E5%A1%9E%E8%B5%8B%E5%80%BC%E4%B8%8E%E9%9D%9E%E9%98%BB%E5%A1%9E%E8%B5%8B%E5%80%BC"><span class="toc-text">阻塞赋值与非阻塞赋值</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BC%82%E6%AD%A5%E5%A4%8D%E4%BD%8D"><span class="toc-text">异步复位</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%81%BF%E5%9D%91%E6%8C%87%E5%8D%97%EF%BC%9A"><span class="toc-text">避坑指南：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%BE%E4%B8%8B%E6%80%BB%E7%BB%93%EF%BC%9A"><span class="toc-text">课下总结：</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%A6%E5%8F%B7%E6%8B%93%E5%B1%95%EF%BC%9A"><span class="toc-text">符号拓展：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BC%A9%E5%87%8F%E8%BF%90%E7%AE%97%E7%AC%A6%EF%BC%9A"><span class="toc-text">缩减运算符：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%89%E9%99%90%E7%8A%B6%E6%80%81%E6%9C%BA%EF%BC%9A"><span class="toc-text">有限状态机：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B0%8F%E5%B7%A5%E5%85%B7%EF%BC%9A"><span class="toc-text">小工具：</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#P2-MIPS%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80"><span class="toc-text">P2_MIPS汇编语言</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%BE%E4%B8%8A"><span class="toc-text">课上</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%BE%E4%B8%8B"><span class="toc-text">课下</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AF%BE%E4%B8%8B%E4%BD%9C%E4%B8%9A-01%E8%BF%B7%E5%AE%AB%EF%BC%9A"><span class="toc-text">课下作业_01迷宫：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AF%BE%E4%B8%8B%E4%BD%9C%E4%B8%9A-%E9%AB%98%E7%B2%BE%E5%BA%A6%E9%98%B6%E4%B9%98"><span class="toc-text">课下作业_高精度阶乘</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#hanoi"><span class="toc-text">hanoi</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#P3%EF%BC%9A%E5%8D%95%E5%91%A8%E6%9C%9FCPU-Logisim%E5%AE%9E%E7%8E%B0"><span class="toc-text">P3：单周期CPU (Logisim实现)</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%BE%E4%B8%8B%E6%80%BB%E7%BB%93%EF%BC%9A-1"><span class="toc-text">课下总结：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%BE%E4%B8%8A%E5%A4%8D%E7%9B%98%EF%BC%9A"><span class="toc-text">课上复盘：</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#JAS"><span class="toc-text">JAS</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#GRAY"><span class="toc-text">GRAY</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#MEMSET"><span class="toc-text">MEMSET</span></a></li></ol></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#P1-Verilog%E9%83%A8%E4%BB%B6%E8%AE%BE%E8%AE%A1%E4%B8%8E%E6%9C%89%E9%99%90%E7%8A%B6%E6%80%81%E6%9C%BA"><span class="toc-text">P1_Verilog部件设计与有限状态机</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93%EF%BC%9A"><span class="toc-text">知识总结：</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BB%84%E5%90%88%E9%80%BB%E8%BE%91%E5%BB%BA%E6%A8%A1%EF%BC%9A"><span class="toc-text">组合逻辑建模：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%98%BB%E5%A1%9E%E8%B5%8B%E5%80%BC%E4%B8%8E%E9%9D%9E%E9%98%BB%E5%A1%9E%E8%B5%8B%E5%80%BC"><span class="toc-text">阻塞赋值与非阻塞赋值</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BC%82%E6%AD%A5%E5%A4%8D%E4%BD%8D"><span class="toc-text">异步复位</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%81%BF%E5%9D%91%E6%8C%87%E5%8D%97%EF%BC%9A"><span class="toc-text">避坑指南：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%BE%E4%B8%8B%E6%80%BB%E7%BB%93%EF%BC%9A"><span class="toc-text">课下总结：</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%A6%E5%8F%B7%E6%8B%93%E5%B1%95%EF%BC%9A"><span class="toc-text">符号拓展：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BC%A9%E5%87%8F%E8%BF%90%E7%AE%97%E7%AC%A6%EF%BC%9A"><span class="toc-text">缩减运算符：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%89%E9%99%90%E7%8A%B6%E6%80%81%E6%9C%BA%EF%BC%9A"><span class="toc-text">有限状态机：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B0%8F%E5%B7%A5%E5%85%B7%EF%BC%9A"><span class="toc-text">小工具：</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#P2-MIPS%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80"><span class="toc-text">P2_MIPS汇编语言</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Mars%E6%B5%8B%E6%8C%87%E4%BB%A4%E6%95%B0%E7%9A%84%E6%96%B9%E6%B3%95%EF%BC%9A"><span class="toc-text">Mars测指令数的方法：</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%91%BD%E4%BB%A4%E8%A1%8C%E7%BC%96%E8%AF%91MIPS%E6%96%87%E4%BB%B6%E7%9A%84%E6%A0%BC%E5%BC%8F%EF%BC%9A"><span class="toc-text">命令行编译MIPS文件的格式：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%AD%A5%E9%AA%A4%EF%BC%9A"><span class="toc-text">步骤：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%87%AA%E5%8A%A8%E8%BF%90%E8%A1%8C%E7%9A%84%E4%B8%A4%E7%A7%8D%E6%96%B9%E6%B3%95"><span class="toc-text">自动运行的两种方法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%87%AA%E5%B7%B1%E5%86%99%E4%B8%80%E4%B8%AA%EF%BC%9A"><span class="toc-text">自己写一个：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#VSCode-CodeRunner"><span class="toc-text">VSCode - CodeRunner</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B8%B8%E7%94%A8%E4%BB%A3%E7%A0%81"><span class="toc-text">常用代码</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%8F"><span class="toc-text">宏</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%9F%A9%E9%98%B5%E6%B1%82%E5%85%83%E7%B4%A0%E5%9C%B0%E5%9D%80"><span class="toc-text">矩阵求元素地址</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%A0%88%E6%93%8D%E4%BD%9C"><span class="toc-text">栈操作</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#syscall%E5%B8%B8%E7%94%A8%E8%AF%BB%E5%86%99"><span class="toc-text">syscall常用读写</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BE%93%E5%87%BA%E7%A9%BA%E6%A0%BC%E5%92%8C%E6%8D%A2%E8%A1%8C"><span class="toc-text">输出空格和换行</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BE%AA%E7%8E%AF%E7%BB%93%E6%9E%84"><span class="toc-text">循环结构</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#for"><span class="toc-text">for</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#while"><span class="toc-text">while</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#switch"><span class="toc-text">switch</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%BE%E4%B8%8A"><span class="toc-text">课上</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%BE%E4%B8%8B"><span class="toc-text">课下</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AF%BE%E4%B8%8B%E4%BD%9C%E4%B8%9A-01%E8%BF%B7%E5%AE%AB%EF%BC%9A"><span class="toc-text">课下作业_01迷宫：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AF%BE%E4%B8%8B%E4%BD%9C%E4%B8%9A-%E9%AB%98%E7%B2%BE%E5%BA%A6%E9%98%B6%E4%B9%98"><span class="toc-text">课下作业_高精度阶乘</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#hanoi"><span class="toc-text">hanoi</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#P3%EF%BC%9A%E5%8D%95%E5%91%A8%E6%9C%9FCPU-Logisim%E5%AE%9E%E7%8E%B0"><span class="toc-text">P3：单周期CPU (Logisim实现)</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%A1%88%EF%BC%9A"><span class="toc-text">设计方案：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%BE%E4%B8%8B%E6%80%BB%E7%BB%93%EF%BC%9A-1"><span class="toc-text">课下总结：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%BE%E4%B8%8A%E5%A4%8D%E7%9B%98%EF%BC%9A"><span class="toc-text">课上复盘：</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#JAS"><span class="toc-text">JAS</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#GRAY"><span class="toc-text">GRAY</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#MEMSET"><span class="toc-text">MEMSET</span></a></li></ol></li></ol></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -274,7 +275,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>​    籍由这篇博客，简单总结上学期计算机组成原理课设。</p>
-<p>​    计组课设一共有P0~P7七个阶段，P0~P2分别是对Logisim、Verilog和MIPS的预习内容，P3用Logisim实现单周期CPU，P4用Verilog实现单周期CPU，P5用Verilog实现流水线CPU，P6将指令集增加到四十余条，P7加入中断和异常。我做到P6，而博客只写到P3。后续~P6 Verilog部分的CPU设计、搭建过程，与工程化建模过程全部用excel记录。</p>
+<p>​    计组课设一共有P0~P7七个阶段，P0~P2分别是对Logisim、Verilog和MIPS的预习内容，P3用Logisim实现单周期CPU，P4用Verilog实现单周期CPU，P5用Verilog实现流水线CPU，P6将指令集增加到四十余条，P7加入中断和异常。我做到P6，而<strong>博客只写到P3</strong>。后续~P6 Verilog部分的CPU设计、搭建过程，与工程化建模过程全部用excel记录，不放在这里了。</p>
 <p><strong>P6的实现指令集：</strong></p>
 <ul>
 <li>LB、LBU、LH、LHU、LW、SB、SH、SW</li>
@@ -288,7 +289,7 @@
 <li>MFHI、MFLO、MTHI、MTLO</li>
 </ul>
 <p><strong>流水线CPU的设计思路：</strong></p>
-<p><img src="https://raw.githubusercontent.com/hwxywqw/pic/master/image-20211214195222077.png" alt="CPU"></p>
+<p><img src="image-20220210134014295.png" alt="image-20220210134014295"></p>
 <p>​    课设对于查重的要求很高，故而大家都按照自己的思路进行设计。有趣的是，我和室友在完成P5的初步搭建后尝试阅读对方的代码，发现思路大相径庭——虽然我们都是完全按照高小鹏老师的PPT搭建的，但我们却几乎看不懂对方在些什么。主要的差异有：B型指令的判断、对于不同模块的打包、转发、暂停等。给出两个例子：</p>
 <ol>
 <li>按单元纵向打包 &amp; 按功能横向打包<ul>
@@ -374,10 +375,60 @@
 <p>有限状态机绘图可以使用，虽然有在线绘图（<a target="_blank" rel="noopener" href="https://csacademy.com/app/graph_editor/">Graph Editor</a>），但是本地画图总感觉心里踏实一点。尝试了一下pycharm配置环境，但是用起来很不顺手，最后还是选择vscode编辑.gv文件+命令行编译。cd到文件目录下即可：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dot FSM.gv -Tpng -o image.png</span><br></pre></td></tr></table></figure>
 
-<p>效果如下，看起来还行。<img src="https://github.com/hwxywqw/pic/blob/master/4_FSM.png" alt="4_FSM" style="zoom:50%;" /></p>
+<p>效果如下：</p>
+<p><img src="image-20220210133653414.png" alt="image-20220210133653414"></p>
 <p><strong>正则表达式：</strong></p>
 <p><a target="_blank" rel="noopener" href="https://deerchao.cn/tools/wegester/">在线正则表达式测试器</a></p>
-<h1 id="P2-MIPS汇编语言"><a href="#P2-MIPS汇编语言" class="headerlink" title="P2_MIPS汇编语言"></a>P2_MIPS汇编语言</h1><h2 id="课上"><a href="#课上" class="headerlink" title="课上"></a>课上</h2><p>课上三道题，先说一下内容：</p>
+<h1 id="P2-MIPS汇编语言"><a href="#P2-MIPS汇编语言" class="headerlink" title="P2_MIPS汇编语言"></a>P2_MIPS汇编语言</h1><h2 id="Mars测指令数的方法："><a href="#Mars测指令数的方法：" class="headerlink" title="Mars测指令数的方法："></a>Mars测指令数的方法：</h2><h3 id="命令行编译MIPS文件的格式："><a href="#命令行编译MIPS文件的格式：" class="headerlink" title="命令行编译MIPS文件的格式："></a>命令行编译MIPS文件的格式：</h3><p>(具体在Help(F1)-Mars-Commend里面找，有什么需求按这个加options就行了。)</p>
+<p>​        MARS can be run from a command interpreter to assemble and execute a MIPS program in a batch fashion. The format for running MARS from a command line is:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java -jar mars.jar [options] program.asm [more files...] [ pa arg1 [more args...]]</span><br></pre></td></tr></table></figure>
+
+<p>​      Items in <em>[ ]</em> are optional. Valid options (not case sensitive, separated by spaces) are:    </p>
+<table>
+<thead>
+<tr>
+<th align="left">ic：</th>
+<th>display instruction count;the number of MIPS basic instructions ‘executed’</th>
+</tr>
+</thead>
+</table>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java -jar Mars4_5.jar ic xxx.asm</span><br></pre></td></tr></table></figure>
+
+<h3 id="步骤："><a href="#步骤：" class="headerlink" title="步骤："></a>步骤：</h3><ol>
+<li>进入到当前目录<ol>
+<li>进入到文件目录，按住Shift，右键打开Powershell，或者如下：</li>
+<li>把.asm文件复制与Mars4_5.jar同一个安装目录</li>
+<li>打开cmd</li>
+<li>cd到Mars4_5.jar的安装目录下</li>
+</ol>
+</li>
+<li>输入：java -jar Mars4_5.jar ic xxx.asm</li>
+<li>输入参数（空格分开）</li>
+</ol>
+<h3 id="自动运行的两种方法"><a href="#自动运行的两种方法" class="headerlink" title="自动运行的两种方法"></a>自动运行的两种方法</h3><h4 id="自己写一个："><a href="#自己写一个：" class="headerlink" title="自己写一个："></a>自己写一个：</h4><p>我用了c，别的也行。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span>&#123;</span><br><span class="line"><span class="comment">//	freopen(&quot;in.txt&quot;,&quot;r&quot;,stdin);</span></span><br><span class="line">	system(<span class="string">&quot;copy D:\\workspace\\cs\\P2\\Q4_full.asm E:\\mars&quot;</span>);	<span class="comment">//.asm复制到安装目录下 </span></span><br><span class="line">	system(<span class="string">&quot;java -jar Mars4_5.jar ic Q4_full.asm\n5&quot;</span>);			<span class="comment">//编译运行，指令在这里加 </span></span><br><span class="line">	system(<span class="string">&quot;del E:\\mars\\Q4_full.asm&quot;</span>);						<span class="comment">//用完删掉 </span></span><br><span class="line">    system(<span class="string">&quot;pause&quot;</span>); </span><br><span class="line"><span class="comment">//	fclose(in);</span></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>把生成的可执行文件放在跟Mars同一个安装目录，运行即可。</p>
+<h4 id="VSCode-CodeRunner"><a href="#VSCode-CodeRunner" class="headerlink" title="VSCode - CodeRunner"></a>VSCode - CodeRunner</h4><p>settings.json中添加.asm文件的运行命令即可</p>
+<h2 id="常用代码"><a href="#常用代码" class="headerlink" title="常用代码"></a>常用代码</h2><h3 id="宏"><a href="#宏" class="headerlink" title="宏"></a>宏</h3><h4 id="矩阵求元素地址"><a href="#矩阵求元素地址" class="headerlink" title="矩阵求元素地址"></a>矩阵求元素地址</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">.macro address(%dst, %row, %column, %rank)  </span><br><span class="line">		multu	%row, %rank</span><br><span class="line">		mflo	%dst</span><br><span class="line">		addu	%dst, %dst, %column</span><br><span class="line">		sll		%dst, %dst, 2</span><br><span class="line">.end_macro</span><br></pre></td></tr></table></figure>
+
+<h4 id="栈操作"><a href="#栈操作" class="headerlink" title="栈操作"></a>栈操作</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">.macro save(%tgt)</span><br><span class="line">	sw		%tgt, 0($sp)</span><br><span class="line">	addi	$sp, $sp, -4</span><br><span class="line">.end_macro </span><br><span class="line">.macro load(%tgt)</span><br><span class="line">	addi	$sp, $sp, 4</span><br><span class="line">	lw		%tgt, 0($sp)</span><br><span class="line">.end_macro </span><br></pre></td></tr></table></figure>
+
+<h4 id="syscall常用读写"><a href="#syscall常用读写" class="headerlink" title="syscall常用读写"></a>syscall常用读写</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">.macro print_int(%tgt)</span><br><span class="line">	move	$a0, %tgt</span><br><span class="line">	li		$v0, 1</span><br><span class="line">	syscall</span><br><span class="line">.end_macro </span><br><span class="line">.macro read_int(%tgt)</span><br><span class="line">	li		$v0, 5</span><br><span class="line">	syscall</span><br><span class="line">	move	%tgt, $v0</span><br><span class="line">.end_macro </span><br></pre></td></tr></table></figure>
+
+<h4 id="输出空格和换行"><a href="#输出空格和换行" class="headerlink" title="输出空格和换行"></a>输出空格和换行</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">.macro print_space</span><br><span class="line">	la		$a0, str_space</span><br><span class="line">	li		$v0, 4</span><br><span class="line">	syscall</span><br><span class="line">.end_macro </span><br><span class="line">.macro print_enter</span><br><span class="line">	la		$a0, str_enter</span><br><span class="line">	li		$v0, 4</span><br><span class="line">	syscall</span><br><span class="line">.end_macro </span><br><span class="line"></span><br><span class="line">str_space:	.asciiz &quot; &quot;</span><br><span class="line">str_enter: 	.asciiz &quot;\n&quot;  #字符串写最后避免内存出问题（不是4的倍数）</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="循环结构"><a href="#循环结构" class="headerlink" title="循环结构"></a>循环结构</h3><h4 id="for"><a href="#for" class="headerlink" title="for"></a>for</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">move	$t0, $0</span><br><span class="line">FOR:</span><br><span class="line">	#</span><br><span class="line">addi	$t0, $t0, 1</span><br><span class="line">bne		$t0, $s0, FOR</span><br></pre></td></tr></table></figure>
+
+<h4 id="while"><a href="#while" class="headerlink" title="while"></a>while</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">move	$t0, $0</span><br><span class="line">WHILE:</span><br><span class="line">    bne		$t0, $s0, END_WHILE</span><br><span class="line">    	#</span><br><span class="line">    j		WHILE</span><br><span class="line">END_WHILE:</span><br></pre></td></tr></table></figure>
+
+<h4 id="switch"><a href="#switch" class="headerlink" title="switch"></a>switch</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">	b...CASE1</span><br><span class="line">	b...CASE2</span><br><span class="line">	...</span><br><span class="line">	j DEFAULT</span><br><span class="line">CASE1:</span><br><span class="line">    #</span><br><span class="line">    j END_SWITCH</span><br><span class="line">CASE2:</span><br><span class="line">    #</span><br><span class="line">    j END_SWITCH</span><br><span class="line">...</span><br><span class="line">DEFAULT:</span><br><span class="line">    #</span><br><span class="line">END_SWITCH</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="课上"><a href="#课上" class="headerlink" title="课上"></a>课上</h2><p>课上三道题，先说一下内容：</p>
 <ol>
 <li>三位数反转。如果小于100或者大于999就输出一个报错，否则反转后输出，不要先导0。</li>
 <li>输出组合数，比如$C_5^3$，告诉你5个里面选3个，按字典序输出就行了，考递归深搜dfs，跟全排列差不多。</li>
@@ -431,7 +482,43 @@
 
 
 
-<h1 id="P3：单周期CPU-Logisim实现"><a href="#P3：单周期CPU-Logisim实现" class="headerlink" title="P3：单周期CPU (Logisim实现)"></a>P3：单周期CPU (Logisim实现)</h1><h2 id="课下总结：-1"><a href="#课下总结：-1" class="headerlink" title="课下总结："></a>课下总结：</h2><ol>
+<h1 id="P3：单周期CPU-Logisim实现"><a href="#P3：单周期CPU-Logisim实现" class="headerlink" title="P3：单周期CPU (Logisim实现)"></a>P3：单周期CPU (Logisim实现)</h1><h2 id="设计方案："><a href="#设计方案：" class="headerlink" title="设计方案："></a>设计方案：</h2><p>课下要求实现指令集：addu, subu, ori, lw, sw, beq, lui, nop</p>
+<p>跳转指令：j, jal, jr</p>
+<ul>
+<li>IFU（取指令单元）：内部包括 PC（程序计数器）、IM(指令存储器)及相关逻辑。<ul>
+<li>PC 用寄存器实现，应具有<strong>异步复位</strong>功能，复位值为起始地址。</li>
+<li><strong>起始地址：0x00000000。</strong></li>
+<li>IM用 ROM 实现，容量为 32bit * 32。</li>
+<li>因 IM 实际地址宽度仅为 5 位，故需要使用恰当的方法将 PC 中储存的地址同 IM 联系起来。</li>
+</ul>
+</li>
+<li>GRF（通用寄存器组，也称为寄存器文件、寄存器堆）<ul>
+<li>用具有写使能的寄存器实现，寄存器总数为 32 个，应具有<strong>异步复位</strong>功能。</li>
+<li><strong>0 号寄存器</strong>的值始终保持为 0。其他寄存器<strong>初始值（复位后）均为 0</strong>，无需专门设置。</li>
+</ul>
+</li>
+<li>ALU（算术逻辑单元）<ul>
+<li>提供 32 位加、减、或运算及大小比较功能。</li>
+<li>可以不支持溢出（不检测溢出）。</li>
+</ul>
+</li>
+<li>DM（数据存储器）<ul>
+<li>使用 RAM 实现，容量为 32bit * 32，应具有<strong>异步复位</strong>功能，复位值为 0x00000000。</li>
+<li><strong>起始地址：0x00000000</strong>。</li>
+<li>RAM 应使用双端口模式，即设置 RAM 的 <strong>Data Interface</strong> 属性为 <strong>Separate load and store ports</strong>。</li>
+</ul>
+</li>
+<li>EXT：<ul>
+<li>可以使用 Logisim 内置的 Bit Extender。</li>
+</ul>
+</li>
+<li>Controller（控制器）<ul>
+<li>使用与或门阵列构造控制信号</li>
+</ul>
+</li>
+</ul>
+<p><img src="image-20220210134525298.png" alt="image-20220210134525298"></p>
+<h2 id="课下总结：-1"><a href="#课下总结：-1" class="headerlink" title="课下总结："></a>课下总结：</h2><ol>
 <li>CPU设计方案<ul>
 <li>实现指令集：addu, subu, ori, lw, sw, beq, lui, nop, j, jal, jr</li>
 <li>CPU主要部件：IM, GRF, PC, NPC, ALU, DM, Controller， 采用工程化方法进行指令集建模。 控制信号的取值不计入功能部件，由与或阵列的组合逻辑直接得出。功能部件一列代表我要对 什么部件的值进行更改，也就是连接关系序偶右侧的部件。</li>
@@ -454,7 +541,6 @@
 <li>报错：outputs fewer than standard answer：跳转跳飞了吧！</li>
 </ul>
 </li>
-<li>最后给出我自己的CPU顶层模块和建模过程</li>
 </ol>
 <h2 id="课上复盘："><a href="#课上复盘：" class="headerlink" title="课上复盘："></a>课上复盘：</h2><p>感觉P3的重点在于工程化建模，和控制信号和输入输出关系。如果这一部分课下做得很好，那课上就会非常顺利，难得一个小时刚过就AK（不过我旁边的巨神做P4还比我早一步走人，膜拜hh）然后最重要的是，把指令要求看清楚再开始做题，不要舍不得这五六分钟时间，思路和理解错了才是最膈应的。</p>
 <h3 id="JAS"><a href="#JAS" class="headerlink" title="JAS"></a>JAS</h3><ul>
