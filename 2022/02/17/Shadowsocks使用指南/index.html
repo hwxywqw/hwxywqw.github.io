@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Hwxywqw</title>
+  <title>Shadowsocks使用指南 | Hwxywqw</title>
   <meta name="keywords" content="">
-  <meta name="description" content="Hwxywqw">
+  <meta name="description" content="Shadowsocks使用指南 | Hwxywqw">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="新年新气象，更换了代理方式，简单记录如下。如今的互联网环境实在可称荆棘遍地、壁障重重。 Just My Socks订阅注：Just My Socks对v2ray(包括v2ray最初的版本Shadowsocks)的支持比较好。 Just My Socks官网镜像地址如下Just My Socks 。服务器地址、端口和密码在订阅后会直接给出。我用得多所以买了500G&#x2F;月，相对也就贵一点，大概三十几块一">
 <meta property="og:type" content="article">
@@ -62,7 +62,7 @@
 
 
 <body>
-<aside class="nav mobile">
+<aside class="nav">
     <div class="nav-left">
         <a href="/"
    class="avatar_target">
@@ -236,12 +236,51 @@
         </div>
     </div>
 </aside>
-<div id="post" class="index">
+<div id="post">
     <div class="pjax">
-        <article class="index">
-            <div class="toc-ref">
+        <article id="post-Shadowsocks使用指南" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Hwxywqw%E2%80%99s-Homepage"><span class="toc-text">Hwxywqw’s Homepage</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#WHO"><span class="toc-text">WHO</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#WHY"><span class="toc-text">WHY</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#P-S"><span class="toc-text">P.S.</span></a></li></ol></li></ol>
+        <h1 class="article-title">Shadowsocks使用指南</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        <span class="book">
+            <i class="iconfont icon-category"></i>
+            
+            
+            <a  data-rel="小工具">小工具</a>
+            
+        </span>
+        
+        
+    </div>
+    <div class="article-meta">
+        
+            发布时间 : <time class="date" title='最后更新: 2022-02-17 01:20:03'>2022-02-17 01:15</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        
+        <span id="busuanzi_container_page_pv">
+            阅读 :<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Just-My-Socks%E8%AE%A2%E9%98%85"><span class="toc-text">Just My Socks订阅</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Shadowsocks%E8%AE%BE%E7%BD%AE"><span class="toc-text">Shadowsocks设置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%94%B5%E8%84%91%E4%BB%A3%E7%90%86%E8%AE%BE%E7%BD%AE"><span class="toc-text">电脑代理设置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#PAC%E6%A8%A1%E5%BC%8F%E8%AE%BE%E7%BD%AE"><span class="toc-text">PAC模式设置</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -254,45 +293,81 @@
     }
 </style>
 </div>
-            <h1 id="Hwxywqw’s-Homepage"><a href="#Hwxywqw’s-Homepage" class="headerlink" title="Hwxywqw’s Homepage"></a>Hwxywqw’s Homepage</h1><p>欢迎来访👋</p>
-<p><strong>使用说明：</strong></p>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>新年新气象，更换了代理方式，简单记录如下。如今的互联网环境实在可称荆棘遍地、壁障重重。</p>
+<h3 id="Just-My-Socks订阅"><a href="#Just-My-Socks订阅" class="headerlink" title="Just My Socks订阅"></a>Just My Socks订阅</h3><p>注：Just My Socks对v2ray(包括v2ray最初的版本Shadowsocks)的支持比较好。</p>
+<p>Just My Socks官网镜像地址如下<a target="_blank" rel="noopener" href="https://justmysocks3.net/members/index.php">Just My Socks</a> 。服务器地址、端口和密码在订阅后会直接给出。我用得多所以买了500G/月，相对也就贵一点，大概三十几块一个月。用得少可以从其他渠道购买。信息单如下：（我们所需的信息用荧光笔标出，也就是直接填入下面的东西：端口、密码和ip。注意加密方式要更改成对应的aes-256-gcm）</p>
+<p><img src="image-20220217004059475.png" alt="Just My Socks信息单"></p>
+<h3 id="Shadowsocks设置"><a href="#Shadowsocks设置" class="headerlink" title="Shadowsocks设置"></a>Shadowsocks设置</h3><p>简要说明（不看也没关系）：</p>
+<ol>
+<li>常见的代理有Clash，V2ray等等。V2ray仅支持Vmess协议，而Clash在此基础上更支持ss/ssr协议。</li>
+<li>V2ray向下(Shadowsocks)兼容，功能复杂，可以作为一个平台实现自己的开发；而Shadowsocks功能单一，同时使用起来十分简单。</li>
+</ol>
+<p>这里使用Shadowsocks，下载地址为<a target="_blank" rel="noopener" href="https://github.com/shadowsocks/shadowsocks-windows/releases/tag/4.4.1.0">Release 4.4.1.0 · shadowsocks/shadowsocks-windows (github.com)</a>，压缩包大小也就几MB，使用极其简单，这也是我选择它的主要原因。shadowsocks的设置（与上面对应关系）如下：</p>
+<table>
+<thead>
+<tr>
+<th>上面的信息</th>
+<th>这里的设置</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Port</td>
+<td>服务器端口</td>
+</tr>
+<tr>
+<td>Password</td>
+<td>密码</td>
+</tr>
+<tr>
+<td>Server IP</td>
+<td>服务器地址</td>
+</tr>
+<tr>
+<td>Server IP</td>
+<td>加密</td>
+</tr>
+</tbody></table>
+<p>服务器地址需要填写订阅的服务器的地址，五个里面随便选一个就行了。虽然直接使用诸如“65.49.222.xx”也是可以接受的，但是为了防止IP失效，尽量使用domine names，也就是我下面填写的“c67s1.jamjams.net ”。（注意在v2ray中，ip地址并没有说明是什么ip地址，要写服务器的地址，不要想当然写成my ip。）当然，这里用的是shadowsocks，那就没什么关系了。</p>
+<p><img src="image-20220217005317597.png" alt="Shadowsocks设置"></p>
+<h3 id="电脑代理设置"><a href="#电脑代理设置" class="headerlink" title="电脑代理设置"></a>电脑代理设置</h3><p>如果这个地方没有改，那么电脑会连不上网。其实也就是浏览器的代理设置。</p>
+<p>我的电脑版本是win10。设置-网络和internet-代理，需要更改两处地方：</p>
+<p>1、自动设置代理-自动检测设置-开</p>
+<p><img src="image-20220217005742208.png" alt="1"></p>
+<p>2、手动设置代理-</p>
 <ul>
-<li>文章目录右上角可切换目录&amp;大纲</li>
-<li>搜索栏默认标题搜索，“in:搜索内容”可进行全文搜索</li>
-</ul>
-<h2 id="WHO"><a href="#WHO" class="headerlink" title="WHO"></a>WHO</h2><p>hwxywqw：海王星鹦鹉青蛙</p>
-<ul>
-<li>网络空间安全专业</li>
-<li>许巍的忠实听众🤗</li>
-</ul>
-<p>联系方式：<a href="mailto:&#x68;&#x77;&#120;&#x79;&#x77;&#113;&#119;&#49;&#57;&#x36;&#x35;&#x40;&#x67;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;">&#x68;&#x77;&#120;&#x79;&#x77;&#113;&#119;&#49;&#57;&#x36;&#x35;&#x40;&#x67;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;</a></p>
-<h2 id="WHY"><a href="#WHY" class="headerlink" title="WHY"></a>WHY</h2><p>我在2021年首次尝试建立Homepage。最初自然是激动的——一个能够被长久维护的个人主页在当今的意义似乎总不止于“一个存放思想的地方”，更近于“一次对碎片化生活的反叛”。但或许因为没有经过长久的推敲，尝试性发布的几篇博客在不久之后便显得陈旧。它们并没能如期待，成为我所思所想的一个剖面。于是不禁思考：建立主页的目的，是什么？</p>
-<p>如果说，仅仅为了记录，那么主页似乎并非必须。互联网发达的今天能够让我们记录的平台实在太多：时兴的微博、QQ、微信暂且不谈，小众一些的博客app如简书、lofter甚至于知乎也方便至极。可它们非我所需——我需要的是反思，是构建自我；而非互动，非完善自我。</p>
-<p>一个个人主页存在的必要性也就此展现。它至少要拥有以下特点：</p>
-<ul>
-<li><strong>可维护</strong>：博客不仅仅是即兴的创作，写之即弃，它要能够依时间、依认知的进步而更新。我便常常能搜到七八年前的，过分老旧的技术博客，其参考价值已很小——我不希望为“刻画自我”而存在的个人主页也沦落到这种地步。</li>
-<li><strong>自由</strong>：体现在两个方面：能够发表我想发表的内容、能够按照想发表的方式发表。<ul>
-<li>内容上的自由：不仅仅指不受敏感词的困扰，更在于所述的内容能够按照符合我思路的，有序的方式进行组织。</li>
-<li>形式上的自由：更多指信息流的排布方式。例如按关键词和次关键词排序、按tag分类、按逻辑表示成树状图或凹入图等等。组织方式亦是一种内容。</li>
-</ul>
+<li><p>使用代理服务器-开</p>
 </li>
-<li><strong>独立</strong>：着重强调这一点，是因为个人主页完全摒弃了社交（我不假设读者的存在，也并没有开放评论功能）。我希望它完全由我组织、掌控，成为“向内反思”之处。一个人的自我正是其最宝贵之所在。</li>
-</ul>
-<h2 id="P-S"><a href="#P-S" class="headerlink" title="P.S."></a>P.S.</h2><p><strong>统计数据：</strong></p>
-<ul>
-<li><p>文章篇数：<code class="article_number"></code></p>
+<li><p>地址-127.0.0.1</p>
 </li>
-<li><p>总字数：<code class="site_word_count"></code></p>
-</li>
-<li><p>本站访问人数：<code class="site_uv"></code></p>
-</li>
-<li><p>访问量：<code class="site_pv"></code></p>
+<li><p>端口：1080</p>
 </li>
 </ul>
+<p><img src="image-20220217005759032.png" alt="2"></p>
+<p>v2ray另有较为详细的教程：<a target="_blank" rel="noopener" href="https://www.v2fly.org/guide/start.html#%E6%9C%8D%E5%8A%A1%E5%99%A8">json配置教程</a>，黏贴一小段代码如下，仅供参考：</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">&quot;inbounds&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">        <span class="punctuation">&#123;</span></span><br><span class="line">            <span class="attr">&quot;port&quot;</span><span class="punctuation">:</span> <span class="number">1080</span><span class="punctuation">,</span> <span class="comment">// SOCKS 代理端口，在浏览器中需配置代理并指向这个端口</span></span><br><span class="line">            <span class="attr">&quot;listen&quot;</span><span class="punctuation">:</span> <span class="string">&quot;127.0.0.1&quot;</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;protocol&quot;</span><span class="punctuation">:</span> <span class="string">&quot;socks&quot;</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;settings&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">                <span class="attr">&quot;udp&quot;</span><span class="punctuation">:</span> <span class="keyword">true</span></span><br><span class="line">            <span class="punctuation">&#125;</span></span><br><span class="line">        <span class="punctuation">&#125;</span></span><br><span class="line">    <span class="punctuation">]</span></span><br></pre></td></tr></table></figure>
 
-        </article>
-        
-        
+<h3 id="PAC模式设置"><a href="#PAC模式设置" class="headerlink" title="PAC模式设置"></a>PAC模式设置</h3><p>目的是：只在登录某些网站时使用代理，其余网站用本地ip正常登录。Shadowsocks小图标：<strong>系统代理-PAC模式</strong>。</p>
+<p><img src="image-20220217011012719.png" alt="PAC"></p>
+
+      
+       
+    </div>
+</article>
+
+
+
+
+
+
+
+    
+
+
+
+
     </div>
     <div class="copyright">
         <p class="footer-entry">
@@ -301,11 +376,11 @@
 <p class="footer-entry">Built with <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank">3-hexo</a> theme</p>
 
     </div>
-</div>
-<div class="full-toc">
-    <button class="full" data-title="切换全屏"><span class="min "></span></button>
+    <div class="full-toc">
+        <button class="full" data-title="切换全屏"><span class="min "></span></button>
 <a class="" id="rocket" ></a>
 
+    </div>
 </div>
 
 </body>
