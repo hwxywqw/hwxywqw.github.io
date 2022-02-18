@@ -6,30 +6,28 @@
   <meta name="keywords" content="">
   <meta name="description" content="CO-计组课设总结 | Hwxywqw">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<meta name="description" content="新年新气象，更换了代理方式，简单记录如下。如今的互联网环境实在可称荆棘遍地、壁障重重。 Just My Socks订阅注：Just My Socks对v2ray(包括v2ray最初的版本Shadowsocks)的支持比较好。 Just My Socks官网镜像地址如下Just My Socks 。服务器地址、端口和密码在订阅后会直接给出。我用得多所以买了500G&#x2F;月，相对也就贵一点，大概三十几块一">
+<meta name="description" content="​    籍由这篇博客，简单总结上学期计算机组成原理课设。 ​    计组课设一共有P0~P7七个阶段，P0~P2分别是对Logisim、Verilog和MIPS的预习内容，P3用Logisim实现单周期CPU，P4用Verilog实现单周期CPU，P5用Verilog实现流水线CPU，P6将指令集增加到四十余条，P7加入中断和异常。我做到P6，而博客只写到P3。后续~P6 Verilog部分的C">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Shadowsocks使用指南">
-<meta property="og:url" content="http://example.com/2022/02/17/Shadowsocks%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/index.html">
+<meta property="og:title" content="CO-计组课设总结">
+<meta property="og:url" content="http://example.com/2022/01/09/Computer-Organization/index.html">
 <meta property="og:site_name" content="Hwxywqw">
-<meta property="og:description" content="新年新气象，更换了代理方式，简单记录如下。如今的互联网环境实在可称荆棘遍地、壁障重重。 Just My Socks订阅注：Just My Socks对v2ray(包括v2ray最初的版本Shadowsocks)的支持比较好。 Just My Socks官网镜像地址如下Just My Socks 。服务器地址、端口和密码在订阅后会直接给出。我用得多所以买了500G&#x2F;月，相对也就贵一点，大概三十几块一">
+<meta property="og:description" content="​    籍由这篇博客，简单总结上学期计算机组成原理课设。 ​    计组课设一共有P0~P7七个阶段，P0~P2分别是对Logisim、Verilog和MIPS的预习内容，P3用Logisim实现单周期CPU，P4用Verilog实现单周期CPU，P5用Verilog实现流水线CPU，P6将指令集增加到四十余条，P7加入中断和异常。我做到P6，而博客只写到P3。后续~P6 Verilog部分的C">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://example.com/2022/02/17/Shadowsocks%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/image-20220217004059475.png">
-<meta property="og:image" content="http://example.com/2022/02/17/Shadowsocks%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/image-20220217005317597.png">
-<meta property="og:image" content="http://example.com/2022/02/17/Shadowsocks%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/image-20220217005742208.png">
-<meta property="og:image" content="http://example.com/2022/02/17/Shadowsocks%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/image-20220217005759032.png">
-<meta property="og:image" content="http://example.com/2022/02/17/Shadowsocks%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/image-20220217011012719.png">
-<meta property="article:published_time" content="2022-02-16T17:15:24.000Z">
-<meta property="article:modified_time" content="2022-02-16T17:20:03.579Z">
+<meta property="og:image" content="http://example.com/2022/01/09/Computer-Organization/image-20220210134014295.png">
+<meta property="og:image" content="http://example.com/2022/01/09/Computer-Organization/image-20220210133653414.png">
+<meta property="og:image" content="http://example.com/2022/01/09/Computer-Organization/image-20220210134525298.png">
+<meta property="article:published_time" content="2022-01-09T15:05:31.000Z">
+<meta property="article:modified_time" content="2022-02-10T06:10:40.496Z">
 <meta property="article:author" content="hwxywqw">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://example.com/2022/02/17/Shadowsocks%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/image-20220217004059475.png">
+<meta name="twitter:image" content="http://example.com/2022/01/09/Computer-Organization/image-20220210134014295.png">
 
 
 <link rel="icon" href="/img/avatar.jpg">
 
 <link href="/css/style.css?v=1.1.0" rel="stylesheet">
 
-<link href="/css/hl_theme/sublime.css?v=1.1.0" rel="stylesheet">
+<link href="/css/hl_theme/atom-light.css?v=1.1.0" rel="stylesheet">
 
 <link href="//cdn.jsdelivr.net/npm/animate.css@4.1.0/animate.min.css" rel="stylesheet">
 
@@ -84,7 +82,7 @@
     <li>
         <div class="all active" data-rel="全部文章">全部文章
             
-                <small>(2)</small>
+                <small>(3)</small>
             
         </div>
     </li>
@@ -130,7 +128,7 @@
                     <div data-rel="小工具">
                         
                         小工具
-                        <small>(1)</small>
+                        <small>(2)</small>
                         
                     </div>
                     
@@ -151,7 +149,7 @@
         
     </div>
 </div>
-<input type="hidden" id="yelog_site_posts_number" value="2">
+<input type="hidden" id="yelog_site_posts_number" value="3">
 
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
@@ -204,20 +202,28 @@
     
     <nav id="title-list-nav">
         
-        <a  class="全部文章 小工具 "
-           href="/2022/02/17/Shadowsocks%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/"
-           data-tag=""
-           data-author="" >
-            <span class="post-title" title="Shadowsocks使用指南">Shadowsocks使用指南</span>
-            <span class="post-date" title="2022-02-17 01:15:24">2022/02/17</span>
-        </a>
-        
         <a  class="全部文章 课程相关 CO "
            href="/2022/01/09/Computer-Organization/"
            data-tag=""
            data-author="" >
             <span class="post-title" title="CO-计组课设总结">CO-计组课设总结</span>
             <span class="post-date" title="2022-01-09 23:05:31">2022/01/09</span>
+        </a>
+        
+        <a  class="全部文章 小工具 "
+           href="/2021/12/18/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="正则表达式使用指南">正则表达式使用指南</span>
+            <span class="post-date" title="2021-12-18 23:07:28">2021/12/18</span>
+        </a>
+        
+        <a  class="全部文章 小工具 "
+           href="/2021/02/17/Shadowsocks%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="Shadowsocks使用指南">Shadowsocks使用指南</span>
+            <span class="post-date" title="2021-02-17 01:15:24">2021/02/17</span>
         </a>
         
         <div id="no-item-tips">
@@ -335,17 +341,24 @@
 <ul>
 <li>always块配合reg型变量与阻塞赋值</li>
 </ul>
-<figure class="highlight verilog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">reg</span> ans;</span><br><span class="line"><span class="keyword">integer</span> i;</span><br><span class="line"></span><br><span class="line"><span class="keyword">always</span>@(*)<span class="keyword">begin</span></span><br><span class="line">    ans = <span class="number">1&#x27;b0</span>; 			<span class="comment">//!!</span></span><br><span class="line">    <span class="keyword">for</span> (i=<span class="number">0</span>; i&lt;<span class="number">32</span>; i=i+<span class="number">1</span>)</span><br><span class="line">    ans = ans^in[i];</span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+<pre><code class="verilog">reg ans;
+integer i;
 
+always@(*)begin
+    ans = 1&#39;b0;             //!!
+    for (i=0; i&lt;32; i=i+1)
+    ans = ans^in[i];
+end
+</code></pre>
 <p><strong>注</strong>：不要漏掉赋初值，否则会<strong>输出x</strong>。这与我们一般说的使用initial进行初始化不同。在module中使用initial初始化reg会导致不可综合，所以那时我们一般在test bench里进行初始化。</p>
 <ul>
 <li>assign语句配合wire型变量</li>
 </ul>
-<figure class="highlight verilog"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">assign</span> result = ((if_begin == if_end) &amp;&amp; (yes == <span class="number">1</span>)) ? <span class="number">1</span>:<span class="number">0</span>;</span><br></pre></td></tr></table></figure>
-
+<pre><code class="verilog">assign result = ((if_begin == if_end) &amp;&amp; (yes == 1)) ? 1:0;
+</code></pre>
 <p>可以采用这种方式写一些小函数，例如：</p>
-<figure class="highlight verilog"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">assign</span> isDigit = (in&gt;=<span class="string">&quot;0&quot;</span> &amp;&amp; in&lt;=<span class="string">&quot;9&quot;</span>)?<span class="number">1</span>:<span class="number">0</span>;</span><br></pre></td></tr></table></figure>
-
+<pre><code class="verilog">assign isDigit = (in&gt;=&quot;0&quot; &amp;&amp; in&lt;=&quot;9&quot;)?1:0;
+</code></pre>
 <h3 id="阻塞赋值与非阻塞赋值"><a href="#阻塞赋值与非阻塞赋值" class="headerlink" title="阻塞赋值与非阻塞赋值"></a>阻塞赋值与非阻塞赋值</h3><p>​    关于阻塞赋值与非阻塞赋值的知识点，《Verilog与数字系统设计教程》第14章写得很好，看过以后顿觉豁然开朗。其中有介绍“<strong>层次化事件队列</strong>”相关知识——理解“仿真器首先按照仿真时间对事件进行排序，然后再在当前仿真时间里按照事件的优先级顺序进行排序。活跃事件是优先级最高的事件。”对于深入理解阻塞赋值与非阻塞赋值颇有助益。</p>
 <p>​    需要注意：在活跃事件（阻塞赋值=、连续赋值assign，以及非阻塞赋值的右式计算……）之间，它们的执行顺序是<strong>随机的</strong>。</p>
 <p><strong>为避免冒险竞争，下面列出一些需要时刻注意的要点：</strong></p>
@@ -360,14 +373,30 @@
 </ul>
 <p><strong>举一个初学时可能感到困惑的例子：initial与阻塞赋值：</strong></p>
 <p>test bench里面，initial里装的是阻塞赋值<code>=</code>，而在.v里，initial里装的是非阻塞赋值<code>&lt;=</code>，这个跟他们本身的用法相关。.v里赋值只进行一次，每个变量之间又没有关系，就可以攒一堆变量到最后一块赋值，而test bench是为了测试而赋值，这个<strong>赋值的结果必须立刻呈现</strong>，例如：</p>
-<figure class="highlight verilog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">always</span> <span class="keyword">begin</span></span><br><span class="line">    a&lt;=<span class="number">2&#x27;b11</span>;</span><br><span class="line">    #<span class="number">10</span></span><br><span class="line">    a&lt;=<span class="number">2&#x27;b00</span>;</span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
-
+<pre><code class="verilog">always begin
+    a&lt;=2&#39;b11;
+    #10
+    a&lt;=2&#39;b00;
+end
+</code></pre>
 <p>这个赋值出现在test bench里就是不合格的，a的值会始终为11。其实a究竟变成11还是00是薛定谔的，因为这两个赋值语句的优先级完全一样。</p>
-<h3 id="异步复位"><a href="#异步复位" class="headerlink" title="异步复位"></a>异步复位</h3><figure class="highlight verilog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">always</span> @(<span class="keyword">posedge</span> clk, <span class="keyword">posedge</span> reset) <span class="keyword">begin</span></span><br><span class="line">    <span class="keyword">if</span> (reset == <span class="number">1</span>) <span class="keyword">begin</span></span><br><span class="line">        status &lt;= `S0;</span><br><span class="line">    <span class="keyword">end</span> <span class="keyword">else</span> <span class="keyword">begin</span></span><br><span class="line">        ……</span><br><span class="line">    <span class="keyword">end</span></span><br><span class="line">……</span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
-
+<h3 id="异步复位"><a href="#异步复位" class="headerlink" title="异步复位"></a>异步复位</h3><pre><code class="verilog">always @(posedge clk, posedge reset) begin
+    if (reset == 1) begin
+        status &lt;= `S0;
+    end else begin
+        ……
+    end
+……
+end
+</code></pre>
 <p>要注意不能写成下面那样，否则会产生竞争冒险，周期会错位，复位会提前。</p>
-<figure class="highlight verilog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">always</span> @(<span class="keyword">posedge</span> clk) <span class="keyword">begin</span></span><br><span class="line">……</span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"><span class="keyword">always</span> @(<span class="keyword">posedge</span> reset) <span class="keyword">begin</span></span><br><span class="line">……</span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
-
+<pre><code class="verilog">always @(posedge clk) begin
+……
+end
+always @(posedge reset) begin
+……
+end
+</code></pre>
 <h3 id="避坑指南："><a href="#避坑指南：" class="headerlink" title="避坑指南："></a>避坑指南：</h3><ul>
 <li>文件开始处或许可以加上一行：``default_nettype none`，否则手误打错变量名时，Verilog会默认这是一个新的，wire型1bit的变量。（但是到了P5,P6可能不适用，因为变量太多了，一个一个定义十分麻烦）</li>
 <li>仿真波形是黄色的xxxxx：看一下有没有把input手误敲成output，或者clk没有用always，而是手误用了assign。</li>
@@ -376,10 +405,10 @@
 <li>输出一直是0：<code>reg [32:0] output</code>。或者建module的时候把output建成input了，修正以后忘记把<strong>tb</strong>文件里被设成reg的output修改回wire。</li>
 </ul>
 <h2 id="课下总结："><a href="#课下总结：" class="headerlink" title="课下总结："></a>课下总结：</h2><h3 id="符号拓展："><a href="#符号拓展：" class="headerlink" title="符号拓展："></a>符号拓展：</h3><p><code>$signed</code>真的很不好用，直接用位拼接更方便：</p>
-<figure class="highlight verilog"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;&#123;<span class="number">16</span>&#123;imm[<span class="number">15</span>]&#125;&#125;, imm&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="缩减运算符："><a href="#缩减运算符：" class="headerlink" title="缩减运算符："></a>缩减运算符：</h3><figure class="highlight verilog"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">C=&amp;B</span><br></pre></td></tr></table></figure>
-
+<pre><code class="verilog">&#123;&#123;16&#123;imm[15]&#125;&#125;, imm&#125;
+</code></pre>
+<h3 id="缩减运算符："><a href="#缩减运算符：" class="headerlink" title="缩减运算符："></a>缩减运算符：</h3><pre><code class="verilog">C=&amp;B
+</code></pre>
 <p>单目运算符，例如上面就是把B的每一位都与起来。非常好用。P1第二次上机的第一题是统计一个32位二进制数里，0有多少个，1有多少个；第一次上机的第一题是统计1有奇数个还是偶数个。如果不使用for循环+integer变量的话，建议考虑缩减运算符。</p>
 <h3 id="有限状态机："><a href="#有限状态机：" class="headerlink" title="有限状态机："></a>有限状态机：</h3><blockquote>
 <p>玄学状态机</p>
@@ -396,16 +425,16 @@
 <p>竟发现周围有许多同学坚韧不拔地在ISE手敲代码。vscode的高亮和代码自动补全是好东西啊！</p>
 <p><strong>graphViz：</strong></p>
 <p>有限状态机绘图可以使用，虽然有在线绘图（<a target="_blank" rel="noopener" href="https://csacademy.com/app/graph_editor/">Graph Editor</a>），但是本地画图总感觉心里踏实一点。尝试了一下pycharm配置环境，但是用起来很不顺手，最后还是选择vscode编辑.gv文件+命令行编译。cd到文件目录下即可：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dot FSM.gv -Tpng -o image.png</span><br></pre></td></tr></table></figure>
-
+<pre><code class="shell">dot FSM.gv -Tpng -o image.png
+</code></pre>
 <p>效果如下：</p>
 <p><img src="image-20220210133653414.png" alt="有限状态机F4"></p>
 <p><strong>正则表达式：</strong></p>
 <p><a target="_blank" rel="noopener" href="https://deerchao.cn/tools/wegester/">在线正则表达式测试器</a></p>
 <h1 id="P2-MIPS汇编语言"><a href="#P2-MIPS汇编语言" class="headerlink" title="P2_MIPS汇编语言"></a>P2_MIPS汇编语言</h1><h2 id="Mars测指令数的方法："><a href="#Mars测指令数的方法：" class="headerlink" title="Mars测指令数的方法："></a>Mars测指令数的方法：</h2><h3 id="命令行编译MIPS文件的格式："><a href="#命令行编译MIPS文件的格式：" class="headerlink" title="命令行编译MIPS文件的格式："></a>命令行编译MIPS文件的格式：</h3><p>(具体在Help(F1)-Mars-Commend里面找，有什么需求按这个加options就行了。)</p>
 <p>​        MARS can be run from a command interpreter to assemble and execute a MIPS program in a batch fashion. The format for running MARS from a command line is:</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java -jar mars.jar [options] program.asm [more files...] [ pa arg1 [more args...]]</span><br></pre></td></tr></table></figure>
-
+<pre><code>java -jar mars.jar [options] program.asm [more files...] [ pa arg1 [more args...]]
+</code></pre>
 <p>​      Items in <em>[ ]</em> are optional. Valid options (not case sensitive, separated by spaces) are:    </p>
 <table>
 <thead>
@@ -415,8 +444,8 @@
 </tr>
 </thead>
 </table>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java -jar Mars4_5.jar ic xxx.asm</span><br></pre></td></tr></table></figure>
-
+<pre><code>java -jar Mars4_5.jar ic xxx.asm
+</code></pre>
 <h3 id="步骤："><a href="#步骤：" class="headerlink" title="步骤："></a>步骤：</h3><ol>
 <li>进入到当前目录<ol>
 <li>进入到文件目录，按住Shift，右键打开Powershell，或者如下：</li>
@@ -429,28 +458,88 @@
 <li>输入参数（空格分开）</li>
 </ol>
 <h3 id="自动运行的两种方法"><a href="#自动运行的两种方法" class="headerlink" title="自动运行的两种方法"></a>自动运行的两种方法</h3><h4 id="自己写一个："><a href="#自己写一个：" class="headerlink" title="自己写一个："></a>自己写一个：</h4><p>我用了c，别的也行。</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span>&#123;</span><br><span class="line"><span class="comment">//	freopen(&quot;in.txt&quot;,&quot;r&quot;,stdin);</span></span><br><span class="line">	system(<span class="string">&quot;copy D:\\workspace\\cs\\P2\\Q4_full.asm E:\\mars&quot;</span>);	<span class="comment">//.asm复制到安装目录下 </span></span><br><span class="line">	system(<span class="string">&quot;java -jar Mars4_5.jar ic Q4_full.asm\n5&quot;</span>);			<span class="comment">//编译运行，指令在这里加 </span></span><br><span class="line">	system(<span class="string">&quot;del E:\\mars\\Q4_full.asm&quot;</span>);						<span class="comment">//用完删掉 </span></span><br><span class="line">    system(<span class="string">&quot;pause&quot;</span>); </span><br><span class="line"><span class="comment">//	fclose(in);</span></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
+<pre><code class="c">#include &lt;stdlib.h&gt;
+int main()&#123;
+//    freopen(&quot;in.txt&quot;,&quot;r&quot;,stdin);
+    system(&quot;copy D:\\workspace\\cs\\P2\\Q4_full.asm E:\\mars&quot;);    //.asm复制到安装目录下 
+    system(&quot;java -jar Mars4_5.jar ic Q4_full.asm\n5&quot;);            //编译运行，指令在这里加 
+    system(&quot;del E:\\mars\\Q4_full.asm&quot;);                        //用完删掉 
+    system(&quot;pause&quot;); 
+//    fclose(in);
+    return 0;
+&#125;
+</code></pre>
 <p>把生成的可执行文件放在跟Mars同一个安装目录，运行即可。</p>
 <h4 id="VSCode-CodeRunner"><a href="#VSCode-CodeRunner" class="headerlink" title="VSCode - CodeRunner"></a>VSCode - CodeRunner</h4><p>settings.json中添加.asm文件的运行命令即可</p>
-<h2 id="常用代码"><a href="#常用代码" class="headerlink" title="常用代码"></a>常用代码</h2><h3 id="宏"><a href="#宏" class="headerlink" title="宏"></a>宏</h3><h4 id="矩阵求元素地址"><a href="#矩阵求元素地址" class="headerlink" title="矩阵求元素地址"></a>矩阵求元素地址</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">.macro address(%dst, %row, %column, %rank)  </span><br><span class="line">		multu	%row, %rank</span><br><span class="line">		mflo	%dst</span><br><span class="line">		addu	%dst, %dst, %column</span><br><span class="line">		sll		%dst, %dst, 2</span><br><span class="line">.end_macro</span><br></pre></td></tr></table></figure>
+<h2 id="常用代码"><a href="#常用代码" class="headerlink" title="常用代码"></a>常用代码</h2><h3 id="宏"><a href="#宏" class="headerlink" title="宏"></a>宏</h3><h4 id="矩阵求元素地址"><a href="#矩阵求元素地址" class="headerlink" title="矩阵求元素地址"></a>矩阵求元素地址</h4><pre><code>.macro address(%dst, %row, %column, %rank)  
+        multu    %row, %rank
+        mflo    %dst
+        addu    %dst, %dst, %column
+        sll        %dst, %dst, 2
+.end_macro
+</code></pre>
+<h4 id="栈操作"><a href="#栈操作" class="headerlink" title="栈操作"></a>栈操作</h4><pre><code>.macro save(%tgt)
+    sw        %tgt, 0($sp)
+    addi    $sp, $sp, -4
+.end_macro 
+.macro load(%tgt)
+    addi    $sp, $sp, 4
+    lw        %tgt, 0($sp)
+.end_macro 
+</code></pre>
+<h4 id="syscall常用读写"><a href="#syscall常用读写" class="headerlink" title="syscall常用读写"></a>syscall常用读写</h4><pre><code>.macro print_int(%tgt)
+    move    $a0, %tgt
+    li        $v0, 1
+    syscall
+.end_macro 
+.macro read_int(%tgt)
+    li        $v0, 5
+    syscall
+    move    %tgt, $v0
+.end_macro 
+</code></pre>
+<h4 id="输出空格和换行"><a href="#输出空格和换行" class="headerlink" title="输出空格和换行"></a>输出空格和换行</h4><pre><code>.macro print_space
+    la        $a0, str_space
+    li        $v0, 4
+    syscall
+.end_macro 
+.macro print_enter
+    la        $a0, str_enter
+    li        $v0, 4
+    syscall
+.end_macro 
 
-<h4 id="栈操作"><a href="#栈操作" class="headerlink" title="栈操作"></a>栈操作</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">.macro save(%tgt)</span><br><span class="line">	sw		%tgt, 0($sp)</span><br><span class="line">	addi	$sp, $sp, -4</span><br><span class="line">.end_macro </span><br><span class="line">.macro load(%tgt)</span><br><span class="line">	addi	$sp, $sp, 4</span><br><span class="line">	lw		%tgt, 0($sp)</span><br><span class="line">.end_macro </span><br></pre></td></tr></table></figure>
-
-<h4 id="syscall常用读写"><a href="#syscall常用读写" class="headerlink" title="syscall常用读写"></a>syscall常用读写</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">.macro print_int(%tgt)</span><br><span class="line">	move	$a0, %tgt</span><br><span class="line">	li		$v0, 1</span><br><span class="line">	syscall</span><br><span class="line">.end_macro </span><br><span class="line">.macro read_int(%tgt)</span><br><span class="line">	li		$v0, 5</span><br><span class="line">	syscall</span><br><span class="line">	move	%tgt, $v0</span><br><span class="line">.end_macro </span><br></pre></td></tr></table></figure>
-
-<h4 id="输出空格和换行"><a href="#输出空格和换行" class="headerlink" title="输出空格和换行"></a>输出空格和换行</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">.macro print_space</span><br><span class="line">	la		$a0, str_space</span><br><span class="line">	li		$v0, 4</span><br><span class="line">	syscall</span><br><span class="line">.end_macro </span><br><span class="line">.macro print_enter</span><br><span class="line">	la		$a0, str_enter</span><br><span class="line">	li		$v0, 4</span><br><span class="line">	syscall</span><br><span class="line">.end_macro </span><br><span class="line"></span><br><span class="line">str_space:	.asciiz &quot; &quot;</span><br><span class="line">str_enter: 	.asciiz &quot;\n&quot;  #字符串写最后避免内存出问题（不是4的倍数）</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="循环结构"><a href="#循环结构" class="headerlink" title="循环结构"></a>循环结构</h3><h4 id="for"><a href="#for" class="headerlink" title="for"></a>for</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">move	$t0, $0</span><br><span class="line">FOR:</span><br><span class="line">	#</span><br><span class="line">addi	$t0, $t0, 1</span><br><span class="line">bne		$t0, $s0, FOR</span><br></pre></td></tr></table></figure>
-
-<h4 id="while"><a href="#while" class="headerlink" title="while"></a>while</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">move	$t0, $0</span><br><span class="line">WHILE:</span><br><span class="line">    bne		$t0, $s0, END_WHILE</span><br><span class="line">    	#</span><br><span class="line">    j		WHILE</span><br><span class="line">END_WHILE:</span><br></pre></td></tr></table></figure>
-
-<h4 id="switch"><a href="#switch" class="headerlink" title="switch"></a>switch</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">	b...CASE1</span><br><span class="line">	b...CASE2</span><br><span class="line">	...</span><br><span class="line">	j DEFAULT</span><br><span class="line">CASE1:</span><br><span class="line">    #</span><br><span class="line">    j END_SWITCH</span><br><span class="line">CASE2:</span><br><span class="line">    #</span><br><span class="line">    j END_SWITCH</span><br><span class="line">...</span><br><span class="line">DEFAULT:</span><br><span class="line">    #</span><br><span class="line">END_SWITCH</span><br></pre></td></tr></table></figure>
-
-
-
+str_space:    .asciiz &quot; &quot;
+str_enter:     .asciiz &quot;\n&quot;  #字符串写最后避免内存出问题（不是4的倍数）
+</code></pre>
+<h3 id="循环结构"><a href="#循环结构" class="headerlink" title="循环结构"></a>循环结构</h3><h4 id="for"><a href="#for" class="headerlink" title="for"></a>for</h4><pre><code>move    $t0, $0
+FOR:
+    #
+addi    $t0, $t0, 1
+bne        $t0, $s0, FOR
+</code></pre>
+<h4 id="while"><a href="#while" class="headerlink" title="while"></a>while</h4><pre><code>move    $t0, $0
+WHILE:
+    bne        $t0, $s0, END_WHILE
+        #
+    j        WHILE
+END_WHILE:
+</code></pre>
+<h4 id="switch"><a href="#switch" class="headerlink" title="switch"></a>switch</h4><pre><code>    b...CASE1
+    b...CASE2
+    ...
+    j DEFAULT
+CASE1:
+    #
+    j END_SWITCH
+CASE2:
+    #
+    j END_SWITCH
+...
+DEFAULT:
+    #
+END_SWITCH
+</code></pre>
 <h2 id="课上"><a href="#课上" class="headerlink" title="课上"></a>课上</h2><p>课上三道题，先说一下内容：</p>
 <ol>
 <li>三位数反转。如果小于100或者大于999就输出一个报错，否则反转后输出，不要先导0。</li>
@@ -460,15 +549,244 @@
 <p>​        本来以为主要考递归，复习了很久，但是最后难点不是递归和栈，就第二题意思意思考了一点。第一题刚开始出了一个小bug，就是我分三次判断了（毕竟才三位数懒得循环），结果忘记给flag，导致输入101输出11，找出这个错以后前两道做得很顺，大概四十分钟做完。第三题给了c的样例代码，难以置信，竟然是错的。我看着那个代码觉得不靠谱啊就打开dev跑了一遍，果然输出了奇怪的东西，dev也还不能调试，只能肉眼debug，唉。最后也没有过，更不知道为什么错。大概5个测试点是AC，三个是Runtime Error，这是我从来没碰到过的报错，就算是指令数超了也应该是Tle才对。</p>
 <p>​        </p>
 <h2 id="课下"><a href="#课下" class="headerlink" title="课下"></a>课下</h2><h3 id="课下作业-01迷宫："><a href="#课下作业-01迷宫：" class="headerlink" title="课下作业_01迷宫："></a>课下作业_01迷宫：</h3><p>​        给出c语言代码。就是一个简单的dfs深搜，但是好久没写了还是有点手生。回忆了一下大一的知识，用了点小技巧把边界判断简化掉了——输入0代表这条路能走，在我的matrix里是1；输入1代表这条路不能走，在我的matrix里是0。我在整个迷宫外面再给他加一圈儿，这样边界都是0，也不用额外初始化，更不用额外判断。</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> a[<span class="number">10</span>][<span class="number">10</span>];</span><br><span class="line"><span class="type">int</span> flag[<span class="number">10</span>][<span class="number">10</span>];</span><br><span class="line"><span class="type">int</span> cnt;</span><br><span class="line"><span class="type">int</span> at1, at2, tgt1, tgt2;</span><br><span class="line"><span class="type">int</span> <span class="title function_">dfs</span><span class="params">(<span class="type">int</span>, <span class="type">int</span>)</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span>&#123;</span><br><span class="line">	<span class="type">int</span> n, m;</span><br><span class="line">	<span class="type">int</span> i, j, k;</span><br><span class="line">	<span class="type">int</span> tmp;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">&quot;%d %d&quot;</span>, &amp;n, &amp;m);</span><br><span class="line">	<span class="keyword">for</span> (i=<span class="number">1</span>; i&lt;=n; i++)&#123;</span><br><span class="line">		<span class="keyword">for</span> (j=<span class="number">1</span>; j&lt;=m; j++)&#123;</span><br><span class="line">			<span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;tmp);</span><br><span class="line">			<span class="keyword">if</span> (tmp==<span class="number">0</span>) a[i][j] = <span class="number">1</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">&quot;%d %d %d %d&quot;</span>, &amp;at1, &amp;at2, &amp;tgt1, &amp;tgt2);</span><br><span class="line">	flag[at1][at2] = <span class="number">1</span>;</span><br><span class="line">	dfs(at1, at2);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>, cnt);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">dfs</span><span class="params">(<span class="type">int</span> row, <span class="type">int</span> col)</span>&#123; <span class="comment">//行进顺序：上下左右</span></span><br><span class="line">	<span class="keyword">if</span>(a[row<span class="number">-1</span>][col]==<span class="number">1</span> &amp;&amp; flag[row<span class="number">-1</span>][col]==<span class="number">0</span>)&#123;</span><br><span class="line">		flag[row<span class="number">-1</span>][col]=<span class="number">1</span>;</span><br><span class="line">		dfs(row<span class="number">-1</span>, col);</span><br><span class="line">		flag[row<span class="number">-1</span>][col]=<span class="number">0</span>;</span><br><span class="line">	&#125; </span><br><span class="line">	<span class="keyword">else</span> <span class="keyword">if</span>(a[row+<span class="number">1</span>][col]==<span class="number">1</span> &amp;&amp; flag[row+<span class="number">1</span>][col]==<span class="number">0</span>)&#123;</span><br><span class="line">		flag[row+<span class="number">1</span>][col]=<span class="number">1</span>;</span><br><span class="line">		dfs(row+<span class="number">1</span>, col);</span><br><span class="line">		flag[row+<span class="number">1</span>][col]=<span class="number">0</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span> <span class="keyword">if</span>(a[row][col<span class="number">-1</span>]==<span class="number">1</span> &amp;&amp; flag[row][col<span class="number">-1</span>]==<span class="number">0</span>)&#123;</span><br><span class="line">		flag[row][col<span class="number">-1</span>]=<span class="number">1</span>;</span><br><span class="line">		dfs(row, col<span class="number">-1</span>);</span><br><span class="line">		flag[row][col<span class="number">-1</span>]=<span class="number">0</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span> <span class="keyword">if</span>(a[row][col+<span class="number">1</span>]==<span class="number">1</span> &amp;&amp; flag[row][col+<span class="number">1</span>]==<span class="number">0</span>)&#123;</span><br><span class="line">		flag[row][col+<span class="number">1</span>]=<span class="number">1</span>;</span><br><span class="line">		dfs(row, col+<span class="number">1</span>);</span><br><span class="line">		flag[row][col+<span class="number">1</span>]=<span class="number">0</span>;</span><br><span class="line">	&#125;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span> (row==tgt1 &amp;&amp; col==tgt2)&#123;</span><br><span class="line">		cnt++;</span><br><span class="line">		<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre><code class="c">int a[10][10];
+int flag[10][10];
+int cnt;
+int at1, at2, tgt1, tgt2;
+int dfs(int, int);
 
+int main()&#123;
+    int n, m;
+    int i, j, k;
+    int tmp;
+    scanf(&quot;%d %d&quot;, &amp;n, &amp;m);
+    for (i=1; i&lt;=n; i++)&#123;
+        for (j=1; j&lt;=m; j++)&#123;
+            scanf(&quot;%d&quot;, &amp;tmp);
+            if (tmp==0) a[i][j] = 1;
+        &#125;
+    &#125;
+    scanf(&quot;%d %d %d %d&quot;, &amp;at1, &amp;at2, &amp;tgt1, &amp;tgt2);
+    flag[at1][at2] = 1;
+    dfs(at1, at2);
+    printf(&quot;%d&quot;, cnt);
+    return 0;
+&#125;
+
+int dfs(int row, int col)&#123; //行进顺序：上下左右
+    if(a[row-1][col]==1 &amp;&amp; flag[row-1][col]==0)&#123;
+        flag[row-1][col]=1;
+        dfs(row-1, col);
+        flag[row-1][col]=0;
+    &#125; 
+    else if(a[row+1][col]==1 &amp;&amp; flag[row+1][col]==0)&#123;
+        flag[row+1][col]=1;
+        dfs(row+1, col);
+        flag[row+1][col]=0;
+    &#125;
+    else if(a[row][col-1]==1 &amp;&amp; flag[row][col-1]==0)&#123;
+        flag[row][col-1]=1;
+        dfs(row, col-1);
+        flag[row][col-1]=0;
+    &#125;
+    else if(a[row][col+1]==1 &amp;&amp; flag[row][col+1]==0)&#123;
+        flag[row][col+1]=1;
+        dfs(row, col+1);
+        flag[row][col+1]=0;
+    &#125;
+    else if (row==tgt1 &amp;&amp; col==tgt2)&#123;
+        cnt++;
+        return 0;
+    &#125;
+&#125;
+</code></pre>
 <p>手动编译一波：</p>
-<figure class="highlight mips"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">.data</span></span><br><span class="line"><span class="meta">.macro</span> <span class="keyword">address(%dst, </span>%row, %column, %rank)  </span><br><span class="line">		<span class="keyword">multu	</span>%row, %rank</span><br><span class="line">		<span class="keyword">mflo	</span>%dst</span><br><span class="line">		<span class="keyword">addu	</span>%dst, %dst, %column</span><br><span class="line">		<span class="keyword">sll	</span>	%dst, %dst, <span class="number">2</span></span><br><span class="line">.end_macro</span><br><span class="line"><span class="meta">.macro</span> save(%tgt)</span><br><span class="line">	<span class="keyword">sw	</span>	%tgt, <span class="number">0</span>($<span class="built_in">sp</span>)</span><br><span class="line">	<span class="keyword">addi	</span>$<span class="built_in">sp</span>, $<span class="built_in">sp</span>, -<span class="number">4</span></span><br><span class="line">.end_macro </span><br><span class="line"><span class="meta">.macro</span> load(%tgt)</span><br><span class="line">	<span class="keyword">addi	</span>$<span class="built_in">sp</span>, $<span class="built_in">sp</span>, <span class="number">4</span></span><br><span class="line">	<span class="keyword">lw	</span>	%tgt, <span class="number">0</span>($<span class="built_in">sp</span>)</span><br><span class="line">.end_macro </span><br><span class="line"><span class="meta">.macro</span> print_int(%tgt)</span><br><span class="line">	<span class="keyword">move	</span>$<span class="built_in">a0</span>, %tgt</span><br><span class="line">	li		$<span class="built_in">v0</span>, <span class="number">1</span></span><br><span class="line">	<span class="keyword">syscall</span></span><br><span class="line"><span class="keyword"></span>.end_macro </span><br><span class="line"><span class="meta">.macro</span> read_int(%tgt)</span><br><span class="line">	li		$<span class="built_in">v0</span>, <span class="number">5</span></span><br><span class="line">	<span class="keyword">syscall</span></span><br><span class="line"><span class="keyword"></span>	<span class="keyword">move	</span>%tgt, $<span class="built_in">v0</span></span><br><span class="line">.end_macro </span><br><span class="line"><span class="symbol"></span></span><br><span class="line"><span class="symbol">matrix:</span>	<span class="meta">.space</span> <span class="number">512</span></span><br><span class="line"><span class="symbol">flag:</span>	<span class="meta">.space</span> <span class="number">512</span></span><br><span class="line"><span class="comment">#global variables</span></span><br><span class="line">	<span class="comment">#$s0: cnt</span></span><br><span class="line">	<span class="comment">#$s1: n</span></span><br><span class="line">	<span class="comment">#$s2: m</span></span><br><span class="line">	<span class="comment">#$s3: at1</span></span><br><span class="line">	<span class="comment">#$s4: at2</span></span><br><span class="line">	<span class="comment">#$s5: tg1</span></span><br><span class="line">	<span class="comment">#$s6: tg2</span></span><br><span class="line">	<span class="comment">#$s7: rank</span></span><br><span class="line"><span class="comment">#local variables</span></span><br><span class="line">	<span class="comment">#scan:</span></span><br><span class="line">		<span class="comment">#$t0: i</span></span><br><span class="line">		<span class="comment">#$t1: j</span></span><br><span class="line">		<span class="comment">#$t2: tmp</span></span><br><span class="line">		<span class="comment">#$t3: address</span></span><br><span class="line">		<span class="comment">#$t4: 1</span></span><br><span class="line">	<span class="comment">#dfs:</span></span><br><span class="line">		<span class="comment">#$t0: row</span></span><br><span class="line">		<span class="comment">#$t1: col</span></span><br><span class="line">		<span class="comment">#$t2: next row</span></span><br><span class="line">		<span class="comment">#$t3: next col</span></span><br><span class="line">		<span class="comment">#$t4: 1</span></span><br><span class="line">		<span class="comment">#$t5: address</span></span><br><span class="line">		<span class="comment">#$t6: tmp(row or col)</span></span><br></pre></td></tr></table></figure>
+<pre><code class="mips">.data
+.macro address(%dst, %row, %column, %rank)  
+        multu    %row, %rank
+        mflo    %dst
+        addu    %dst, %dst, %column
+        sll        %dst, %dst, 2
+.end_macro
+.macro save(%tgt)
+    sw        %tgt, 0($sp)
+    addi    $sp, $sp, -4
+.end_macro 
+.macro load(%tgt)
+    addi    $sp, $sp, 4
+    lw        %tgt, 0($sp)
+.end_macro 
+.macro print_int(%tgt)
+    move    $a0, %tgt
+    li        $v0, 1
+    syscall
+.end_macro 
+.macro read_int(%tgt)
+    li        $v0, 5
+    syscall
+    move    %tgt, $v0
+.end_macro 
 
+matrix:    .space 512
+flag:    .space 512
+#global variables
+    #$s0: cnt
+    #$s1: n
+    #$s2: m
+    #$s3: at1
+    #$s4: at2
+    #$s5: tg1
+    #$s6: tg2
+    #$s7: rank
+#local variables
+    #scan:
+        #$t0: i
+        #$t1: j
+        #$t2: tmp
+        #$t3: address
+        #$t4: 1
+    #dfs:
+        #$t0: row
+        #$t1: col
+        #$t2: next row
+        #$t3: next col
+        #$t4: 1
+        #$t5: address
+        #$t6: tmp(row or col)
+</code></pre>
 <p>​        先给出变量与寄存器的对应关系，和一些简单的宏函数。其实也可以只记录at和target两点在一维矩阵中的地址，但是考虑到这样每次比较还得把元素地址算出来，肯定要跑好几条指令，$s寄存器也还够用，就之间存在寄存器里了。</p>
 <p>​        不过我感觉自己对s寄存器和t寄存器的使用跟标准有点偏差。我好像一直习惯把全局变量放到s，局部变量放到t，不过这个跟程序员变量差别也不大。</p>
-<figure class="highlight mips"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">4</span><span class="meta">.text</span> </span><br><span class="line">read_int($<span class="built_in">s1</span>)</span><br><span class="line">read_int($<span class="built_in">s2</span>)</span><br><span class="line">li		$<span class="built_in">t4</span>, <span class="number">1</span></span><br><span class="line"><span class="keyword">add	</span>	$<span class="built_in">s1</span>, $<span class="built_in">s1</span>, $<span class="built_in">t4</span></span><br><span class="line"><span class="keyword">add	</span>	$<span class="built_in">s2</span>, $<span class="built_in">s2</span>, $<span class="built_in">t4</span></span><br><span class="line"><span class="keyword">add	</span>	$<span class="built_in">s7</span>, $<span class="built_in">s2</span>, $<span class="built_in">t4</span></span><br><span class="line"><span class="comment">#li		$s7, 8</span></span><br><span class="line"><span class="keyword">move	</span>$<span class="built_in">t0</span>, $<span class="built_in">t4</span></span><br><span class="line"><span class="symbol">loop_i:</span></span><br><span class="line">	<span class="keyword">move	</span>$<span class="built_in">t1</span>, $<span class="built_in">t4</span></span><br><span class="line"><span class="symbol">	loop_j:</span></span><br><span class="line">		read_int($<span class="built_in">t2</span>)</span><br><span class="line">		<span class="keyword">bne	</span>	$<span class="built_in">t2</span>, $<span class="number">0</span>, notroad</span><br><span class="line">		<span class="keyword">address($t3, </span>$<span class="built_in">t0</span>, $<span class="built_in">t1</span>, $<span class="built_in">s7</span>)</span><br><span class="line">		<span class="keyword">sw	</span>	$<span class="built_in">t4</span>, matrix($<span class="built_in">t3</span>)</span><br><span class="line"><span class="symbol">		notroad:</span></span><br><span class="line">	<span class="keyword">add	</span>	$<span class="built_in">t1</span>, $<span class="built_in">t1</span>, $<span class="built_in">t4</span></span><br><span class="line">	<span class="keyword">bne	</span>	$<span class="built_in">t1</span>, $<span class="built_in">s2</span>, loop_j</span><br><span class="line"><span class="keyword">add	</span>	$<span class="built_in">t0</span>, $<span class="built_in">t0</span>, $<span class="built_in">t4</span></span><br><span class="line"><span class="keyword">bne	</span>	$<span class="built_in">t0</span>, $<span class="built_in">s1</span>, loop_i</span><br><span class="line"></span><br><span class="line">read_int($<span class="built_in">s3</span>)</span><br><span class="line">read_int($<span class="built_in">s4</span>)</span><br><span class="line">read_int($<span class="built_in">s5</span>)</span><br><span class="line">read_int($<span class="built_in">s6</span>)</span><br><span class="line"><span class="keyword">address($t3, </span>$<span class="built_in">s3</span>, $<span class="built_in">s4</span>, $<span class="built_in">s7</span>)</span><br><span class="line"><span class="keyword">sw	</span>	$<span class="built_in">t4</span>, flag($<span class="built_in">t3</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">move	</span>$<span class="built_in">a1</span>, $<span class="built_in">s3</span></span><br><span class="line"><span class="keyword">move	</span>$<span class="built_in">a2</span>, $<span class="built_in">s4</span></span><br><span class="line"><span class="keyword">jal	</span>	dfs</span><br><span class="line"></span><br><span class="line">print_int($<span class="built_in">s0</span>)</span><br><span class="line">li		$<span class="built_in">v0</span>, <span class="number">10</span></span><br><span class="line"><span class="keyword">syscall</span></span><br><span class="line"><span class="keyword"></span><span class="symbol"></span></span><br><span class="line"><span class="symbol"></span></span><br><span class="line"><span class="symbol"></span></span><br><span class="line"><span class="symbol">dfs:</span></span><br><span class="line">	save($<span class="built_in">ra</span>)</span><br><span class="line">	<span class="keyword">move	</span>$<span class="built_in">t0</span>, $<span class="built_in">a1</span></span><br><span class="line">	<span class="keyword">move	</span>$<span class="built_in">t1</span>, $<span class="built_in">a2</span></span><br><span class="line">	<span class="comment">##[row-1][col]</span></span><br><span class="line">	<span class="keyword">sub	</span>	$<span class="built_in">t2</span>, $<span class="built_in">t0</span>, $<span class="built_in">t4</span></span><br><span class="line">	<span class="keyword">address($t5, </span>$<span class="built_in">t2</span>, $<span class="built_in">t1</span>, $<span class="built_in">s7</span>)</span><br><span class="line">	<span class="keyword">lw	</span>	$<span class="built_in">t6</span>, matrix($<span class="built_in">t5</span>)</span><br><span class="line">	<span class="keyword">beq	</span>	$<span class="built_in">t6</span>, $<span class="number">0</span>, notthis1</span><br><span class="line">		<span class="keyword">lw	</span>	$<span class="built_in">t6</span>, flag($<span class="built_in">t5</span>)</span><br><span class="line">		<span class="keyword">bne	</span>	$<span class="built_in">t6</span>, $<span class="number">0</span>, notthis1</span><br><span class="line">			<span class="keyword">sw	</span>	$<span class="built_in">t4</span>, flag($<span class="built_in">t5</span>)</span><br><span class="line">				save($<span class="built_in">t0</span>)</span><br><span class="line">				save($<span class="built_in">t1</span>)</span><br><span class="line">				save($<span class="built_in">t5</span>)</span><br><span class="line">				<span class="keyword">move	</span>$<span class="built_in">a1</span>, $<span class="built_in">t2</span></span><br><span class="line">				<span class="keyword">move	</span>$<span class="built_in">a2</span>, $<span class="built_in">t1</span></span><br><span class="line">				<span class="keyword">jal	</span>	dfs</span><br><span class="line">				load($<span class="built_in">t5</span>)</span><br><span class="line">				load($<span class="built_in">t1</span>)</span><br><span class="line">				load($<span class="built_in">t0</span>)</span><br><span class="line">			<span class="keyword">sw	</span>	$<span class="number">0</span>,  flag($<span class="built_in">t5</span>)</span><br><span class="line"><span class="symbol">	notthis1:</span></span><br><span class="line">	</span><br><span class="line">	<span class="comment">#[row+1][col]</span></span><br><span class="line">	<span class="keyword">add	</span>	$<span class="built_in">t2</span>, $<span class="built_in">t0</span>, $<span class="built_in">t4</span></span><br><span class="line">	<span class="keyword">address($t5, </span>$<span class="built_in">t2</span>, $<span class="built_in">t1</span>, $<span class="built_in">s7</span>)</span><br><span class="line">	<span class="keyword">lw	</span>	$<span class="built_in">t6</span>, matrix($<span class="built_in">t5</span>)</span><br><span class="line">	<span class="keyword">beq	</span>	$<span class="built_in">t6</span>, $<span class="number">0</span>, notthis2</span><br><span class="line">		<span class="keyword">lw	</span>	$<span class="built_in">t6</span>, flag($<span class="built_in">t5</span>)</span><br><span class="line">		<span class="keyword">bne	</span>	$<span class="built_in">t6</span>, $<span class="number">0</span>, notthis2</span><br><span class="line">			<span class="keyword">sw	</span>	$<span class="built_in">t4</span>, flag($<span class="built_in">t5</span>)</span><br><span class="line">				save($<span class="built_in">t0</span>)</span><br><span class="line">				save($<span class="built_in">t1</span>)</span><br><span class="line">				save($<span class="built_in">t5</span>)</span><br><span class="line">				<span class="keyword">move	</span>$<span class="built_in">a1</span>, $<span class="built_in">t2</span></span><br><span class="line">				<span class="keyword">move	</span>$<span class="built_in">a2</span>, $<span class="built_in">t1</span></span><br><span class="line">				<span class="keyword">jal	</span>	dfs</span><br><span class="line">				load($<span class="built_in">t5</span>)</span><br><span class="line">				load($<span class="built_in">t1</span>)</span><br><span class="line">				load($<span class="built_in">t0</span>)</span><br><span class="line">			<span class="keyword">sw	</span>	$<span class="number">0</span>,  flag($<span class="built_in">t5</span>)</span><br><span class="line"><span class="symbol">	notthis2:</span></span><br><span class="line">	</span><br><span class="line">	<span class="comment">#[row][col-1]</span></span><br><span class="line">	<span class="keyword">sub	</span>	$<span class="built_in">t3</span>, $<span class="built_in">t1</span>, $<span class="built_in">t4</span></span><br><span class="line">	<span class="keyword">address($t5, </span>$<span class="built_in">t0</span>, $<span class="built_in">t3</span>, $<span class="built_in">s7</span>)</span><br><span class="line">	<span class="keyword">lw	</span>	$<span class="built_in">t6</span>, matrix($<span class="built_in">t5</span>)</span><br><span class="line">	<span class="keyword">beq	</span>	$<span class="built_in">t6</span>, $<span class="number">0</span>, notthis3</span><br><span class="line">		<span class="keyword">lw	</span>	$<span class="built_in">t6</span>, flag($<span class="built_in">t5</span>)</span><br><span class="line">		<span class="keyword">bne	</span>	$<span class="built_in">t6</span>, $<span class="number">0</span>, notthis3</span><br><span class="line">			<span class="keyword">sw	</span>	$<span class="built_in">t4</span>, flag($<span class="built_in">t5</span>)</span><br><span class="line">				save($<span class="built_in">t0</span>)</span><br><span class="line">				save($<span class="built_in">t1</span>)</span><br><span class="line">				save($<span class="built_in">t5</span>)</span><br><span class="line">				<span class="keyword">move	</span>$<span class="built_in">a1</span>, $<span class="built_in">t0</span></span><br><span class="line">				<span class="keyword">move	</span>$<span class="built_in">a2</span>, $<span class="built_in">t3</span></span><br><span class="line">				<span class="keyword">jal	</span>	dfs</span><br><span class="line">				load($<span class="built_in">t5</span>)</span><br><span class="line">				load($<span class="built_in">t1</span>)</span><br><span class="line">				load($<span class="built_in">t0</span>)</span><br><span class="line">			<span class="keyword">sw	</span>	$<span class="number">0</span>,  flag($<span class="built_in">t5</span>)</span><br><span class="line"><span class="symbol">	notthis3:</span></span><br><span class="line">	</span><br><span class="line">	<span class="comment">#[row][col+1]</span></span><br><span class="line">	<span class="keyword">add	</span>	$<span class="built_in">t3</span>, $<span class="built_in">t1</span>, $<span class="built_in">t4</span></span><br><span class="line">	<span class="keyword">address($t5, </span>$<span class="built_in">t0</span>, $<span class="built_in">t3</span>, $<span class="built_in">s7</span>)</span><br><span class="line">	<span class="keyword">lw	</span>	$<span class="built_in">t6</span>, matrix($<span class="built_in">t5</span>)</span><br><span class="line">	<span class="keyword">beq	</span>	$<span class="built_in">t6</span>, $<span class="number">0</span>, notthis4</span><br><span class="line">		<span class="keyword">lw	</span>	$<span class="built_in">t6</span>, flag($<span class="built_in">t5</span>)</span><br><span class="line">		<span class="keyword">bne	</span>	$<span class="built_in">t6</span>, $<span class="number">0</span>, notthis4</span><br><span class="line">			<span class="keyword">sw	</span>	$<span class="built_in">t4</span>, flag($<span class="built_in">t5</span>)</span><br><span class="line">				save($<span class="built_in">t0</span>)</span><br><span class="line">				save($<span class="built_in">t1</span>)</span><br><span class="line">				save($<span class="built_in">t5</span>)</span><br><span class="line">				<span class="keyword">move	</span>$<span class="built_in">a1</span>, $<span class="built_in">t0</span></span><br><span class="line">				<span class="keyword">move	</span>$<span class="built_in">a2</span>, $<span class="built_in">t3</span></span><br><span class="line">				<span class="keyword">jal	</span>	dfs</span><br><span class="line">				load($<span class="built_in">t5</span>)</span><br><span class="line">				load($<span class="built_in">t1</span>)</span><br><span class="line">				load($<span class="built_in">t0</span>)</span><br><span class="line">			<span class="keyword">sw	</span>	$<span class="number">0</span>,  flag($<span class="built_in">t5</span>)</span><br><span class="line"><span class="symbol">	notthis4:</span></span><br><span class="line">	</span><br><span class="line">	<span class="keyword">bne	</span>	$<span class="built_in">t0</span>, $<span class="built_in">s5</span>, nottgt</span><br><span class="line">	<span class="keyword">bne	</span>	$<span class="built_in">t1</span>, $<span class="built_in">s6</span>, nottgt</span><br><span class="line">		<span class="keyword">add	</span>	$<span class="built_in">s0</span>, $<span class="built_in">s0</span>, $<span class="built_in">t4</span></span><br><span class="line"><span class="symbol">	nottgt:</span></span><br><span class="line">	</span><br><span class="line">	load($<span class="built_in">ra</span>)</span><br><span class="line">	<span class="keyword">jr	</span>	$<span class="built_in">ra</span></span><br></pre></td></tr></table></figure>
+<pre><code class="mips">4.text 
+read_int($s1)
+read_int($s2)
+li        $t4, 1
+add        $s1, $s1, $t4
+add        $s2, $s2, $t4
+add        $s7, $s2, $t4
+#li        $s7, 8
+move    $t0, $t4
+loop_i:
+    move    $t1, $t4
+    loop_j:
+        read_int($t2)
+        bne        $t2, $0, notroad
+        address($t3, $t0, $t1, $s7)
+        sw        $t4, matrix($t3)
+        notroad:
+    add        $t1, $t1, $t4
+    bne        $t1, $s2, loop_j
+add        $t0, $t0, $t4
+bne        $t0, $s1, loop_i
 
+read_int($s3)
+read_int($s4)
+read_int($s5)
+read_int($s6)
+address($t3, $s3, $s4, $s7)
+sw        $t4, flag($t3)
+
+move    $a1, $s3
+move    $a2, $s4
+jal        dfs
+
+print_int($s0)
+li        $v0, 10
+syscall
+
+
+
+dfs:
+    save($ra)
+    move    $t0, $a1
+    move    $t1, $a2
+    ##[row-1][col]
+    sub        $t2, $t0, $t4
+    address($t5, $t2, $t1, $s7)
+    lw        $t6, matrix($t5)
+    beq        $t6, $0, notthis1
+        lw        $t6, flag($t5)
+        bne        $t6, $0, notthis1
+            sw        $t4, flag($t5)
+                save($t0)
+                save($t1)
+                save($t5)
+                move    $a1, $t2
+                move    $a2, $t1
+                jal        dfs
+                load($t5)
+                load($t1)
+                load($t0)
+            sw        $0,  flag($t5)
+    notthis1:
+    
+    #[row+1][col]
+    add        $t2, $t0, $t4
+    address($t5, $t2, $t1, $s7)
+    lw        $t6, matrix($t5)
+    beq        $t6, $0, notthis2
+        lw        $t6, flag($t5)
+        bne        $t6, $0, notthis2
+            sw        $t4, flag($t5)
+                save($t0)
+                save($t1)
+                save($t5)
+                move    $a1, $t2
+                move    $a2, $t1
+                jal        dfs
+                load($t5)
+                load($t1)
+                load($t0)
+            sw        $0,  flag($t5)
+    notthis2:
+    
+    #[row][col-1]
+    sub        $t3, $t1, $t4
+    address($t5, $t0, $t3, $s7)
+    lw        $t6, matrix($t5)
+    beq        $t6, $0, notthis3
+        lw        $t6, flag($t5)
+        bne        $t6, $0, notthis3
+            sw        $t4, flag($t5)
+                save($t0)
+                save($t1)
+                save($t5)
+                move    $a1, $t0
+                move    $a2, $t3
+                jal        dfs
+                load($t5)
+                load($t1)
+                load($t0)
+            sw        $0,  flag($t5)
+    notthis3:
+    
+    #[row][col+1]
+    add        $t3, $t1, $t4
+    address($t5, $t0, $t3, $s7)
+    lw        $t6, matrix($t5)
+    beq        $t6, $0, notthis4
+        lw        $t6, flag($t5)
+        bne        $t6, $0, notthis4
+            sw        $t4, flag($t5)
+                save($t0)
+                save($t1)
+                save($t5)
+                move    $a1, $t0
+                move    $a2, $t3
+                jal        dfs
+                load($t5)
+                load($t1)
+                load($t0)
+            sw        $0,  flag($t5)
+    notthis4:
+    
+    bne        $t0, $s5, nottgt
+    bne        $t1, $s6, nottgt
+        add        $s0, $s0, $t4
+    nottgt:
+    
+    load($ra)
+    jr        $ra
+</code></pre>
 <p>​        上面手动编译就是纯粹体力劳动了，跟c的思路一样就没有添加额外的注释。dfs判断里面几个方向的判断代码几乎一模一样，一共可以写成一个宏+跳转，但我没写，有点后悔，看起来乱糟糟的。如果写了的话大概可以节约50行代码行数，不过命令数肯定没变化。中间有几个bug，记录一下：</p>
 <ul>
 <li>出入栈的时候没有保存address，也就是save($t5)，导致递归完成后把flag数组修改错了</li>
@@ -476,16 +794,64 @@
 <li>进入递归的时候忘记传参at1,at2</li>
 </ul>
 <p>用样例跑了一遍：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">已复制         1 个文件。</span><br><span class="line">MARS 4.5  Copyright 2003-2014 Pete Sanderson and Kenneth Vollmar</span><br><span class="line"></span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">0</span><br><span class="line">0</span><br><span class="line">1</span><br><span class="line">0</span><br><span class="line">0</span><br><span class="line">1</span><br><span class="line">0</span><br><span class="line">0</span><br><span class="line">0</span><br><span class="line">1</span><br><span class="line">1</span><br><span class="line">0</span><br><span class="line">1</span><br><span class="line">0</span><br><span class="line">1</span><br><span class="line">1</span><br><span class="line">0</span><br><span class="line">0</span><br><span class="line">0</span><br><span class="line">0</span><br><span class="line">1</span><br><span class="line">1</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">2			//这个是输出</span><br><span class="line">1929		//这个是执行的命令数</span><br><span class="line"></span><br><span class="line">请按任意键继续. . .</span><br></pre></td></tr></table></figure>
+<pre><code>已复制         1 个文件。
+MARS 4.5  Copyright 2003-2014 Pete Sanderson and Kenneth Vollmar
 
+4
+5
+0
+0
+1
+0
+0
+1
+0
+0
+0
+1
+1
+0
+1
+0
+1
+1
+0
+0
+0
+0
+1
+1
+4
+5
+2            //这个是输出
+1929        //这个是执行的命令数
 
-
+请按任意键继续. . .
+</code></pre>
 <h3 id="课下作业-高精度阶乘"><a href="#课下作业-高精度阶乘" class="headerlink" title="课下作业_高精度阶乘"></a>课下作业_高精度阶乘</h3><p>题解要求输出1000位以内，遂算一下大概称到多少是1000位：阶乘公式两边取10的对数即可。</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;math.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span>&#123;</span><br><span class="line">	<span class="type">int</span> n=<span class="number">0</span>, i;</span><br><span class="line">	<span class="type">double</span> sum=<span class="built_in">log10</span>(<span class="number">3628800</span>), tmp=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span> (i=<span class="number">11</span>; i&lt;=<span class="number">450</span>; i++)&#123;</span><br><span class="line">		tmp = <span class="built_in">log10</span>(i);</span><br><span class="line">		sum += tmp;</span><br><span class="line">		n = (<span class="type">int</span>)(sum+<span class="number">1</span>);</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;%d:  %d\n&quot;</span>, i, n);</span><br><span class="line">	&#125; </span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre><code class="c">#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;math.h&gt;
 
+int main()&#123;
+    int n=0, i;
+    double sum=log10(3628800), tmp=0;
+    for (i=11; i&lt;=450; i++)&#123;
+        tmp = log10(i);
+        sum += tmp;
+        n = (int)(sum+1);
+        printf(&quot;%d:  %d\n&quot;, i, n);
+    &#125; 
+    return 0;
+&#125;
+</code></pre>
 <p>跑出来结果如下。就算double不精准那也差不多，说明测试数据最多给到449，取个整算450.</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">446:  990</span><br><span class="line">447:  993</span><br><span class="line">448:  995</span><br><span class="line">449:  998</span><br><span class="line">450:  1001</span><br></pre></td></tr></table></figure>
-
+<pre><code>446:  990
+447:  993
+448:  995
+449:  998
+450:  1001
+</code></pre>
 <p>​        然后考虑用多少进制的问题。方便起见，用一个word也就是32位来存储一个单元，那最多可以到$2^{31}-1$。但是不能直接用这个数字，考虑到以下两个原因：</p>
 <ul>
 <li>不是10的整数倍，输出还需要进制转换，浪费指令数</li>
@@ -499,12 +865,61 @@
 </ul>
 <p>具体的MIPS代码实现就不放在这上面了。反正就是体力劳动。</p>
 <h3 id="hanoi"><a href="#hanoi" class="headerlink" title="hanoi"></a>hanoi</h3><p>​        据说前几届考了汉诺塔，就写了一个简单版的，没有输出，只有计数，如下。刚上大一的时候就让我们学汉诺塔，但那时候又啥也不会，递归也看不懂，汉诺塔也不知道是什么东西，于是学的很痛苦，一直没能理解，每次做这道题之前都要在脑海里模拟一遍三个盘子怎么放，然后纠结于细节不敢下手。后来真的弄懂了才发现之前就是误入歧途——递归，就是你根本不需要在乎它究竟是怎么实现的，你只要告诉电脑，怎么把一个大问题拆分成若干个小问题，它自己就帮你跑出来了。真正需要程序员把握的是，如何去拆分，而不是细节如何实现。</p>
-<figure class="highlight mips"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">.text</span> </span><br><span class="line">read_int($<span class="built_in">s1</span>)</span><br><span class="line"><span class="keyword">move	</span>$<span class="built_in">a0</span>, $<span class="built_in">s1</span></span><br><span class="line">li		$<span class="built_in">a1</span>, <span class="number">1</span></span><br><span class="line">li		$<span class="built_in">a2</span>, <span class="number">2</span></span><br><span class="line">li		$<span class="built_in">a3</span>, <span class="number">3</span></span><br><span class="line"><span class="keyword">jal	</span>	hanoi</span><br><span class="line">print_int($<span class="built_in">s0</span>)</span><br><span class="line">li		$<span class="built_in">v0</span>, <span class="number">10</span></span><br><span class="line"><span class="keyword">syscall</span></span><br><span class="line"><span class="keyword"></span><span class="symbol"></span></span><br><span class="line"><span class="symbol">hanoi:</span></span><br><span class="line">	save($<span class="built_in">ra</span>)</span><br><span class="line">	<span class="keyword">move	</span>$<span class="built_in">t1</span>, $<span class="built_in">a0</span></span><br><span class="line">	<span class="keyword">move	</span>$<span class="built_in">t2</span>, $<span class="built_in">a1</span></span><br><span class="line">	<span class="keyword">move	</span>$<span class="built_in">t3</span>, $<span class="built_in">a2</span></span><br><span class="line">	<span class="keyword">move	</span>$<span class="built_in">t4</span>, $<span class="built_in">a3</span></span><br><span class="line">	li		$<span class="built_in">t0</span>, <span class="number">1</span></span><br><span class="line">	<span class="keyword">bne	</span>	$<span class="built_in">t0</span>, $<span class="built_in">a0</span>, notthis</span><br><span class="line">		<span class="keyword">addi	</span>$<span class="built_in">s0</span>, $<span class="built_in">s0</span>, <span class="number">1</span></span><br><span class="line">		load($<span class="built_in">ra</span>)</span><br><span class="line">		<span class="keyword">jr	</span>	$<span class="built_in">ra</span>	</span><br><span class="line"><span class="symbol">	notthis:</span></span><br><span class="line">	<span class="keyword">addi	</span>$<span class="built_in">t5</span>, $<span class="built_in">t1</span>, -<span class="number">1</span></span><br><span class="line">	<span class="keyword">move	</span>$<span class="built_in">a0</span>, $<span class="built_in">t5</span></span><br><span class="line">	<span class="keyword">move	</span>$<span class="built_in">a1</span>, $<span class="built_in">t2</span></span><br><span class="line">	<span class="keyword">move	</span>$<span class="built_in">a2</span>, $<span class="built_in">t4</span></span><br><span class="line">	<span class="keyword">move	</span>$<span class="built_in">a3</span>, $<span class="built_in">t3</span></span><br><span class="line">	save($<span class="built_in">t1</span>)</span><br><span class="line">	save($<span class="built_in">t2</span>)</span><br><span class="line">	save($<span class="built_in">t3</span>)</span><br><span class="line">	save($<span class="built_in">t4</span>)</span><br><span class="line">	<span class="keyword">jal	</span>	hanoi</span><br><span class="line">	load($<span class="built_in">t4</span>)</span><br><span class="line">	load($<span class="built_in">t3</span>)</span><br><span class="line">	load($<span class="built_in">t2</span>)</span><br><span class="line">	load($<span class="built_in">t1</span>)</span><br><span class="line">	<span class="keyword">addi	</span>$<span class="built_in">s0</span>, $<span class="built_in">s0</span>, <span class="number">1</span></span><br><span class="line">	<span class="keyword">addi	</span>$<span class="built_in">t5</span>, $<span class="built_in">t1</span>, -<span class="number">1</span></span><br><span class="line">	<span class="keyword">move	</span>$<span class="built_in">a0</span>, $<span class="built_in">t5</span></span><br><span class="line">	<span class="keyword">move	</span>$<span class="built_in">a1</span>, $<span class="built_in">t3</span></span><br><span class="line">	<span class="keyword">move	</span>$<span class="built_in">a2</span>, $<span class="built_in">t2</span></span><br><span class="line">	<span class="keyword">move	</span>$<span class="built_in">a3</span>, $<span class="built_in">t4</span></span><br><span class="line">	save($<span class="built_in">t1</span>)</span><br><span class="line">	save($<span class="built_in">t2</span>)</span><br><span class="line">	save($<span class="built_in">t3</span>)</span><br><span class="line">	save($<span class="built_in">t4</span>)</span><br><span class="line">	<span class="keyword">jal	</span>	hanoi</span><br><span class="line">	load($<span class="built_in">t4</span>)</span><br><span class="line">	load($<span class="built_in">t3</span>)</span><br><span class="line">	load($<span class="built_in">t2</span>)</span><br><span class="line">	load($<span class="built_in">t1</span>)</span><br><span class="line">	load($<span class="built_in">ra</span>)</span><br><span class="line">	<span class="keyword">jr	</span>	$<span class="built_in">ra</span>	</span><br></pre></td></tr></table></figure>
+<pre><code class="mips">.text 
+read_int($s1)
+move    $a0, $s1
+li        $a1, 1
+li        $a2, 2
+li        $a3, 3
+jal        hanoi
+print_int($s0)
+li        $v0, 10
+syscall
 
-
-
-
-
+hanoi:
+    save($ra)
+    move    $t1, $a0
+    move    $t2, $a1
+    move    $t3, $a2
+    move    $t4, $a3
+    li        $t0, 1
+    bne        $t0, $a0, notthis
+        addi    $s0, $s0, 1
+        load($ra)
+        jr        $ra    
+    notthis:
+    addi    $t5, $t1, -1
+    move    $a0, $t5
+    move    $a1, $t2
+    move    $a2, $t4
+    move    $a3, $t3
+    save($t1)
+    save($t2)
+    save($t3)
+    save($t4)
+    jal        hanoi
+    load($t4)
+    load($t3)
+    load($t2)
+    load($t1)
+    addi    $s0, $s0, 1
+    addi    $t5, $t1, -1
+    move    $a0, $t5
+    move    $a1, $t3
+    move    $a2, $t2
+    move    $a3, $t4
+    save($t1)
+    save($t2)
+    save($t3)
+    save($t4)
+    jal        hanoi
+    load($t4)
+    load($t3)
+    load($t2)
+    load($t1)
+    load($ra)
+    jr        $ra    
+</code></pre>
 <h1 id="P3：单周期CPU-Logisim实现"><a href="#P3：单周期CPU-Logisim实现" class="headerlink" title="P3：单周期CPU (Logisim实现)"></a>P3：单周期CPU (Logisim实现)</h1><h2 id="设计方案："><a href="#设计方案：" class="headerlink" title="设计方案："></a>设计方案：</h2><p>课下要求实现指令集：addu, subu, ori, lw, sw, beq, lui, nop</p>
 <p>跳转指令：j, jal, jr</p>
 <ul>
