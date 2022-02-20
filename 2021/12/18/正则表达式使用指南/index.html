@@ -6,21 +6,21 @@
   <meta name="keywords" content="">
   <meta name="description" content="正则表达式使用指南 | Hwxywqw">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<meta name="description" content="​    籍由这篇博客，简单总结上学期计算机组成原理课设。 ​    计组课设一共有P0~P7七个阶段，P0~P2分别是对Logisim、Verilog和MIPS的预习内容，P3用Logisim实现单周期CPU，P4用Verilog实现单周期CPU，P5用Verilog实现流水线CPU，P6将指令集增加到四十余条，P7加入中断和异常。我做到P6，而博客只写到P3。后续~P6 Verilog部分的C">
+<meta name="description" content="新年新气象，更换了代理方式，简单记录如下。如今的互联网环境实在可称荆棘遍地、壁障重重。 Just My Socks订阅注：Just My Socks对v2ray(包括v2ray最初的版本Shadowsocks)的支持比较好。 Just My Socks官网镜像地址如下Just My Socks 。服务器地址、端口和密码在订阅后会直接给出。我用得多所以买了500G&#x2F;月，相对也就贵一点，大概三十几块一">
 <meta property="og:type" content="article">
-<meta property="og:title" content="CO-计组课设总结">
-<meta property="og:url" content="http://example.com/2022/01/09/Computer-Organization/index.html">
+<meta property="og:title" content="Shadowsocks使用指南">
+<meta property="og:url" content="http://example.com/2022/01/17/Shadowsocks%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/index.html">
 <meta property="og:site_name" content="Hwxywqw">
-<meta property="og:description" content="​    籍由这篇博客，简单总结上学期计算机组成原理课设。 ​    计组课设一共有P0~P7七个阶段，P0~P2分别是对Logisim、Verilog和MIPS的预习内容，P3用Logisim实现单周期CPU，P4用Verilog实现单周期CPU，P5用Verilog实现流水线CPU，P6将指令集增加到四十余条，P7加入中断和异常。我做到P6，而博客只写到P3。后续~P6 Verilog部分的C">
+<meta property="og:description" content="新年新气象，更换了代理方式，简单记录如下。如今的互联网环境实在可称荆棘遍地、壁障重重。 Just My Socks订阅注：Just My Socks对v2ray(包括v2ray最初的版本Shadowsocks)的支持比较好。 Just My Socks官网镜像地址如下Just My Socks 。服务器地址、端口和密码在订阅后会直接给出。我用得多所以买了500G&#x2F;月，相对也就贵一点，大概三十几块一">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://example.com/2022/01/09/Computer-Organization/image-20220210134014295.png">
-<meta property="og:image" content="http://example.com/2022/01/09/Computer-Organization/image-20220210133653414.png">
-<meta property="og:image" content="http://example.com/2022/01/09/Computer-Organization/image-20220210134525298.png">
-<meta property="article:published_time" content="2022-01-09T15:05:31.000Z">
-<meta property="article:modified_time" content="2022-02-10T06:10:40.496Z">
+<meta property="og:image" content="http://example.com/2022/01/17/Shadowsocks%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/image-20220217004059475.png">
+<meta property="og:image" content="http://example.com/2022/01/17/Shadowsocks%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/image-20220217005317597.png">
+<meta property="og:image" content="http://example.com/2022/01/17/Shadowsocks%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/image-20220217011012719.png">
+<meta property="article:published_time" content="2022-01-16T17:15:24.000Z">
+<meta property="article:modified_time" content="2022-02-20T07:38:56.316Z">
 <meta property="article:author" content="hwxywqw">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://example.com/2022/01/09/Computer-Organization/image-20220210134014295.png">
+<meta name="twitter:image" content="http://example.com/2022/01/17/Shadowsocks%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/image-20220217004059475.png">
 
 
 <link rel="icon" href="/img/avatar.jpg">
@@ -202,6 +202,14 @@
     
     <nav id="title-list-nav">
         
+        <a  class="全部文章 小工具 "
+           href="/2022/01/17/Shadowsocks%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="Shadowsocks使用指南">Shadowsocks使用指南</span>
+            <span class="post-date" title="2022-01-17 01:15:24">2022/01/17</span>
+        </a>
+        
         <a  class="全部文章 课程相关 CO "
            href="/2022/01/09/Computer-Organization/"
            data-tag=""
@@ -216,14 +224,6 @@
            data-author="" >
             <span class="post-title" title="正则表达式使用指南">正则表达式使用指南</span>
             <span class="post-date" title="2021-12-18 23:07:28">2021/12/18</span>
-        </a>
-        
-        <a  class="全部文章 小工具 "
-           href="/2021/02/17/Shadowsocks%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/"
-           data-tag=""
-           data-author="" >
-            <span class="post-title" title="Shadowsocks使用指南">Shadowsocks使用指南</span>
-            <span class="post-date" title="2021-02-17 01:15:24">2021/02/17</span>
         </a>
         
         <div id="no-item-tips">
@@ -264,7 +264,7 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2022-02-18 23:53:44'>2021-12-18 23:07</time>
+            发布时间 : <time class="date" title='最后更新: 2022-02-20 15:37:47'>2021-12-18 23:07</time>
         
     </div>
     <div class="article-meta">
@@ -286,7 +286,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-text">前言</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E8%AF%AD%E6%B3%95"><span class="toc-text">正则表达式语法</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%9A%E4%BD%8D%E7%AC%A6"><span class="toc-text">定位符</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6"><span class="toc-text">字符</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%99%90%E5%AE%9A%E7%AC%A6"><span class="toc-text">限定符</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B4%AA%E5%A9%AA"><span class="toc-text">贪婪</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%87%92%E6%83%B0"><span class="toc-text">懒惰</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%80%89%E6%8B%A9"><span class="toc-text">选择</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BF%AE%E9%A5%B0%E7%AC%A6"><span class="toc-text">修饰符</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%90%E7%AE%97%E7%AC%A6%E4%BC%98%E5%85%88%E7%BA%A7"><span class="toc-text">运算符优先级</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-text">前言</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E7%AE%80%E5%8D%95%E8%AF%AD%E6%B3%95"><span class="toc-text">正则表达式简单语法</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%8D%E7%BD%AE"><span class="toc-text">位置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6"><span class="toc-text">字符</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%99%90%E5%AE%9A%E7%AC%A6"><span class="toc-text">限定符</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B4%AA%E5%A9%AA"><span class="toc-text">贪婪</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%87%92%E6%83%B0"><span class="toc-text">懒惰</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%80%89%E6%8B%A9"><span class="toc-text">选择</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BF%AE%E9%A5%B0%E7%AC%A6"><span class="toc-text">修饰符</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%90%E7%AE%97%E7%AC%A6%E4%BC%98%E5%85%88%E7%BA%A7"><span class="toc-text">运算符优先级</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Python%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F"><span class="toc-text">Python正则表达式</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%82%E6%95%B0%E8%AF%B4%E6%98%8E"><span class="toc-text">参数说明</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%AF%B9%E8%B1%A1"><span class="toc-text">正则表达式对象</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#re-RegexObject"><span class="toc-text">re.RegexObject</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#re-MatchObject"><span class="toc-text">re.MatchObject</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0"><span class="toc-text">常用函数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#re-compile"><span class="toc-text">re.compile</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#re-match"><span class="toc-text">re.match</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#re-search"><span class="toc-text">re.search</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#re-findall"><span class="toc-text">re.findall</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#re-finditer"><span class="toc-text">re.finditer</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#re-sub"><span class="toc-text">re.sub</span></a></li></ol></li></ol></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -312,7 +312,7 @@ char *strstr(const char *haystack, const char *needle)
 <pre><code class="python">import re
 &quot;简单写一个可以匹配实数（支持科学计数法）的正则&quot;
 
-numPattern = &quot;^[+-]?\d+(\.?\d*([Ee]&#123;1&#125;[+-]?\d+)?)?$&quot;
+numPattern = r&quot;^[+-]?\d+(\.?\d*([Ee][+-]?\d+)?)?$&quot;
 
 with open(&quot;in.txt&quot;, &quot;r&quot;) as file1:
     while (1):
@@ -337,17 +337,30 @@ abcd5e5
 Process finished with exit code 0
 </code></pre>
 <p>真香。</p>
-<p>附一个在线测试网站：<a target="_blank" rel="noopener" href="https://c.runoob.com/front-end/854/">正则表达式在线测试</a></p>
-<h1 id="正则表达式语法"><a href="#正则表达式语法" class="headerlink" title="正则表达式语法"></a>正则表达式语法</h1><p>简单介绍常用功能。</p>
-<p><strong>注</strong>：正则表达式中<code>/</code>代表一种“额外匹配规则的”标记，而<code>\</code>类似于转义符。</p>
-<h2 id="定位符"><a href="#定位符" class="headerlink" title="定位符"></a>定位符</h2><ul>
+<p>附：</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/27653434">正则表达式系列总结 - 知乎 (zhihu.com)</a></li>
+<li>在线测试网站：<a target="_blank" rel="noopener" href="https://c.runoob.com/front-end/854/">正则表达式在线测试</a></li>
+<li>正则调试网站：<a target="_blank" rel="noopener" href="https://regex101.com/">regex101: build, test, and debug regex</a></li>
+<li>正则分析网站：<a target="_blank" rel="noopener" href="https://regexper.com/">Regexper</a> （还采用上面的例子，效果如下图：）</li>
+</ul>
+<p><img src="image-20220219194114520.png" alt="正则可视化"></p>
+<h1 id="正则表达式简单语法"><a href="#正则表达式简单语法" class="headerlink" title="正则表达式简单语法"></a>正则表达式简单语法</h1><p><strong>注</strong>：正则表达式中<code>/</code>代表一种“额外匹配规则的”标记，而<code>\</code>类似于转义符。</p>
+<h2 id="位置"><a href="#位置" class="headerlink" title="位置"></a>位置</h2><p>位置是一个空字符，它不匹配具有实体的任何一个字符（哪怕非打印），它更像一个锚点。</p>
+<ul>
 <li><code>^</code>：匹配起始位置：例如<code>^apple</code>可匹配”apple everyday”<code>，不能匹配</code>“an apple”</li>
 <li><code>$</code>：匹配结束位置：例如<code>apple$</code>不能匹配”apple everyday”<code>，可匹配</code>“an apple”</li>
 <li><code>\b</code>：匹配单词边界，例如<code>\bapple</code>不能匹配”pineapple”</li>
 <li><code>\B</code>：匹配非单词边界，例如<code>\Bapple</code>能匹配”pineapple”</li>
+<li><code>exp1(?=exp2)</code>：positive lookahead，查找 exp2 前面的 exp1</li>
+<li><code>exp1(?!exp2)</code>：negative lookahead，查找后面不是 exp2 的 exp1</li>
+<li><code>(?&lt;=exp2)exp1</code>：positive lookbehind，查找 exp2 后面的 exp1</li>
+<li><code>(?&lt;!exp2)exp1</code>：negative lookbehind，查找前面不是 exp2 的 exp1</li>
 </ul>
-<h2 id="字符"><a href="#字符" class="headerlink" title="字符"></a>字符</h2><p>注：连字符-在方括号中的使用按照Unicode排序。</p>
-<ul>
+<p>例：匹配非起始的某个位置：<code>(?&lt;!^)</code></p>
+<p><strong>注</strong>：positive lookahead中文名为：正向先行断言，而上述四个统称为<strong>零宽断言</strong>。但中文名太难记了，英文名很形象：往前看看？往后看看？找了bing上的一张示意图如下。</p>
+<p><img src="image-20220220145119387.png" alt="image-20220220145119387"></p>
+<h2 id="字符"><a href="#字符" class="headerlink" title="字符"></a>字符</h2><ul>
 <li><code>[abc]</code>：匹配方括号中所有字符</li>
 <li><code>[^abc]</code>：匹配“除了方括号中字符”的所有字符</li>
 <li><code>[a-z]</code>：匹配所有小写字母 (允许<code>[a-c]</code>)</li>
@@ -358,6 +371,12 @@ Process finished with exit code 0
 <li><code>\w</code>：匹配字母、数字、下划线。等价于 <code>[A-Za-z0-9_]</code> (<code>\W</code>等价于 <code>[^A-Za-z0-9_]</code>)</li>
 <li><code>\d</code>：匹配数字，等价于<code>[0-9]</code> (<code>\D</code>等价于 <code>[^0-9]</code>)</li>
 </ul>
+<p><strong>注1</strong>：连字符-在方括号中的使用按照Unicode排序。</p>
+<p><strong>注2</strong>：正则表达式的两种模糊匹配：</p>
+<ol>
+<li><strong>横向模糊</strong>：字符匹配的个数是不定的，具体见下面“限定符”</li>
+<li><strong>纵向模糊</strong>：匹配一个字符，但不是确定的某个。例如[abc]能够跟abc当中的任一个匹配。我之前记错成可匹配多次，总多此一举写成[abc]{1}。</li>
+</ol>
 <h2 id="限定符"><a href="#限定符" class="headerlink" title="限定符"></a>限定符</h2><h3 id="贪婪"><a href="#贪婪" class="headerlink" title="贪婪"></a>贪婪</h3><ul>
 <li><code>?</code>：匹配它前面的字符0次或1次，等价于<code>&#123;0,1&#125;</code>。如”aaaaabc”正则<code>a?</code>，得到”a”</li>
 <li><code>*</code>：匹配它前面的字符0次或多次，等价于<code>&#123;0,&#125;</code>。如”aaaaabc”正则<code>a?</code>，得到”aaaaa”</li>
@@ -382,11 +401,7 @@ Process finished with exit code 0
 <li><code>(exp)</code>  匹配exp，并捕获文本到自动命名的组里</li>
 <li><code>(?&lt;name&gt;exp)</code>：匹配exp，并捕获文本到名称为name的组里</li>
 <li><code>(?:exp)</code>：匹配exp，不捕获匹配的文本，也不给此分组分配组号</li>
-<li><code>exp1(?=exp2)</code>：查找 exp2 前面的 exp1</li>
-<li><code>exp1(?!exp2)</code>：查找后面不是 exp2 的 exp1</li>
-<li><code>(?&lt;=exp2)exp1</code>：查找 exp2 后面的 exp1</li>
-<li><code>(?&lt;!exp2)exp1</code>：查找前面不是 exp2 的 exp1</li>
-<li><code>|</code>：指明两项之间的一个选择</li>
+<li><code>|</code>：指明两项之间的一个选择 （懒惰，前面的匹配到后不再匹配后面的分支）</li>
 </ul>
 <p>例如：<code>/\b([a-z]+) \1\b</code>可匹配重复单词，如”I am happy happy”，其中\b代表单词边界，()为一个子匹配项，\1为第一个子匹配项。</p>
 <h2 id="修饰符"><a href="#修饰符" class="headerlink" title="修饰符"></a>修饰符</h2><p>位于正则表达式外，代表一种“额外匹配规则的”标记。</p>
@@ -426,6 +441,173 @@ Process finished with exit code 0
 <td align="left">或</td>
 </tr>
 </tbody></table>
+<h1 id="Python正则表达式"><a href="#Python正则表达式" class="headerlink" title="Python正则表达式"></a>Python正则表达式</h1><blockquote>
+<p>为什么Pattern前面有个r呢？</p>
+</blockquote>
+<p>先说点题外话。可能第一次看到python正则的时候会不知道Pattern字符串前面的r是哪里来的，随手写的几个例子也看不出有什么差别（然后我就栽进了这个坑），以前言中识别实数的正则为例：</p>
+<pre><code class="python">numPattern = r&quot;^[+-]?\d+(\.?\d*([Ee][+-]?\d+)?)?$&quot;
+</code></pre>
+<p>事实上，这个r就是保证你写的字符串不会被python转义掉。上述例子加不加都一样，那是因为没什么可以被转义的东西，而下例中就体现出差别了：</p>
+<pre><code class="python">import re
+Pattern = r&quot;^(happy)&quot;
+
+with open(&quot;in2.txt&quot;, &quot;r&quot;) as file1:
+    while (1):
+        line = file1.readline()
+        if (line):
+            num = re.sub(Pattern, &quot;not \1 but sad&quot;, line)   //!
+            if (num): print(num)
+        else: break
+</code></pre>
+<pre><code>#输入
+happy dog
+
+#输出
+not  but sad dog
+</code></pre>
+<p><code>/1</code>理应是一次向后引用——我们期望得到一只伤心的小狗，然而happy却被吞掉了！事实上，这里输出了<code>\o01</code>，是非打印字符SOH，因为<code>\1</code>本身可以看作字符串里的一个八进制转义字符。我们当然不能让它这么做。于是加上<code>r</code>，让本该转移的字符不再转义。修正如下：</p>
+<pre><code class="python">num = re.sub(Pattern, r&quot;not \1 but sad&quot;, line)
+</code></pre>
+<p>此时输出了一只伤心的小狗：</p>
+<pre><code>not happy but sad dog
+</code></pre>
+<p>当然，编辑器的高亮也可能暗示其中的玄机，这可真是一目了然，不言而喻啊！</p>
+<p><img src="image-20220220003550849.png" alt="\1失去了它的特殊地位"></p>
+<p>下面的内容主要是python标准库里的，参考：<a target="_blank" rel="noopener" href="https://www.runoob.com/python/python-reg-expressions.html">Python 正则表达式 | 菜鸟教程 (runoob.com)</a></p>
+<h2 id="参数说明"><a href="#参数说明" class="headerlink" title="参数说明"></a>参数说明</h2><ul>
+<li><strong>pattern</strong> : 一个字符串形式的正则表达式</li>
+<li><strong>flags</strong> : 可选，表示匹配模式，比如忽略大小写，多行模式等，具体参数为：<ol>
+<li><strong>re.I</strong> 忽略大小写</li>
+<li><strong>re.L</strong> 表示特殊字符集 \w, \W, \b, \B, \s, \S 依赖于当前环境</li>
+<li><strong>re.M</strong> 多行模式</li>
+<li><strong>re.S</strong> 即为 <strong>.</strong> 并且包括换行符在内的任意字符（**.** 不包括换行符）</li>
+<li><strong>re.U</strong> 表示特殊字符集 \w, \W, \b, \B, \d, \D, \s, \S 依赖于 Unicode 字符属性数据库</li>
+<li><strong>re.X</strong> 为了增加可读性，忽略空格和 <strong>#</strong> 后面的注释</li>
+</ol>
+</li>
+</ul>
+<p>注：多个标志可以通过按位 OR(|) 它们来指定。如 <code>re.I | re.M</code> 被设置成 I 和 M 标志。其实就是<code>/Pattern/img</code>里面的修饰符。</p>
+<h2 id="正则表达式对象"><a href="#正则表达式对象" class="headerlink" title="正则表达式对象"></a>正则表达式对象</h2><h3 id="re-RegexObject"><a href="#re-RegexObject" class="headerlink" title="re.RegexObject"></a>re.RegexObject</h3><p>re.compile() 返回 RegexObject 对象。</p>
+<h3 id="re-MatchObject"><a href="#re-MatchObject" class="headerlink" title="re.MatchObject"></a>re.MatchObject</h3><p>group() 返回被 RE 匹配的字符串。</p>
+<ul>
+<li><strong>start()</strong> 返回匹配开始的位置</li>
+<li><strong>end()</strong> 返回匹配结束的位置</li>
+<li><strong>span()</strong> 返回一个元组包含匹配 (开始,结束) 的位置</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="left">匹配对象方法</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">group(num=0)</td>
+<td align="left">匹配的整个表达式的字符串，group() 可以一次输入多个组号，在这种情况下它将返回一个包含那些组所对应值的元组。</td>
+</tr>
+<tr>
+<td align="left">groups()</td>
+<td align="left">返回一个包含所有小组字符串的元组，从 1 到 所含的小组号。</td>
+</tr>
+</tbody></table>
+<ul>
+<li><code>group([group1, …])</code> 方法用于获得一个或多个分组匹配的字符串，当要获得整个匹配的子串时，可直接使用 <code>group()</code> 或 <code>group(0)</code>；</li>
+<li><code>start([group])</code> 方法用于获取分组匹配的子串在整个字符串中的起始位置（子串第一个字符的索引），参数默认值为 0；</li>
+<li><code>end([group])</code> 方法用于获取分组匹配的子串在整个字符串中的结束位置（子串最后一个字符的索引+1），参数默认值为 0；</li>
+<li><code>span([group])</code> 方法返回 <code>(start(group), end(group))</code>。</li>
+</ul>
+<p>两个例子以帮助理解：</p>
+<pre><code class="python">#!/usr/bin/python
+import re
+ 
+line = &quot;Cats are smarter than dogs&quot;
+ 
+matchObj = re.match( r&#39;(.*) are (.*?) .*&#39;, line, re.M|re.I)
+ 
+if matchObj:
+   print &quot;matchObj.group() : &quot;, matchObj.group()
+   print &quot;matchObj.group(1) : &quot;, matchObj.group(1)
+   print &quot;matchObj.group(2) : &quot;, matchObj.group(2)
+else:
+   print &quot;No match!!&quot;
+</code></pre>
+<pre><code>#输出
+matchObj.group() :  Cats are smarter than dogs
+matchObj.group(1) :  Cats
+matchObj.group(2) :  smarter
+</code></pre>
+<pre><code class="python">&gt;&gt;&gt;import re
+&gt;&gt;&gt; pattern = re.compile(r&#39;\d+&#39;)                    # 用于匹配至少一个数字
+&gt;&gt;&gt; m = pattern.match(&#39;one12twothree34four&#39;)        # 查找头部，没有匹配
+&gt;&gt;&gt; print m
+None
+&gt;&gt;&gt; m = pattern.match(&#39;one12twothree34four&#39;, 2, 10) # 从&#39;e&#39;的位置开始匹配，没有匹配
+&gt;&gt;&gt; print m
+None
+&gt;&gt;&gt; m = pattern.match(&#39;one12twothree34four&#39;, 3, 10) # 从&#39;1&#39;的位置开始匹配，正好匹配
+&gt;&gt;&gt; print m                                         # 返回一个 Match 对象
+&lt;_sre.SRE_Match object at 0x10a42aac0&gt;
+&gt;&gt;&gt; m.group(0)   # 可省略 0
+&#39;12&#39;
+&gt;&gt;&gt; m.start(0)   # 可省略 0
+3
+&gt;&gt;&gt; m.end(0)     # 可省略 0
+5
+&gt;&gt;&gt; m.span(0)    # 可省略 0
+(3, 5)
+</code></pre>
+<h2 id="常用函数"><a href="#常用函数" class="headerlink" title="常用函数"></a>常用函数</h2><h3 id="re-compile"><a href="#re-compile" class="headerlink" title="re.compile"></a>re.compile</h3><p>其用于编译正则表达式，生成一个正则表达式（ Pattern ）对象，供 match() 和 search() 这两个函数使用。</p>
+<pre><code class="python">re.compile(pattern[, flags])
+</code></pre>
+<h3 id="re-match"><a href="#re-match" class="headerlink" title="re.match"></a>re.match</h3><pre><code class="python">re.match(pattern, string, flags=0)
+</code></pre>
+<p>它尝试<strong>从字符串的起始位置</strong>匹配一个模式，如果不是起始位置匹配成功的话，match() 就返回 none。我们可以使用 group(num) 或 groups() 匹配对象函数来获取匹配表达式。</p>
+<h3 id="re-search"><a href="#re-search" class="headerlink" title="re.search"></a>re.search</h3><pre><code class="python">re.search(pattern, string, flags=0)
+</code></pre>
+<p>re.search 扫描<strong>整个字符串</strong>并<strong>返回第一个成功的匹配</strong>。我们可以使用 group(num) 或 groups() 匹配对象函数来获取匹配表达式。</p>
+<h3 id="re-findall"><a href="#re-findall" class="headerlink" title="re.findall"></a>re.findall</h3><p>在字符串中找到正则表达式所匹配的所有子串，并返回一个列表，如果有多个匹配模式，则返回元组列表，如果没有找到匹配的，则返回空列表。</p>
+<p><strong>注意：</strong> match 和 search 是匹配一次 findall 匹配所有。</p>
+<p>语法格式为：</p>
+<pre><code class="python">findall(string[, pos[, endpos]])
+</code></pre>
+<p>参数：</p>
+<ul>
+<li><strong>string</strong> : 待匹配的字符串。</li>
+<li><strong>pos</strong> : 可选参数，指定字符串的起始位置，默认为 0。</li>
+<li><strong>endpos</strong> : 可选参数，指定字符串的结束位置，默认为字符串的长度。</li>
+</ul>
+<h3 id="re-finditer"><a href="#re-finditer" class="headerlink" title="re.finditer"></a>re.finditer</h3><p>和 findall 类似，在字符串中找到正则表达式所匹配的所有子串，并把它们作为一个迭代器返回。</p>
+<pre><code class="python">re.finditer(pattern, string, flags=0)
+</code></pre>
+<h3 id="re-sub"><a href="#re-sub" class="headerlink" title="re.sub"></a>re.sub</h3><p>它可以替换字符串中的匹配项。</p>
+<pre><code class="python">re.sub(pattern, repl, string, count=0, flags=0)
+</code></pre>
+<p>参数：</p>
+<ul>
+<li>repl : 替换为的字符串，也可为一个函数。</li>
+<li>string : 要被查找替换的原始字符串。</li>
+<li>count : 模式匹配后替换的最大次数，默认 0 表示替换所有的匹配。</li>
+</ul>
+<pre><code class="python">import re
+Pattern = r&quot;(\d+)-(\d+)-(\d+)&quot;
+
+def func(num1, num2, num3):
+    return num3+&quot;-&quot;+num1+&quot;-&quot;+num2
+
+with open(&quot;in2.txt&quot;, &quot;r&quot;) as file1:
+    while (1):
+        line = file1.readline()
+        if (line):
+            num = re.sub(Pattern, func(r&quot;\1&quot;,r&quot;\2&quot;,r&quot;\3&quot;), line)
+            if (num): print(num)
+        else: break
+</code></pre>
+<pre><code>#输入
+1234-233-573512
+
+#输出
+573512-1234-233
+</code></pre>
 
       
        
