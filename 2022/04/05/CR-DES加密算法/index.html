@@ -6,12 +6,12 @@
   <meta name="keywords" content="">
   <meta name="description" content="CR-DES加密算法 | Hwxywqw">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<meta name="description" content="DES算法​        完成DES算法的目的，有一部分在于熟悉DES算法与Fesitel结构，了解古典密码思想在现代密码中的应用（DES是它们很不错的体现）。此外也有了解加解密流程，并尝试算法优化的目的在里面。 软件环境：gcc version 6.4.0 (x86_64-posix-seh-rev0, Built by MinGW-W64 project) 一、DES算法输入输出输入共包含四">
+<meta name="description" content="DES算法​        实现DES算法的目的，有一部分在于熟悉DES算法与Fesitel结构，了解古典密码思想在现代密码中的应用（DES是它们很不错的体现）。此外也有了解加解密流程，并尝试算法优化的目的在里面。这一篇博客从实验报告修改而来(所以确实有很重的报告色彩👻)，删去了一些测试内容，添加了更多的源代码和原理介绍。主要可以分为五部分：  DES 三重DES DES的弱密钥和半弱密钥 DE">
 <meta property="og:type" content="article">
 <meta property="og:title" content="CR-DES加密算法">
 <meta property="og:url" content="http://example.com/2022/04/05/CR-DES%E5%8A%A0%E5%AF%86%E7%AE%97%E6%B3%95/index.html">
 <meta property="og:site_name" content="Hwxywqw">
-<meta property="og:description" content="DES算法​        完成DES算法的目的，有一部分在于熟悉DES算法与Fesitel结构，了解古典密码思想在现代密码中的应用（DES是它们很不错的体现）。此外也有了解加解密流程，并尝试算法优化的目的在里面。 软件环境：gcc version 6.4.0 (x86_64-posix-seh-rev0, Built by MinGW-W64 project) 一、DES算法输入输出输入共包含四">
+<meta property="og:description" content="DES算法​        实现DES算法的目的，有一部分在于熟悉DES算法与Fesitel结构，了解古典密码思想在现代密码中的应用（DES是它们很不错的体现）。此外也有了解加解密流程，并尝试算法优化的目的在里面。这一篇博客从实验报告修改而来(所以确实有很重的报告色彩👻)，删去了一些测试内容，添加了更多的源代码和原理介绍。主要可以分为五部分：  DES 三重DES DES的弱密钥和半弱密钥 DE">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://example.com/2022/04/05/CR-DES%E5%8A%A0%E5%AF%86%E7%AE%97%E6%B3%95/des.png">
 <meta property="og:image" content="http://example.com/2022/04/05/CR-DES%E5%8A%A0%E5%AF%86%E7%AE%97%E6%B3%95/image-20220329205503656.png">
@@ -30,7 +30,7 @@
 <meta property="og:image" content="http://example.com/2022/04/05/CR-DES%E5%8A%A0%E5%AF%86%E7%AE%97%E6%B3%95/adv.png">
 <meta property="og:image" content="http://example.com/2022/04/05/CR-DES%E5%8A%A0%E5%AF%86%E7%AE%97%E6%B3%95/image-20220328014000297.png">
 <meta property="article:published_time" content="2022-04-05T14:12:04.000Z">
-<meta property="article:modified_time" content="2022-04-05T14:45:29.431Z">
+<meta property="article:modified_time" content="2022-04-05T15:07:51.120Z">
 <meta property="article:author" content="hwxywqw">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://example.com/2022/04/05/CR-DES%E5%8A%A0%E5%AF%86%E7%AE%97%E6%B3%95/des.png">
@@ -319,7 +319,7 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2022-04-05 22:45:29'>2022-04-05 22:12</time>
+            发布时间 : <time class="date" title='最后更新: 2022-04-05 23:07:51'>2022-04-05 22:12</time>
         
     </div>
     <div class="article-meta">
@@ -357,8 +357,16 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="DES算法"><a href="#DES算法" class="headerlink" title="DES算法"></a>DES算法</h1><p>​        完成DES算法的目的，有一部分在于熟悉DES算法与Fesitel结构，了解古典密码思想在现代密码中的应用（DES是它们很不错的体现）。此外也有了解加解密流程，并尝试算法优化的目的在里面。</p>
-<p>软件环境：gcc version 6.4.0 (x86_64-posix-seh-rev0, Built by MinGW-W64 project)</p>
+        <h1 id="DES算法"><a href="#DES算法" class="headerlink" title="DES算法"></a>DES算法</h1><p>​        实现DES算法的目的，有一部分在于熟悉DES算法与Fesitel结构，了解古典密码思想在现代密码中的应用（DES是它们很不错的体现）。此外也有了解加解密流程，并尝试算法优化的目的在里面。这一篇博客从实验报告修改而来(所以确实有很重的报告色彩👻)，删去了一些测试内容，添加了更多的源代码和原理介绍。主要可以分为五部分：</p>
+<ul>
+<li>DES</li>
+<li>三重DES</li>
+<li>DES的弱密钥和半弱密钥</li>
+<li>DES的优化</li>
+<li>附录：源代码和代换盒</li>
+</ul>
+<p>​        最后的加密速度在本地测试大约在250Mb/s，与650Mb/s的标准速度差了不少，但比我在网上找到的一些开源速度强了也有十来倍，最后并没有进行更进一步的优化(因为写AES去了🤣)。一起写这个的小伙伴们大约一百人，我这个速度排在第七位，最快的速度独树一帜在530Mb/s，其余七七八八的都在250往后了……</p>
+<p>环境：gcc version 6.4.0 (x86_64-posix-seh-rev0, Built by MinGW-W64 project)</p>
 <h1 id="一、DES算法"><a href="#一、DES算法" class="headerlink" title="一、DES算法"></a>一、DES算法</h1><h2 id="输入输出"><a href="#输入输出" class="headerlink" title="输入输出"></a>输入输出</h2><p>输入共包含四行。</p>
 <ul>
 <li>第 1 行一个正整数 T，代表需要加密 / 解密的次数，使用的密钥相同；</li>
@@ -387,9 +395,9 @@
 <h3 id="密钥生成"><a href="#密钥生成" class="headerlink" title="密钥生成"></a>密钥生成</h3><p>​        密钥生成算法使用一个64位（包含8位奇偶校验位）的原始密钥来生成16个48位的子密钥。生成时，先经过一次初始置换PC-1，然后被分成两半分别独立进行循环左移，输出时再进行第二次映射PC-2。</p>
 <h2 id="算法流程"><a href="#算法流程" class="headerlink" title="算法流程"></a>算法流程</h2><h3 id="函数调用图"><a href="#函数调用图" class="headerlink" title="函数调用图"></a>函数调用图</h3><p><img src="des.png" alt="des"></p>
 <h3 id="函数总流程图"><a href="#函数总流程图" class="headerlink" title="函数总流程图"></a>函数总流程图</h3><p>​        整个的DES算法可看作相对独立的两大部分：密钥生成和加解密。</p>
-<p><img src="image-20220329205503656.png" alt="image-20220329205503656"></p>
+<p><img src="image-20220329205503656.png" alt="des"></p>
 <h3 id="加密-解密"><a href="#加密-解密" class="headerlink" title="加密/解密"></a>加密/解密</h3><p>​        加解密的整个流程可分为三个主要层次：加解密、论迭代、F函数、我将其中一部分单独封装为函数，其调用关系在这一部分的最开始给出。</p>
-<p><img src="image-20220329200247392.png" alt="image-20220329200247392"></p>
+<p><img src="image-20220329200247392.png" alt="decode&amp;encode"></p>
 <p>伪代码如下：</p>
 <pre><code class="python">Function encode(plain, key[16]):
     plain ← IP(plain)
@@ -407,7 +415,7 @@ Function F(word, key):
     word ← P(word)
     return word
 </code></pre>
-<h3 id="密钥生成-1"><a href="#密钥生成-1" class="headerlink" title="密钥生成"></a>密钥生成</h3><p><img src="image-20220329211031170.png" alt="image-20220329211031170"></p>
+<h3 id="密钥生成-1"><a href="#密钥生成-1" class="headerlink" title="密钥生成"></a>密钥生成</h3><p><img src="image-20220329211031170.png" alt="keygenerate"></p>
 <p>伪代码如下：</p>
 <pre><code class="python">Function keygenerate(key):
     key ← PC_1(key)
@@ -417,7 +425,7 @@ Function F(word, key):
         subkey[i] ← PC_2([C, D])
     return subkey
 </code></pre>
-<h2 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h2><p><img src="image-20220329201756503.png" alt="image-20220329201756503"></p>
+<h2 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h2><p><img src="image-20220329201756503.png" alt="test"></p>
 <h2 id="总结与思考"><a href="#总结与思考" class="headerlink" title="总结与思考"></a>总结与思考</h2><p>​        我在实现DES时采用了位运算而非01字符串操作的方法，这样实现更快，但是代码可读性较差，于是添加了相当的注释。鉴于DES较为显著的模块化特征，我也格外注意了函数的封装和参数传递，但由于仍旧采用面向过程的编程方式，各个变量之间的关系体现得并不明显，可以采取更进一步的优化。</p>
 <h1 id="二、三重DES算法"><a href="#二、三重DES算法" class="headerlink" title="二、三重DES算法"></a>二、三重DES算法</h1><p>DES并非一个群（指两次复合加密运算并不能被一次加密运算所代替），这使得二重、三重DES是有意义的。此外，三重DES虽然有一定价值，使其穷举攻击的安全性有所改进，但并没有3倍密钥量那么坚强。</p>
 <h2 id="输入输出-1"><a href="#输入输出-1" class="headerlink" title="输入输出"></a>输入输出</h2><p>三重DES(DES-EDE2)算法使用两个秘钥 $k_1$ 和 $k_2$，加密规则为 $c = Enc_{k_1}(Dec_{k_2}(Enc_{k_1}(m)))$</p>
@@ -438,8 +446,8 @@ Function F(word, key):
 0xf1b98dac6657545c
 </code></pre>
 <h2 id="算法原理-1"><a href="#算法原理-1" class="headerlink" title="算法原理"></a>算法原理</h2><p>​        3DES加解密的原理如下，密钥长度为$64\times 3=192$。<br>$$<br>C=E_{k3}(D_{k2}(E_{k1}(P)))\<br>P=D_{k1}(E_{K2}(D_{k3}(C)))<br>$$<br>​        有时令$K_1=K_3$，此时密钥长度为$64\times 2=128$。</p>
-<h2 id="算法流程-1"><a href="#算法流程-1" class="headerlink" title="算法流程"></a>算法流程</h2><p><img src="image-20220329214923272.png" alt="image-20220329214923272"></p>
-<h2 id="测试-1"><a href="#测试-1" class="headerlink" title="测试"></a>测试</h2><p><img src="image-20220329220055569.png" alt="image-20220329220055569"></p>
+<h2 id="算法流程-1"><a href="#算法流程-1" class="headerlink" title="算法流程"></a>算法流程</h2><p><img src="image-20220329214923272.png" alt="3des"></p>
+<h2 id="测试-1"><a href="#测试-1" class="headerlink" title="测试"></a>测试</h2><p><img src="image-20220329220055569.png" alt="test"></p>
 <h2 id="总结与思考-1"><a href="#总结与思考-1" class="headerlink" title="总结与思考"></a>总结与思考</h2><p>​        随着计算机运算能力增强，DES密码变得容易被暴力破解；3DES即通过每个数据块应用三次DES加密，来提供一种相对简单的方法（增加DES的密钥长度，至原来的2到3倍）来提高DES算法的安全性，避免类似的攻击。</p>
 <h1 id="三、弱密钥与半弱密钥"><a href="#三、弱密钥与半弱密钥" class="headerlink" title="三、弱密钥与半弱密钥"></a>三、弱密钥与半弱密钥</h1><p>这一部分编程实现了弱密钥与半弱密钥的查找——遍历是不现实的，用了循环节的原理直接生成。弱密钥和半弱密钥是不安全的密钥——使用弱密钥二次加密会得到明文；而半弱密钥总是成对出现——使用一对中的两个密钥分别加密会恢复明文。当然它们也可以通过生成的子密钥的形态来定义，如下：</p>
 <ul>
@@ -453,7 +461,7 @@ Function F(word, key):
 <li>原密钥生成算法（补奇偶校验）</li>
 </ul>
 <p><strong>明确</strong>密钥生成算法各个阶段的<strong>名称</strong>如下，黄色虚线框内为本题讨论内容：</p>
-<p><img src="image-20220328004902250.png" alt="image-20220328004902250"></p>
+<p><img src="image-20220328004902250.png" alt="key"></p>
 <h2 id="算法原理-2"><a href="#算法原理-2" class="headerlink" title="算法原理"></a>算法原理</h2><h3 id="生成密钥"><a href="#生成密钥" class="headerlink" title="生成密钥"></a>生成密钥</h3><p>​        密钥生成时，先经过一次初始置换PC-1，然后被分成两半分别独立进行循环左移，输出时再进行第二次映射PC-2（并不影响密钥的本质）。正如“生成空间”的概念一样，一个生成密钥生成一组子密钥，同样一个生成密钥可确定两个原密钥（奇偶校验位不同）。找到这个生成密钥即可找到所有的弱密钥、半弱密钥。</p>
 <p>​        对于弱密钥(weak)而言，它所有的子密钥全都相同。要保证每次生成的密钥是相同的，则确保PC-1过后分成的两半，在循环左移中不改变即可——这也就意味着密钥的循环节长度为1。这在{0， 1}串中即意味着：当且仅当半密钥全是1，全是0，或者一半全是1、另一半全是0时，才会发生这种情况：</p>
 <pre><code class="c">0x00000000000000,
@@ -545,8 +553,8 @@ for (int i = 0; i &lt; 56; i ++)&#123;
 0x1ee11ee10ff00ff0 0xe11ee11ef00ff00f
 </code></pre>
 <p>对于弱密钥正确性的验证：（以一次输入为例，经过两次加密）</p>
-<p><img src="image-20220329190018610.png" alt="image-20220329190018610"></p>
-<p><img src="image-20220329191331545.png" alt="image-20220329191331545"></p>
+<p><img src="image-20220329190018610.png" alt="test"></p>
+<p><img src="image-20220329191331545.png" alt="test"></p>
 <h2 id="总结与思考-2"><a href="#总结与思考-2" class="headerlink" title="总结与思考"></a>总结与思考</h2><p>​        由于弱密钥、半弱密钥（或者稍强一些的possible weak key）生成的子密钥个数较少，他们的构造方式可以体现出明显的对称性，包括左半部分和右半部分的对称、半部分内部循环节的对称。假若初始密钥具有这种显著的对称特点，就很有可能成为弱密钥和半弱密钥，使得可以使用加密密钥的对称密钥来解密，降低了安全性。</p>
 <p>​        由于弱密钥和半弱密钥的个数相对于密钥的总数较少，所以不会对DES算法的整体安全性造成格外重大的破坏。此外，如有需求，可以在生成密钥时对原始密钥进行检查，避免弱密钥或半弱密钥的使用。</p>
 <h1 id="四、DES算法的优化"><a href="#四、DES算法的优化" class="headerlink" title="四、DES算法的优化"></a>四、DES算法的优化</h1><h2 id="思路-1"><a href="#思路-1" class="headerlink" title="思路"></a>思路</h2><p>​        DES算法的结构固定，复杂度也固定，故而若想进行速度方面的优化，难以从减少复杂度方面下手——这样会使得安全性下降，算法原理也改变。所以我选择进行基于C语言的，对置换盒实现方法的优化。</p>
@@ -570,7 +578,7 @@ for (int i = 0; i &lt; 56; i ++)&#123;
 61, 53, 45, 37, 29, 21, 13,  5, 
 63, 55, 47, 39, 31, 23, 15,  7&#125;
 </code></pre>
-<p><img src="image-20220327232305504.png" alt="image-20220327232305504"></p>
+<p><img src="image-20220327232305504.png" alt="IP"></p>
 <h3 id="拓展置换"><a href="#拓展置换" class="headerlink" title="拓展置换"></a>拓展置换</h3><p>​        相较于初始置换，拓展置换的规律更加显著：每 6 位为一组，共分为 8 组（含重复）。算法实现时可设置步长为 6 的索引，一次处理 6 位，直接通过或运算即可得到拓展结果。</p>
 <pre><code class="c">Kext[48] = &#123;
 32, 1,  2,  3,  4,  5,  
@@ -582,7 +590,7 @@ for (int i = 0; i &lt; 56; i ++)&#123;
 24, 25, 26, 27, 28, 29, 
 28, 29, 30, 31, 32, 1 &#125;,
 </code></pre>
-<p><img src="image-20220327233059468.png" alt="image-20220327233059468"></p>
+<p><img src="image-20220327233059468.png" alt="EP"></p>
 <h2 id="算法流程-3"><a href="#算法流程-3" class="headerlink" title="算法流程"></a>算法流程</h2><h3 id="函数调用图-2"><a href="#函数调用图-2" class="headerlink" title="函数调用图"></a>函数调用图</h3><p><img src="adv.png" alt="adv"></p>
 <h3 id="IP置换流程"><a href="#IP置换流程" class="headerlink" title="IP置换流程"></a>IP置换流程</h3><p>​        我分别对初始置换IP、逆置换InvP和拓展置换进行处理，这里以初始置换为例说明算法流程，其余二者与IP置换原理类似，实现稍有不同。</p>
 <p>​        未经优化的DES算法如下所示，我使用无符号长整型来表示输入的 64 位二进制数，经过 64 轮代换，得到置换后输出的结果。</p>
@@ -642,7 +650,7 @@ for (int i = 0; i &lt; 56; i ++)&#123;
 </tr>
 </tbody></table>
 <p>测试环境：gcc版本6.4.0</p>
-<p><img src="image-20220328014000297.png" alt="image-20220328014000297"></p>
+<p><img src="image-20220328014000297.png" alt="test"></p>
 <h1 id="附录一：DES两问"><a href="#附录一：DES两问" class="headerlink" title="附录一：DES两问"></a>附录一：DES两问</h1><p><strong>目前对于DES的密码分析都做了哪些工作，有什么成果？</strong></p>
 <p>​        尽管在现代，DES已经不再被认为是可靠的加密方式，但其与其诸多变型和改进仍在被广泛使用，因此掌握DES的密码分析是必要的。当前攻击DES的方法主要有线性密码分析方法、差分密码分析方法等，还没有一种能将密码分析的复杂性降至穷尽搜索的一半以下的简捷方法。</p>
 <p>​        线性密码分析由Matsui在1993年提出，属于一种已知明文攻击，某些情况下可用于唯密文攻击，基于找到DES中进行变换的线性近似。目前对线性密码分析的研究中较为重要的是计算攻击算法的成功率和复杂度。线性密码分析在提出后得到不断推广，例如“多重线性密码分析”、“非线性密码分析”等。</p>

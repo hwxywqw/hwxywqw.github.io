@@ -6,12 +6,12 @@
   <meta name="keywords" content="">
   <meta name="description" content="Shadowsocks使用指南 | Hwxywqw">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<meta name="description" content="DES算法​        完成DES算法的目的，有一部分在于熟悉DES算法与Fesitel结构，了解古典密码思想在现代密码中的应用（DES是它们很不错的体现）。此外也有了解加解密流程，并尝试算法优化的目的在里面。 软件环境：gcc version 6.4.0 (x86_64-posix-seh-rev0, Built by MinGW-W64 project) 一、DES算法输入输出输入共包含四">
+<meta name="description" content="DES算法​        实现DES算法的目的，有一部分在于熟悉DES算法与Fesitel结构，了解古典密码思想在现代密码中的应用（DES是它们很不错的体现）。此外也有了解加解密流程，并尝试算法优化的目的在里面。这一篇博客从实验报告修改而来(所以确实有很重的报告色彩👻)，删去了一些测试内容，添加了更多的源代码和原理介绍。主要可以分为五部分：  DES 三重DES DES的弱密钥和半弱密钥 DE">
 <meta property="og:type" content="article">
 <meta property="og:title" content="CR-DES加密算法">
 <meta property="og:url" content="http://example.com/2022/04/05/CR-DES%E5%8A%A0%E5%AF%86%E7%AE%97%E6%B3%95/index.html">
 <meta property="og:site_name" content="Hwxywqw">
-<meta property="og:description" content="DES算法​        完成DES算法的目的，有一部分在于熟悉DES算法与Fesitel结构，了解古典密码思想在现代密码中的应用（DES是它们很不错的体现）。此外也有了解加解密流程，并尝试算法优化的目的在里面。 软件环境：gcc version 6.4.0 (x86_64-posix-seh-rev0, Built by MinGW-W64 project) 一、DES算法输入输出输入共包含四">
+<meta property="og:description" content="DES算法​        实现DES算法的目的，有一部分在于熟悉DES算法与Fesitel结构，了解古典密码思想在现代密码中的应用（DES是它们很不错的体现）。此外也有了解加解密流程，并尝试算法优化的目的在里面。这一篇博客从实验报告修改而来(所以确实有很重的报告色彩👻)，删去了一些测试内容，添加了更多的源代码和原理介绍。主要可以分为五部分：  DES 三重DES DES的弱密钥和半弱密钥 DE">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://example.com/2022/04/05/CR-DES%E5%8A%A0%E5%AF%86%E7%AE%97%E6%B3%95/des.png">
 <meta property="og:image" content="http://example.com/2022/04/05/CR-DES%E5%8A%A0%E5%AF%86%E7%AE%97%E6%B3%95/image-20220329205503656.png">
@@ -30,7 +30,7 @@
 <meta property="og:image" content="http://example.com/2022/04/05/CR-DES%E5%8A%A0%E5%AF%86%E7%AE%97%E6%B3%95/adv.png">
 <meta property="og:image" content="http://example.com/2022/04/05/CR-DES%E5%8A%A0%E5%AF%86%E7%AE%97%E6%B3%95/image-20220328014000297.png">
 <meta property="article:published_time" content="2022-04-05T14:12:04.000Z">
-<meta property="article:modified_time" content="2022-04-05T14:45:29.431Z">
+<meta property="article:modified_time" content="2022-04-05T15:07:51.120Z">
 <meta property="article:author" content="hwxywqw">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://example.com/2022/04/05/CR-DES%E5%8A%A0%E5%AF%86%E7%AE%97%E6%B3%95/des.png">
