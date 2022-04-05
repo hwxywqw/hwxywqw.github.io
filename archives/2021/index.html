@@ -6,19 +6,34 @@
   <meta name="keywords" content="">
   <meta name="description" content="Hwxywqw">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<meta name="description" content="前言HILL密码是一种多字母代换密码，原理就是把明文字母n个一组，分成很多组，按组挨个(mod 26的意义下)乘以密钥矩阵(n*n可逆方阵)，得出密文。 它完全隐藏了单字母的频率特性，将连续 m 个明文替换成 m 个密文，且所用矩阵越大所隐藏的频率信息越多。它足以抵抗唯密文攻击，但较易被已知明文攻击破解（例如我输入一个单位矩阵，得出密文即密钥矩阵）。 实现不算复杂，但既然涉及到矩阵运算（例如模26">
+<meta name="description" content="DES算法​        完成DES算法的目的，有一部分在于熟悉DES算法与Fesitel结构，了解古典密码思想在现代密码中的应用（DES是它们很不错的体现）。此外也有了解加解密流程，并尝试算法优化的目的在里面。 软件环境：gcc version 6.4.0 (x86_64-posix-seh-rev0, Built by MinGW-W64 project) 一、DES算法输入输出输入共包含四">
 <meta property="og:type" content="article">
-<meta property="og:title" content="CR-HILL密码">
-<meta property="og:url" content="http://example.com/2022/03/20/CR-HILL%E5%AF%86%E7%A0%81/index.html">
+<meta property="og:title" content="CR-DES加密算法">
+<meta property="og:url" content="http://example.com/2022/04/05/CR-DES%E5%8A%A0%E5%AF%86%E7%AE%97%E6%B3%95/index.html">
 <meta property="og:site_name" content="Hwxywqw">
-<meta property="og:description" content="前言HILL密码是一种多字母代换密码，原理就是把明文字母n个一组，分成很多组，按组挨个(mod 26的意义下)乘以密钥矩阵(n*n可逆方阵)，得出密文。 它完全隐藏了单字母的频率特性，将连续 m 个明文替换成 m 个密文，且所用矩阵越大所隐藏的频率信息越多。它足以抵抗唯密文攻击，但较易被已知明文攻击破解（例如我输入一个单位矩阵，得出密文即密钥矩阵）。 实现不算复杂，但既然涉及到矩阵运算（例如模26">
+<meta property="og:description" content="DES算法​        完成DES算法的目的，有一部分在于熟悉DES算法与Fesitel结构，了解古典密码思想在现代密码中的应用（DES是它们很不错的体现）。此外也有了解加解密流程，并尝试算法优化的目的在里面。 软件环境：gcc version 6.4.0 (x86_64-posix-seh-rev0, Built by MinGW-W64 project) 一、DES算法输入输出输入共包含四">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://example.com/2022/03/20/CR-HILL%E5%AF%86%E7%A0%81/CR-HILL%E5%AF%86%E7%A0%81/image-20220320135832340.png">
-<meta property="article:published_time" content="2022-03-20T05:12:58.000Z">
-<meta property="article:modified_time" content="2022-03-20T06:12:41.655Z">
+<meta property="og:image" content="http://example.com/2022/04/05/CR-DES%E5%8A%A0%E5%AF%86%E7%AE%97%E6%B3%95/des.png">
+<meta property="og:image" content="http://example.com/2022/04/05/CR-DES%E5%8A%A0%E5%AF%86%E7%AE%97%E6%B3%95/image-20220329205503656.png">
+<meta property="og:image" content="http://example.com/2022/04/05/CR-DES%E5%8A%A0%E5%AF%86%E7%AE%97%E6%B3%95/image-20220329200247392.png">
+<meta property="og:image" content="http://example.com/2022/04/05/CR-DES%E5%8A%A0%E5%AF%86%E7%AE%97%E6%B3%95/image-20220329211031170.png">
+<meta property="og:image" content="http://example.com/2022/04/05/CR-DES%E5%8A%A0%E5%AF%86%E7%AE%97%E6%B3%95/image-20220329201756503.png">
+<meta property="og:image" content="http://example.com/2022/04/05/CR-DES%E5%8A%A0%E5%AF%86%E7%AE%97%E6%B3%95/image-20220329214923272.png">
+<meta property="og:image" content="http://example.com/2022/04/05/CR-DES%E5%8A%A0%E5%AF%86%E7%AE%97%E6%B3%95/image-20220329220055569.png">
+<meta property="og:image" content="http://example.com/2022/04/05/CR-DES%E5%8A%A0%E5%AF%86%E7%AE%97%E6%B3%95/image-20220328004902250.png">
+<meta property="og:image" content="http://example.com/2022/04/05/CR-DES%E5%8A%A0%E5%AF%86%E7%AE%97%E6%B3%95/weakkey.png">
+<meta property="og:image" content="http://example.com/2022/04/05/CR-DES%E5%8A%A0%E5%AF%86%E7%AE%97%E6%B3%95/image-20220328012439648.png">
+<meta property="og:image" content="http://example.com/2022/04/05/CR-DES%E5%8A%A0%E5%AF%86%E7%AE%97%E6%B3%95/image-20220329190018610.png">
+<meta property="og:image" content="http://example.com/2022/04/05/CR-DES%E5%8A%A0%E5%AF%86%E7%AE%97%E6%B3%95/image-20220329191331545.png">
+<meta property="og:image" content="http://example.com/2022/04/05/CR-DES%E5%8A%A0%E5%AF%86%E7%AE%97%E6%B3%95/image-20220327232305504.png">
+<meta property="og:image" content="http://example.com/2022/04/05/CR-DES%E5%8A%A0%E5%AF%86%E7%AE%97%E6%B3%95/image-20220327233059468.png">
+<meta property="og:image" content="http://example.com/2022/04/05/CR-DES%E5%8A%A0%E5%AF%86%E7%AE%97%E6%B3%95/adv.png">
+<meta property="og:image" content="http://example.com/2022/04/05/CR-DES%E5%8A%A0%E5%AF%86%E7%AE%97%E6%B3%95/image-20220328014000297.png">
+<meta property="article:published_time" content="2022-04-05T14:12:04.000Z">
+<meta property="article:modified_time" content="2022-04-05T14:45:29.431Z">
 <meta property="article:author" content="hwxywqw">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://example.com/2022/03/20/CR-HILL%E5%AF%86%E7%A0%81/CR-HILL%E5%AF%86%E7%A0%81/image-20220320135832340.png">
+<meta name="twitter:image" content="http://example.com/2022/04/05/CR-DES%E5%8A%A0%E5%AF%86%E7%AE%97%E6%B3%95/des.png">
 
 
 <link rel="icon" href="/img/avatar.jpg">
@@ -80,7 +95,7 @@
     <li>
         <div class="all active" data-rel="全部文章">全部文章
             
-                <small>(5)</small>
+                <small>(6)</small>
             
         </div>
     </li>
@@ -92,7 +107,7 @@
                         <i class="fold iconfont icon-right"></i>
                         
                         课程相关
-                        <small>(3)</small>
+                        <small>(4)</small>
                         
                     </div>
                     
@@ -115,7 +130,7 @@
                                         
                                         CR
                                         
-                                            <small>(1
+                                            <small>(2
                                                 )</small>
                                         
                                     </div>
@@ -163,7 +178,7 @@
         
     </div>
 </div>
-<input type="hidden" id="yelog_site_posts_number" value="5">
+<input type="hidden" id="yelog_site_posts_number" value="6">
 
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
@@ -215,6 +230,14 @@
 
     
     <nav id="title-list-nav">
+        
+        <a  class="全部文章 课程相关 CR "
+           href="/2022/04/05/CR-DES%E5%8A%A0%E5%AF%86%E7%AE%97%E6%B3%95/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="CR-DES加密算法">CR-DES加密算法</span>
+            <span class="post-date" title="2022-04-05 22:12:04">2022/04/05</span>
+        </a>
         
         <a  class="全部文章 课程相关 CR "
            href="/2022/03/20/CR-HILL%E5%AF%86%E7%A0%81/"
@@ -300,7 +323,7 @@
 <li>想学好数学……</li>
 <li>许巍的忠实听众🤗</li>
 </ul>
-<p>联系方式：<a href="mailto:&#x68;&#x77;&#120;&#x79;&#119;&#x71;&#119;&#x31;&#57;&#54;&#53;&#x40;&#103;&#109;&#x61;&#x69;&#108;&#x2e;&#x63;&#x6f;&#x6d;">&#x68;&#x77;&#120;&#x79;&#119;&#x71;&#119;&#x31;&#57;&#54;&#53;&#x40;&#103;&#109;&#x61;&#x69;&#108;&#x2e;&#x63;&#x6f;&#x6d;</a></p>
+<p>联系方式：<a href="mailto:&#x68;&#119;&#120;&#121;&#x77;&#x71;&#119;&#49;&#x39;&#x36;&#53;&#64;&#x67;&#x6d;&#x61;&#105;&#108;&#46;&#99;&#x6f;&#x6d;">&#x68;&#119;&#120;&#121;&#x77;&#x71;&#119;&#49;&#x39;&#x36;&#53;&#64;&#x67;&#x6d;&#x61;&#105;&#108;&#46;&#99;&#x6f;&#x6d;</a></p>
 <h2 id="WHY"><a href="#WHY" class="headerlink" title="WHY"></a>WHY</h2><p>我在2021年首次尝试建立Homepage。最初自然是激动的——一个能够被长久维护的个人主页在当今的意义似乎总不止于“一个存放思想的地方”，更近于“一次对碎片化生活的反叛”。但或许因为没有经过长久的推敲，尝试性发布的几篇博客在不久之后便显得陈旧。它们并没能如期待，成为我所思所想的一个剖面。于是不禁思考：建立主页的目的，是什么？</p>
 <p>如果说，仅仅为了记录，那么主页似乎并非必须。互联网发达的今天能够让我们记录的平台实在太多：时兴的微博、QQ、微信暂且不谈，小众一些的博客app如简书、lofter甚至于知乎也方便至极。可它们非我所需——我需要的是反思，是构建自我；而非互动，非完善自我。</p>
 <p>一个个人主页存在的必要性也就此展现。它至少要拥有以下特点：</p>
