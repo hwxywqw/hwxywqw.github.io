@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Shadowsocks使用指南 | Hwxywqw</title>
+  <title>Disco Diffusion - AI作画 | Hwxywqw</title>
   <meta name="keywords" content="">
-  <meta name="description" content="Shadowsocks使用指南 | Hwxywqw">
+  <meta name="description" content="Disco Diffusion - AI作画 | Hwxywqw">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="​        这些画作是AI生成的，我只提供了想法——当然，它们在我的脑海里已经存在很久了，但我并不能很好地描绘或者表述它们。在观察画作生成时，我也收获了一些新的思考。或许AI画的艺术价值不仅仅止于“画”，也不只因为作画时产生的随机的错误而变得独特，它是一种艺术，是因为它的存在本身。 ​        希望看到它们的你能够产生一些触动。我将持续更新这一篇文章……下述连接指向这一开源项目，操作并">
 <meta property="og:type" content="article">
@@ -296,9 +296,9 @@
 </aside>
 <div id="post">
     <div class="pjax">
-        <article id="post-Shadowsocks使用指南" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-Disco-Diffusion-AI作画" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">Shadowsocks使用指南</h1>
+        <h1 class="article-title">Disco Diffusion - AI作画</h1>
     
     <div class="article-meta">
         
@@ -316,7 +316,7 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2022-03-11 00:04:12'>2021-01-17 01:15</time>
+            发布时间 : <time class="date" title='最后更新: 2022-04-15 21:08:39'>2022-04-11 20:53</time>
         
     </div>
     <div class="article-meta">
@@ -338,7 +338,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Just-My-Socks%E8%AE%A2%E9%98%85"><span class="toc-text">Just My Socks订阅</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Shadowsocks%E8%AE%BE%E7%BD%AE"><span class="toc-text">Shadowsocks设置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%94%B5%E8%84%91%E4%BB%A3%E7%90%86%E8%AE%BE%E7%BD%AE"><span class="toc-text">电脑代理设置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#PAC%E6%A8%A1%E5%BC%8F%E8%AE%BE%E7%BD%AE"><span class="toc-text">PAC模式设置</span></a></li></ol>
+        
     
 <style>
     .left-col .switch-btn,
@@ -354,68 +354,16 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>新年新气象，更换了代理方式，简单记录如下。如今的互联网环境实在可称荆棘遍地、壁障重重。</p>
-<h2 id="Just-My-Socks订阅"><a href="#Just-My-Socks订阅" class="headerlink" title="Just My Socks订阅"></a>Just My Socks订阅</h2><p>注：Just My Socks对v2ray(包括v2ray最初的版本Shadowsocks)的支持比较好。</p>
-<p>Just My Socks官网镜像地址如下<a target="_blank" rel="noopener" href="https://justmysocks3.net/members/index.php">Just My Socks</a> 。服务器地址、端口和密码在订阅后会直接给出。我用得多所以买了500G/月，相对也就贵一点，大概三十几块一个月。用得少可以从其他渠道购买。信息单如下：（我们所需的信息用荧光笔标出，也就是直接填入下面的东西：端口、密码和ip。注意加密方式要更改成对应的aes-256-gcm）</p>
-<p><img src="image-20220217004059475.png" alt="Just My Socks信息单"></p>
-<h2 id="Shadowsocks设置"><a href="#Shadowsocks设置" class="headerlink" title="Shadowsocks设置"></a>Shadowsocks设置</h2><p>简要说明（不看也没关系）：</p>
-<ol>
-<li>常见的代理有Clash，V2ray等等。V2ray仅支持Vmess协议，而Clash在此基础上更支持ss/ssr协议。</li>
-<li>V2ray向下(Shadowsocks)兼容，功能复杂，可以作为一个平台实现自己的开发；而Shadowsocks功能单一，同时使用起来十分简单。</li>
-</ol>
-<p>这里使用Shadowsocks，下载地址为<a target="_blank" rel="noopener" href="https://github.com/shadowsocks/shadowsocks-windows/releases/tag/4.4.1.0">Release 4.4.1.0 · shadowsocks/shadowsocks-windows (github.com)</a>，压缩包大小也就几MB，使用极其简单，这也是我选择它的主要原因。shadowsocks的设置（与上面对应关系）如下：</p>
-<table>
-<thead>
-<tr>
-<th>上面的信息</th>
-<th>这里的设置</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>Port</td>
-<td>服务器端口</td>
-</tr>
-<tr>
-<td>Password</td>
-<td>密码</td>
-</tr>
-<tr>
-<td>Server IP</td>
-<td>服务器地址</td>
-</tr>
-<tr>
-<td>Server IP</td>
-<td>加密</td>
-</tr>
-</tbody></table>
-<p>服务器地址需要填写订阅的服务器的地址，五个里面随便选一个就行了。虽然直接使用诸如“65.49.222.xx”也是可以接受的，但是为了防止IP失效，尽量使用domine names，也就是我下面填写的“c67s1.jamjams.net ”。（注意在v2ray中，ip地址并没有说明是什么ip地址，要写服务器的地址，不要想当然写成my ip。）当然，这里用的是shadowsocks，那就没什么关系了。</p>
-<p><img src="image-20220217005317597.png" alt="Shadowsocks设置"></p>
-<h2 id="电脑代理设置"><a href="#电脑代理设置" class="headerlink" title="电脑代理设置"></a>电脑代理设置</h2><p>如果这个地方没有改，那么电脑会连不上网。其实也就是浏览器的代理设置。</p>
-<p>我的电脑版本是win10。设置-网络和internet-代理，需要更改两处地方：</p>
-<p>1、自动设置代理-自动检测设置-开</p>
-<p>2、手动设置代理-</p>
-<ul>
-<li><p>使用代理服务器-开</p>
-</li>
-<li><p>地址-127.0.0.1</p>
-</li>
-<li><p>端口：1080</p>
-</li>
-</ul>
-<p>v2ray另有较为详细的教程：<a target="_blank" rel="noopener" href="https://www.v2fly.org/guide/start.html#%E6%9C%8D%E5%8A%A1%E5%99%A8">json配置教程</a>，黏贴一小段代码如下，仅供参考：</p>
-<pre><code class="json">&quot;inbounds&quot;: [
-        &#123;
-            &quot;port&quot;: 1080, // SOCKS 代理端口，在浏览器中需配置代理并指向这个端口
-            &quot;listen&quot;: &quot;127.0.0.1&quot;,
-            &quot;protocol&quot;: &quot;socks&quot;,
-            &quot;settings&quot;: &#123;
-                &quot;udp&quot;: true
-            &#125;
-        &#125;
-    ]
-</code></pre>
-<h2 id="PAC模式设置"><a href="#PAC模式设置" class="headerlink" title="PAC模式设置"></a>PAC模式设置</h2><p>目的是：只在登录某些网站时使用代理，其余网站用本地ip正常登录。Shadowsocks小图标：<strong>系统代理-PAC模式</strong>。</p>
-<p><img src="image-20220217011012719.png" alt="PAC"></p>
+        <p>​        这些画作是AI生成的，我只提供了想法——当然，它们在我的脑海里已经存在很久了，但我并不能很好地描绘或者表述它们。在观察画作生成时，我也收获了一些新的思考。或许AI画的艺术价值不仅仅止于“画”，也不只因为作画时产生的随机的错误而变得独特，它是一种艺术，是因为它的存在本身。</p>
+<p>​        希望看到它们的你能够产生一些触动。我将持续更新这一篇文章……下述连接指向这一开源项目，操作并不困难，youtube上有许多的教程。</p>
+<p><a target="_blank" rel="noopener" href="https://colab.research.google.com/github/alembics/disco-diffusion/blob/main/Disco_Diffusion.ipynb">https://colab.research.google.com/github/alembics/disco-diffusion/blob/main/Disco_Diffusion.ipynb</a></p>
+<p><img src="DestroyedCity-Whale.png" alt="Destroyed Whale"></p>
+<p><img src="Star-City-Star.png" alt="Star Ferry"></p>
+<p><img src="CrashedSpaceship-Planet-3.png" alt="Explore-1"></p>
+<p><img src="CrashedSpaceship-Planet-1.png" alt="Explore-2"></p>
+<p><img src="Pheonix-City-BurningCloudSea-2.png" alt="Salvation-1"></p>
+<p><img src="Pheonix-City-BurningCloudSea-1.png" alt="Salvation-2"></p>
+<p><img src="Cave-jellyfish.png" alt="Dream"></p>
 
       
        
