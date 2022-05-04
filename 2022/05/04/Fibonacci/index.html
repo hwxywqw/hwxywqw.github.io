@@ -16,7 +16,7 @@
 <meta property="og:image" content="http://example.com/2022/05/04/Fibonacci/image-20220504131246329.png">
 <meta property="og:image" content="http://example.com/2022/05/04/Fibonacci/image-20220504131309291.png">
 <meta property="article:published_time" content="2022-05-04T04:46:32.000Z">
-<meta property="article:modified_time" content="2022-05-04T05:13:16.745Z">
+<meta property="article:modified_time" content="2022-05-04T12:06:58.062Z">
 <meta property="article:author" content="hwxywqw">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://example.com/2022/05/04/Fibonacci/image-20220504131246329.png">
@@ -362,7 +362,7 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2022-05-04 13:13:16'>2022-05-04 12:46</time>
+            发布时间 : <time class="date" title='最后更新: 2022-05-04 20:06:58'>2022-05-04 12:46</time>
         
     </div>
     <div class="article-meta">
@@ -408,11 +408,11 @@
 <p>常见的Fibonacci的解法是用常系数线性递推的母函数方法，但先不说这个，这里写另外一种用矩阵迭代的求解方式，鉴于我对矩阵爱得深沉……它与母函数的方法相比确实麻烦一点，但给人的几何感却更强，很有趣。如果有时间的话，我想哪次探讨一下求解微分方程、常系数线性递推和矩阵求解的联系，若不深究，那这一篇也只是雾里看花罢了。</p>
 <p>原理还是很简单的：通项公式记为矩阵$A$，将前两项记为列向量$v_0$，则Fibonacci两项就可以看为前两项的，关于$A$的一个线性变换。把$v_0$拆成$A$特征向量的组合，不停乘以$A$就好了。（拆成特征向量是考虑到，矩阵乘自己的特征向量就是：$AX=kX$）注意到，Fibonacci的通项公式写成矩阵刚好是个实对称矩阵，显然有两个线性无关的特征向量，那么随便给两个初项写成的列向量一定能被它俩表示，就一定有解。</p>
 <h2 id="解法"><a href="#解法" class="headerlink" title="解法"></a>解法</h2><h3 id="第一部分：公式推导"><a href="#第一部分：公式推导" class="headerlink" title="第一部分：公式推导"></a>第一部分：公式推导</h3><p>博客对latex的align的支持不太好，这里就直接放截图了。</p>
-<p><img src="image-20220504131246329.png" alt="image-20220504131246329"></p>
+<p><img src="image-20220504131246329.png" alt="公式"></p>
 <ul>
-<li><em>TIPS：就是迭代。利用矩阵的相似对角化，和$$AX=kX$$大批量化简迭代中的$$P^{-1}P$$部分，剩下的对角阵就会变得相当好看。</em></li>
+<li><em>TIPS：就是迭代。利用矩阵的相似对角化，和$AX=kX$大批量化简迭代中的$P^{-1}P$部分，剩下的对角阵就会变得相当好看。</em></li>
 </ul>
-<h3 id="第二部分：解"><a href="#第二部分：解" class="headerlink" title="第二部分：解"></a>第二部分：解</h3><p><img src="image-20220504131309291.png" alt="image-20220504131309291"></p>
+<h3 id="第二部分：解"><a href="#第二部分：解" class="headerlink" title="第二部分：解"></a>第二部分：解</h3><p><img src="image-20220504131309291.png" alt="解法"></p>
 
       
        
