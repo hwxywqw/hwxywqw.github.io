@@ -6,40 +6,33 @@
   <meta name="keywords" content="">
   <meta name="description" content="Hwxywqw">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<meta name="description" content="&quot;文件夹内容，这是最完整的。我曾在github上放了一部分源码，但那一版还没有实现命令行交互&quot; D:. │  chart_generate.py    :用于生成词频统计,查看压缩比时用到 │  CLI.py                 :CLI所用,加密解密建议使用此文件 │  decode.exe            :解密所用可执行文件 │  encode.exe">
+<meta name="description" content="[TOC] 线性代数与奇偶校验的观点奇偶校验与线性代数观点的等价标准的(7， 4)汉明码的编码过程：  将 1 到 7 写成二进制的形式：1,10, … ,111。  所有$2^k，k ≥ 0$的位作为奇偶校验位$p^k$，其他的位作为数据位$d^k$。 因此，奇偶校验位为第 $1，2，4$ 位，数据位为第 $3，5，6，7$ 位。最终传输的比特串为：$𝑝_0𝑝_1𝑑_0𝑝_2𝑑_1𝑑">
 <meta property="og:type" content="article">
-<meta property="og:title" content="区间编码_RangeCoding">
-<meta property="og:url" content="http://example.com/2022/05/06/%E5%8C%BA%E9%97%B4%E7%BC%96%E7%A0%81-RangeCoding/index.html">
+<meta property="og:title" content="汉明码-HammingCode">
+<meta property="og:url" content="http://example.com/2022/07/07/%E6%B1%89%E6%98%8E%E7%A0%81-HammingCode/index.html">
 <meta property="og:site_name" content="Hwxywqw">
-<meta property="og:description" content="&quot;文件夹内容，这是最完整的。我曾在github上放了一部分源码，但那一版还没有实现命令行交互&quot; D:. │  chart_generate.py    :用于生成词频统计,查看压缩比时用到 │  CLI.py                 :CLI所用,加密解密建议使用此文件 │  decode.exe            :解密所用可执行文件 │  encode.exe">
+<meta property="og:description" content="[TOC] 线性代数与奇偶校验的观点奇偶校验与线性代数观点的等价标准的(7， 4)汉明码的编码过程：  将 1 到 7 写成二进制的形式：1,10, … ,111。  所有$2^k，k ≥ 0$的位作为奇偶校验位$p^k$，其他的位作为数据位$d^k$。 因此，奇偶校验位为第 $1，2，4$ 位，数据位为第 $3，5，6，7$ 位。最终传输的比特串为：$𝑝_0𝑝_1𝑑_0𝑝_2𝑑_1𝑑">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://example.com/2022/05/06/%E5%8C%BA%E9%97%B4%E7%BC%96%E7%A0%81-RangeCoding/arth.jpg">
-<meta property="og:image" content="http://example.com/2022/05/06/%E5%8C%BA%E9%97%B4%E7%BC%96%E7%A0%81-RangeCoding/image-20220428000133260.png">
-<meta property="og:image" content="http://example.com/2022/05/06/%E5%8C%BA%E9%97%B4%E7%BC%96%E7%A0%81-RangeCoding/image-20220428000118688.png">
-<meta property="og:image" content="http://example.com/2022/05/06/%E5%8C%BA%E9%97%B4%E7%BC%96%E7%A0%81-RangeCoding/image-20220427223630062.png">
-<meta property="og:image" content="http://example.com/2022/05/06/%E5%8C%BA%E9%97%B4%E7%BC%96%E7%A0%81-RangeCoding/image-20220428144350937.png">
-<meta property="og:image" content="http://example.com/2022/05/06/%E5%8C%BA%E9%97%B4%E7%BC%96%E7%A0%81-RangeCoding/image-20220428205920949.png">
-<meta property="og:image" content="http://example.com/2022/05/06/%E5%8C%BA%E9%97%B4%E7%BC%96%E7%A0%81-RangeCoding/image-20220428144856805.png">
-<meta property="og:image" content="http://example.com/2022/05/06/%E5%8C%BA%E9%97%B4%E7%BC%96%E7%A0%81-RangeCoding/image-20220427203009250.png">
-<meta property="og:image" content="http://example.com/2022/05/06/%E5%8C%BA%E9%97%B4%E7%BC%96%E7%A0%81-RangeCoding/image-20220427210656022.png">
-<meta property="og:image" content="http://example.com/2022/05/06/%E5%8C%BA%E9%97%B4%E7%BC%96%E7%A0%81-RangeCoding/image-20220427210702636.png">
-<meta property="og:image" content="http://example.com/2022/05/06/%E5%8C%BA%E9%97%B4%E7%BC%96%E7%A0%81-RangeCoding/Figure_2.png">
-<meta property="og:image" content="http://example.com/2022/05/06/%E5%8C%BA%E9%97%B4%E7%BC%96%E7%A0%81-RangeCoding/Figure_1.png">
-<meta property="og:image" content="http://example.com/2022/05/06/%E5%8C%BA%E9%97%B4%E7%BC%96%E7%A0%81-RangeCoding/Figure_docx.png">
-<meta property="og:image" content="http://example.com/2022/05/06/%E5%8C%BA%E9%97%B4%E7%BC%96%E7%A0%81-RangeCoding/Figure_cpp.png">
-<meta property="og:image" content="http://example.com/2022/05/06/%E5%8C%BA%E9%97%B4%E7%BC%96%E7%A0%81-RangeCoding/Figure_jpg.png">
-<meta property="og:image" content="http://example.com/2022/05/06/%E5%8C%BA%E9%97%B4%E7%BC%96%E7%A0%81-RangeCoding/Figure_exe.png">
-<meta property="og:image" content="http://example.com/2022/05/06/%E5%8C%BA%E9%97%B4%E7%BC%96%E7%A0%81-RangeCoding/Figure_png.png">
-<meta property="og:image" content="http://example.com/2022/05/06/%E5%8C%BA%E9%97%B4%E7%BC%96%E7%A0%81-RangeCoding/Figure_mkv.png">
-<meta property="og:image" content="http://example.com/2022/05/06/%E5%8C%BA%E9%97%B4%E7%BC%96%E7%A0%81-RangeCoding/Figure_pdf.png">
-<meta property="og:image" content="http://example.com/2022/05/06/%E5%8C%BA%E9%97%B4%E7%BC%96%E7%A0%81-RangeCoding/Figure_pptx.png">
-<meta property="og:image" content="http://example.com/2022/05/06/%E5%8C%BA%E9%97%B4%E7%BC%96%E7%A0%81-RangeCoding/Figure_3.png">
-<meta property="og:image" content="http://example.com/2022/05/06/%E5%8C%BA%E9%97%B4%E7%BC%96%E7%A0%81-RangeCoding/Figure_4.png">
-<meta property="article:published_time" content="2022-05-06T05:47:52.000Z">
-<meta property="article:modified_time" content="2022-05-07T07:00:16.116Z">
+<meta property="og:image" content="http://example.com/2022/07/07/%E6%B1%89%E6%98%8E%E7%A0%81-HammingCode/image-20220707134415488.png">
+<meta property="og:image" content="http://example.com/2022/07/07/%E6%B1%89%E6%98%8E%E7%A0%81-HammingCode/image-20220707134252800.png">
+<meta property="og:image" content="http://example.com/2022/07/07/%E6%B1%89%E6%98%8E%E7%A0%81-HammingCode/image-20220707134325474.png">
+<meta property="og:image" content="http://example.com/2022/07/07/%E6%B1%89%E6%98%8E%E7%A0%81-HammingCode/image-20220707132305147.png">
+<meta property="og:image" content="http://example.com/2022/07/07/%E6%B1%89%E6%98%8E%E7%A0%81-HammingCode/image-20220707134448614.png">
+<meta property="og:image" content="http://example.com/2022/07/07/%E6%B1%89%E6%98%8E%E7%A0%81-HammingCode/image-20220707134520827.png">
+<meta property="og:image" content="http://example.com/2022/07/07/%E6%B1%89%E6%98%8E%E7%A0%81-HammingCode/image-20220707131209704.png">
+<meta property="og:image" content="http://example.com/2022/07/07/%E6%B1%89%E6%98%8E%E7%A0%81-HammingCode/image-20220707133340223.png">
+<meta property="og:image" content="http://example.com/2022/07/07/%E6%B1%89%E6%98%8E%E7%A0%81-HammingCode/image-20220707133357591.png">
+<meta property="og:image" content="http://example.com/2022/07/07/%E6%B1%89%E6%98%8E%E7%A0%81-HammingCode/image-20220707133406659.png">
+<meta property="og:image" content="http://example.com/2022/07/07/%E6%B1%89%E6%98%8E%E7%A0%81-HammingCode/image-20220707133414717.png">
+<meta property="og:image" content="http://example.com/2022/07/07/%E6%B1%89%E6%98%8E%E7%A0%81-HammingCode/image-20220707133430932.png">
+<meta property="og:image" content="http://example.com/2022/07/07/%E6%B1%89%E6%98%8E%E7%A0%81-HammingCode/image-20220707133441046.png">
+<meta property="og:image" content="http://example.com/2022/07/07/%E6%B1%89%E6%98%8E%E7%A0%81-HammingCode/image-20220707133008663.png">
+<meta property="og:image" content="http://example.com/2022/07/07/%E6%B1%89%E6%98%8E%E7%A0%81-HammingCode/image-20220707132822876.png">
+<meta property="article:published_time" content="2022-07-07T05:08:36.000Z">
+<meta property="article:modified_time" content="2022-07-07T05:45:29.987Z">
 <meta property="article:author" content="hwxywqw">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://example.com/2022/05/06/%E5%8C%BA%E9%97%B4%E7%BC%96%E7%A0%81-RangeCoding/arth.jpg">
+<meta name="twitter:image" content="http://example.com/2022/07/07/%E6%B1%89%E6%98%8E%E7%A0%81-HammingCode/image-20220707134415488.png">
 
 
 <link rel="icon" href="/img/avatar.jpg">
@@ -101,7 +94,7 @@
     <li>
         <div class="all active" data-rel="全部文章">全部文章
             
-                <small>(8)</small>
+                <small>(9)</small>
             
         </div>
     </li>
@@ -113,7 +106,7 @@
                         <i class="fold iconfont icon-right"></i>
                         
                         课程相关
-                        <small>(3)</small>
+                        <small>(4)</small>
                         
                     </div>
                     
@@ -136,7 +129,7 @@
                                         
                                         IT
                                         
-                                            <small>(1
+                                            <small>(2
                                                 )</small>
                                         
                                     </div>
@@ -219,7 +212,7 @@
         
     </div>
 </div>
-<input type="hidden" id="yelog_site_posts_number" value="8">
+<input type="hidden" id="yelog_site_posts_number" value="9">
 
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
@@ -271,6 +264,14 @@
 
     
     <nav id="title-list-nav">
+        
+        <a  class="全部文章 课程相关 IT "
+           href="/2022/07/07/%E6%B1%89%E6%98%8E%E7%A0%81-HammingCode/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="汉明码-HammingCode">汉明码-HammingCode</span>
+            <span class="post-date" title="2022-07-07 13:08:36">2022/07/07</span>
+        </a>
         
         <a  class="全部文章 课程相关 IT "
            href="/2022/05/06/%E5%8C%BA%E9%97%B4%E7%BC%96%E7%A0%81-RangeCoding/"
@@ -383,7 +384,7 @@
 <li>想学好数学……</li>
 <li>许巍的忠实听众🤗</li>
 </ul>
-<p>联系方式：<a href="mailto:&#x68;&#119;&#x78;&#x79;&#x77;&#x71;&#x77;&#49;&#57;&#54;&#53;&#64;&#x67;&#109;&#x61;&#x69;&#108;&#46;&#x63;&#x6f;&#109;">&#x68;&#119;&#x78;&#x79;&#x77;&#x71;&#x77;&#49;&#57;&#54;&#53;&#64;&#x67;&#109;&#x61;&#x69;&#108;&#46;&#x63;&#x6f;&#109;</a></p>
+<p>联系方式：<a href="mailto:&#x68;&#119;&#x78;&#x79;&#x77;&#x71;&#119;&#x31;&#x39;&#54;&#53;&#64;&#x67;&#x6d;&#x61;&#x69;&#x6c;&#x2e;&#99;&#x6f;&#109;">&#x68;&#119;&#x78;&#x79;&#x77;&#x71;&#119;&#x31;&#x39;&#54;&#53;&#64;&#x67;&#x6d;&#x61;&#x69;&#x6c;&#x2e;&#99;&#x6f;&#109;</a></p>
 <h2 id="WHY"><a href="#WHY" class="headerlink" title="WHY"></a>WHY</h2><p>我在2021年首次尝试建立Homepage。最初自然是激动的——一个能够被长久维护的个人主页在当今的意义似乎总不止于一个存放思想的地方，更近于一次对碎片化的反叛。但或许因为没有经过长久的推敲，尝试性发布的几篇博客在不久之后便显得陈旧。它们并没能如期待，成为我所思所想的一个剖面。于是不禁思考：建立主页的目的，是什么？</p>
 <p>如果说，仅仅为了记录，那么主页似乎并非必须。互联网发达的今天能够让我们记录的平台实在太多：时兴的微博、QQ、微信暂且不谈，小众一些的博客app如简书、lofter甚至于知乎也方便至极。可它们非我所需——我期望的是自我；而非互动。</p>
 <p>一个个人主页存在的必要性也就此展现。它至少要拥有以下特点：</p>
