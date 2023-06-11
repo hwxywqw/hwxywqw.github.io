@@ -6,33 +6,17 @@
   <meta name="keywords" content="">
   <meta name="description" content="汉明码-HammingCode | Hwxywqw">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<meta name="description" content="[TOC] 线性代数与奇偶校验的观点奇偶校验与线性代数观点的等价标准的(7， 4)汉明码的编码过程：  将 1 到 7 写成二进制的形式：1,10, … ,111。  所有$2^k，k ≥ 0$的位作为奇偶校验位$p^k$，其他的位作为数据位$d^k$。 因此，奇偶校验位为第 $1，2，4$ 位，数据位为第 $3，5，6，7$ 位。最终传输的比特串为：$𝑝_0𝑝_1𝑑_0𝑝_2𝑑_1𝑑">
+<meta name="description" content="最近在收集UNESCO教科文组织世界遗产和非物质文化遗产系列的明信片和邮票，就整理了一下中国的，这大约是从世界的视角看来最能代表中国的东西了？于是忽然才发现自己对中国的了解实在堪称有限……惭愧。世界遗产大约去过三分之一，非遗了解的则属实不多，比如两个史诗都是第一次听说。感觉亦需长久的潜移默化的熏陶。     Locate  World Heritage    1 北京 周口店北京人遗址 Pekin">
 <meta property="og:type" content="article">
-<meta property="og:title" content="汉明码-HammingCode">
-<meta property="og:url" content="http://example.com/2022/07/07/%E6%B1%89%E6%98%8E%E7%A0%81-HammingCode/index.html">
+<meta property="og:title" content="UNESCO-China">
+<meta property="og:url" content="http://example.com/2023/06/11/UNESCO-China/index.html">
 <meta property="og:site_name" content="Hwxywqw">
-<meta property="og:description" content="[TOC] 线性代数与奇偶校验的观点奇偶校验与线性代数观点的等价标准的(7， 4)汉明码的编码过程：  将 1 到 7 写成二进制的形式：1,10, … ,111。  所有$2^k，k ≥ 0$的位作为奇偶校验位$p^k$，其他的位作为数据位$d^k$。 因此，奇偶校验位为第 $1，2，4$ 位，数据位为第 $3，5，6，7$ 位。最终传输的比特串为：$𝑝_0𝑝_1𝑑_0𝑝_2𝑑_1𝑑">
+<meta property="og:description" content="最近在收集UNESCO教科文组织世界遗产和非物质文化遗产系列的明信片和邮票，就整理了一下中国的，这大约是从世界的视角看来最能代表中国的东西了？于是忽然才发现自己对中国的了解实在堪称有限……惭愧。世界遗产大约去过三分之一，非遗了解的则属实不多，比如两个史诗都是第一次听说。感觉亦需长久的潜移默化的熏陶。     Locate  World Heritage    1 北京 周口店北京人遗址 Pekin">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://example.com/2022/07/07/%E6%B1%89%E6%98%8E%E7%A0%81-HammingCode/image-20220707134415488.png">
-<meta property="og:image" content="http://example.com/2022/07/07/%E6%B1%89%E6%98%8E%E7%A0%81-HammingCode/image-20220707134252800.png">
-<meta property="og:image" content="http://example.com/2022/07/07/%E6%B1%89%E6%98%8E%E7%A0%81-HammingCode/image-20220707134325474.png">
-<meta property="og:image" content="http://example.com/2022/07/07/%E6%B1%89%E6%98%8E%E7%A0%81-HammingCode/image-20220707132305147.png">
-<meta property="og:image" content="http://example.com/2022/07/07/%E6%B1%89%E6%98%8E%E7%A0%81-HammingCode/image-20220707134448614.png">
-<meta property="og:image" content="http://example.com/2022/07/07/%E6%B1%89%E6%98%8E%E7%A0%81-HammingCode/image-20220707134520827.png">
-<meta property="og:image" content="http://example.com/2022/07/07/%E6%B1%89%E6%98%8E%E7%A0%81-HammingCode/image-20220707131209704.png">
-<meta property="og:image" content="http://example.com/2022/07/07/%E6%B1%89%E6%98%8E%E7%A0%81-HammingCode/image-20220707133340223.png">
-<meta property="og:image" content="http://example.com/2022/07/07/%E6%B1%89%E6%98%8E%E7%A0%81-HammingCode/image-20220707133357591.png">
-<meta property="og:image" content="http://example.com/2022/07/07/%E6%B1%89%E6%98%8E%E7%A0%81-HammingCode/image-20220707133406659.png">
-<meta property="og:image" content="http://example.com/2022/07/07/%E6%B1%89%E6%98%8E%E7%A0%81-HammingCode/image-20220707133414717.png">
-<meta property="og:image" content="http://example.com/2022/07/07/%E6%B1%89%E6%98%8E%E7%A0%81-HammingCode/image-20220707133430932.png">
-<meta property="og:image" content="http://example.com/2022/07/07/%E6%B1%89%E6%98%8E%E7%A0%81-HammingCode/image-20220707133441046.png">
-<meta property="og:image" content="http://example.com/2022/07/07/%E6%B1%89%E6%98%8E%E7%A0%81-HammingCode/image-20220707133008663.png">
-<meta property="og:image" content="http://example.com/2022/07/07/%E6%B1%89%E6%98%8E%E7%A0%81-HammingCode/image-20220707132822876.png">
-<meta property="article:published_time" content="2022-07-07T05:08:36.000Z">
-<meta property="article:modified_time" content="2022-07-07T05:45:29.987Z">
+<meta property="article:published_time" content="2023-06-11T13:08:47.000Z">
+<meta property="article:modified_time" content="2023-06-11T13:17:07.447Z">
 <meta property="article:author" content="hwxywqw">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://example.com/2022/07/07/%E6%B1%89%E6%98%8E%E7%A0%81-HammingCode/image-20220707134415488.png">
 
 
 <link rel="icon" href="/img/avatar.jpg">
@@ -94,7 +78,7 @@
     <li>
         <div class="all active" data-rel="全部文章">全部文章
             
-                <small>(9)</small>
+                <small>(7)</small>
             
         </div>
     </li>
@@ -106,67 +90,6 @@
                         <i class="fold iconfont icon-right"></i>
                         
                         课程相关
-                        <small>(4)</small>
-                        
-                    </div>
-                    
-                        <ul class="sub hide">
-                            
-                                <li>
-                                    <div data-rel="课程相关<--->CO">
-                                        
-                                        CO
-                                        
-                                            <small>(2
-                                                )</small>
-                                        
-                                    </div>
-                                    
-                                </li>
-                            
-                                <li>
-                                    <div data-rel="课程相关<--->IT">
-                                        
-                                        IT
-                                        
-                                            <small>(2
-                                                )</small>
-                                        
-                                    </div>
-                                    
-                                </li>
-                            
-                        </ul>
-                    
-                </li>
-            
-        
-    
-        
-            
-        
-    
-        
-            
-                <li>
-                    <div data-rel="其他">
-                        
-                        其他
-                        <small>(2)</small>
-                        
-                    </div>
-                    
-                </li>
-            
-        
-    
-        
-            
-                <li>
-                    <div data-rel="小工具">
-                        <i class="fold iconfont icon-right"></i>
-                        
-                        小工具
                         <small>(3)</small>
                         
                     </div>
@@ -174,9 +97,9 @@
                         <ul class="sub hide">
                             
                                 <li>
-                                    <div data-rel="小工具<--->DD">
+                                    <div data-rel="课程相关<--->IT">
                                         
-                                        DD
+                                        IT
                                         
                                             <small>(1
                                                 )</small>
@@ -193,9 +116,47 @@
     
         
             
+                <li>
+                    <div data-rel="随笔">
+                        
+                        随笔
+                        <small>(1)</small>
+                        
+                    </div>
+                    
+                </li>
+            
         
     
         
+            
+                <li>
+                    <div data-rel="小工具">
+                        
+                        小工具
+                        <small>(2)</small>
+                        
+                    </div>
+                    
+                </li>
+            
+        
+    
+        
+            
+        
+    
+        
+            
+                <li>
+                    <div data-rel="Post">
+                        
+                        Post
+                        <small>(1)</small>
+                        
+                    </div>
+                    
+                </li>
             
         
     
@@ -212,7 +173,7 @@
         
     </div>
 </div>
-<input type="hidden" id="yelog_site_posts_number" value="9">
+<input type="hidden" id="yelog_site_posts_number" value="7">
 
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
@@ -265,6 +226,22 @@
     
     <nav id="title-list-nav">
         
+        <a  class="全部文章 Post "
+           href="/2023/06/11/UNESCO-China/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="UNESCO-China">UNESCO-China</span>
+            <span class="post-date" title="2023-06-11 21:08:47">2023/06/11</span>
+        </a>
+        
+        <a  class="全部文章 随笔 "
+           href="/2023/02/11/Deporte/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="Deporte">Deporte</span>
+            <span class="post-date" title="2023-02-11 20:14:04">2023/02/11</span>
+        </a>
+        
         <a  class="全部文章 课程相关 IT "
            href="/2022/07/07/%E6%B1%89%E6%98%8E%E7%A0%81-HammingCode/"
            data-tag=""
@@ -273,7 +250,7 @@
             <span class="post-date" title="2022-07-07 13:08:36">2022/07/07</span>
         </a>
         
-        <a  class="全部文章 课程相关 IT "
+        <a  class="全部文章 课程相关 "
            href="/2022/05/06/%E5%8C%BA%E9%97%B4%E7%BC%96%E7%A0%81-RangeCoding/"
            data-tag=""
            data-author="" >
@@ -281,44 +258,12 @@
             <span class="post-date" title="2022-05-06 13:47:52">2022/05/06</span>
         </a>
         
-        <a  class="全部文章 其他 "
-           href="/2022/05/04/%E7%BB%84%E5%9B%BE-Glorious-Years/"
-           data-tag=""
-           data-author="" >
-            <span class="post-title" title="(组图)Glorious Years">(组图)Glorious Years</span>
-            <span class="post-date" title="2022-05-04 12:40:16">2022/05/04</span>
-        </a>
-        
-        <a  class="全部文章 小工具 DD "
-           href="/2022/04/11/Disco-Diffusion-AI%E4%BD%9C%E7%94%BB/"
-           data-tag=""
-           data-author="" >
-            <span class="post-title" title="Disco Diffusion - AI作画">Disco Diffusion - AI作画</span>
-            <span class="post-date" title="2022-04-11 20:53:33">2022/04/11</span>
-        </a>
-        
-        <a  class="全部文章 课程相关 CO "
+        <a  class="全部文章 课程相关 "
            href="/2022/01/09/CO-%E8%AE%A1%E7%BB%84%E8%AF%BE%E8%AE%BE%E6%80%BB%E7%BB%93/"
            data-tag=""
            data-author="" >
             <span class="post-title" title="CO-计组课设总结">CO-计组课设总结</span>
             <span class="post-date" title="2022-01-09 23:05:31">2022/01/09</span>
-        </a>
-        
-        <a  class="全部文章 课程相关 CO "
-           href="/2021/12/25/CO-%E5%AD%98%E5%82%A8%E7%B3%BB%E7%BB%9F/"
-           data-tag=""
-           data-author="" >
-            <span class="post-title" title="CO-存储系统">CO-存储系统</span>
-            <span class="post-date" title="2021-12-25 23:59:06">2021/12/25</span>
-        </a>
-        
-        <a  class="全部文章 其他 "
-           href="/2021/12/04/Fibonacci/"
-           data-tag=""
-           data-author="" >
-            <span class="post-title" title="Fibonacci">Fibonacci</span>
-            <span class="post-date" title="2021-12-04 12:46:32">2021/12/04</span>
         </a>
         
         <a  class="全部文章 小工具 "
@@ -377,7 +322,7 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2022-07-07 13:45:29'>2022-07-07 13:08</time>
+            发布时间 : <time class="date" title='最后更新: 2023-06-11 20:07:57'>2022-07-07 13:08</time>
         
     </div>
     <div class="article-meta">

@@ -6,33 +6,17 @@
   <meta name="keywords" content="">
   <meta name="description" content="Hwxywqw">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<meta name="description" content="[TOC] 线性代数与奇偶校验的观点奇偶校验与线性代数观点的等价标准的(7， 4)汉明码的编码过程：  将 1 到 7 写成二进制的形式：1,10, … ,111。  所有$2^k，k ≥ 0$的位作为奇偶校验位$p^k$，其他的位作为数据位$d^k$。 因此，奇偶校验位为第 $1，2，4$ 位，数据位为第 $3，5，6，7$ 位。最终传输的比特串为：$𝑝_0𝑝_1𝑑_0𝑝_2𝑑_1𝑑">
+<meta name="description" content="最近在收集UNESCO教科文组织世界遗产和非物质文化遗产系列的明信片和邮票，就整理了一下中国的，这大约是从世界的视角看来最能代表中国的东西了？于是忽然才发现自己对中国的了解实在堪称有限……惭愧。世界遗产大约去过三分之一，非遗了解的则属实不多，比如两个史诗都是第一次听说。感觉亦需长久的潜移默化的熏陶。     Locate  World Heritage    1 北京 周口店北京人遗址 Pekin">
 <meta property="og:type" content="article">
-<meta property="og:title" content="汉明码-HammingCode">
-<meta property="og:url" content="http://example.com/2022/07/07/%E6%B1%89%E6%98%8E%E7%A0%81-HammingCode/index.html">
+<meta property="og:title" content="UNESCO-China">
+<meta property="og:url" content="http://example.com/2023/06/11/UNESCO-China/index.html">
 <meta property="og:site_name" content="Hwxywqw">
-<meta property="og:description" content="[TOC] 线性代数与奇偶校验的观点奇偶校验与线性代数观点的等价标准的(7， 4)汉明码的编码过程：  将 1 到 7 写成二进制的形式：1,10, … ,111。  所有$2^k，k ≥ 0$的位作为奇偶校验位$p^k$，其他的位作为数据位$d^k$。 因此，奇偶校验位为第 $1，2，4$ 位，数据位为第 $3，5，6，7$ 位。最终传输的比特串为：$𝑝_0𝑝_1𝑑_0𝑝_2𝑑_1𝑑">
+<meta property="og:description" content="最近在收集UNESCO教科文组织世界遗产和非物质文化遗产系列的明信片和邮票，就整理了一下中国的，这大约是从世界的视角看来最能代表中国的东西了？于是忽然才发现自己对中国的了解实在堪称有限……惭愧。世界遗产大约去过三分之一，非遗了解的则属实不多，比如两个史诗都是第一次听说。感觉亦需长久的潜移默化的熏陶。     Locate  World Heritage    1 北京 周口店北京人遗址 Pekin">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://example.com/2022/07/07/%E6%B1%89%E6%98%8E%E7%A0%81-HammingCode/image-20220707134415488.png">
-<meta property="og:image" content="http://example.com/2022/07/07/%E6%B1%89%E6%98%8E%E7%A0%81-HammingCode/image-20220707134252800.png">
-<meta property="og:image" content="http://example.com/2022/07/07/%E6%B1%89%E6%98%8E%E7%A0%81-HammingCode/image-20220707134325474.png">
-<meta property="og:image" content="http://example.com/2022/07/07/%E6%B1%89%E6%98%8E%E7%A0%81-HammingCode/image-20220707132305147.png">
-<meta property="og:image" content="http://example.com/2022/07/07/%E6%B1%89%E6%98%8E%E7%A0%81-HammingCode/image-20220707134448614.png">
-<meta property="og:image" content="http://example.com/2022/07/07/%E6%B1%89%E6%98%8E%E7%A0%81-HammingCode/image-20220707134520827.png">
-<meta property="og:image" content="http://example.com/2022/07/07/%E6%B1%89%E6%98%8E%E7%A0%81-HammingCode/image-20220707131209704.png">
-<meta property="og:image" content="http://example.com/2022/07/07/%E6%B1%89%E6%98%8E%E7%A0%81-HammingCode/image-20220707133340223.png">
-<meta property="og:image" content="http://example.com/2022/07/07/%E6%B1%89%E6%98%8E%E7%A0%81-HammingCode/image-20220707133357591.png">
-<meta property="og:image" content="http://example.com/2022/07/07/%E6%B1%89%E6%98%8E%E7%A0%81-HammingCode/image-20220707133406659.png">
-<meta property="og:image" content="http://example.com/2022/07/07/%E6%B1%89%E6%98%8E%E7%A0%81-HammingCode/image-20220707133414717.png">
-<meta property="og:image" content="http://example.com/2022/07/07/%E6%B1%89%E6%98%8E%E7%A0%81-HammingCode/image-20220707133430932.png">
-<meta property="og:image" content="http://example.com/2022/07/07/%E6%B1%89%E6%98%8E%E7%A0%81-HammingCode/image-20220707133441046.png">
-<meta property="og:image" content="http://example.com/2022/07/07/%E6%B1%89%E6%98%8E%E7%A0%81-HammingCode/image-20220707133008663.png">
-<meta property="og:image" content="http://example.com/2022/07/07/%E6%B1%89%E6%98%8E%E7%A0%81-HammingCode/image-20220707132822876.png">
-<meta property="article:published_time" content="2022-07-07T05:08:36.000Z">
-<meta property="article:modified_time" content="2022-07-07T05:45:29.987Z">
+<meta property="article:published_time" content="2023-06-11T13:08:47.000Z">
+<meta property="article:modified_time" content="2023-06-11T13:17:07.447Z">
 <meta property="article:author" content="hwxywqw">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://example.com/2022/07/07/%E6%B1%89%E6%98%8E%E7%A0%81-HammingCode/image-20220707134415488.png">
 
 
 <link rel="icon" href="/img/avatar.jpg">
@@ -94,7 +78,7 @@
     <li>
         <div class="all active" data-rel="全部文章">全部文章
             
-                <small>(9)</small>
+                <small>(7)</small>
             
         </div>
     </li>
@@ -106,67 +90,6 @@
                         <i class="fold iconfont icon-right"></i>
                         
                         课程相关
-                        <small>(4)</small>
-                        
-                    </div>
-                    
-                        <ul class="sub hide">
-                            
-                                <li>
-                                    <div data-rel="课程相关<--->CO">
-                                        
-                                        CO
-                                        
-                                            <small>(2
-                                                )</small>
-                                        
-                                    </div>
-                                    
-                                </li>
-                            
-                                <li>
-                                    <div data-rel="课程相关<--->IT">
-                                        
-                                        IT
-                                        
-                                            <small>(2
-                                                )</small>
-                                        
-                                    </div>
-                                    
-                                </li>
-                            
-                        </ul>
-                    
-                </li>
-            
-        
-    
-        
-            
-        
-    
-        
-            
-                <li>
-                    <div data-rel="其他">
-                        
-                        其他
-                        <small>(2)</small>
-                        
-                    </div>
-                    
-                </li>
-            
-        
-    
-        
-            
-                <li>
-                    <div data-rel="小工具">
-                        <i class="fold iconfont icon-right"></i>
-                        
-                        小工具
                         <small>(3)</small>
                         
                     </div>
@@ -174,9 +97,9 @@
                         <ul class="sub hide">
                             
                                 <li>
-                                    <div data-rel="小工具<--->DD">
+                                    <div data-rel="课程相关<--->IT">
                                         
-                                        DD
+                                        IT
                                         
                                             <small>(1
                                                 )</small>
@@ -193,9 +116,47 @@
     
         
             
+                <li>
+                    <div data-rel="随笔">
+                        
+                        随笔
+                        <small>(1)</small>
+                        
+                    </div>
+                    
+                </li>
+            
         
     
         
+            
+                <li>
+                    <div data-rel="小工具">
+                        
+                        小工具
+                        <small>(2)</small>
+                        
+                    </div>
+                    
+                </li>
+            
+        
+    
+        
+            
+        
+    
+        
+            
+                <li>
+                    <div data-rel="Post">
+                        
+                        Post
+                        <small>(1)</small>
+                        
+                    </div>
+                    
+                </li>
             
         
     
@@ -212,7 +173,7 @@
         
     </div>
 </div>
-<input type="hidden" id="yelog_site_posts_number" value="9">
+<input type="hidden" id="yelog_site_posts_number" value="7">
 
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
@@ -265,6 +226,22 @@
     
     <nav id="title-list-nav">
         
+        <a  class="全部文章 Post "
+           href="/2023/06/11/UNESCO-China/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="UNESCO-China">UNESCO-China</span>
+            <span class="post-date" title="2023-06-11 21:08:47">2023/06/11</span>
+        </a>
+        
+        <a  class="全部文章 随笔 "
+           href="/2023/02/11/Deporte/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="Deporte">Deporte</span>
+            <span class="post-date" title="2023-02-11 20:14:04">2023/02/11</span>
+        </a>
+        
         <a  class="全部文章 课程相关 IT "
            href="/2022/07/07/%E6%B1%89%E6%98%8E%E7%A0%81-HammingCode/"
            data-tag=""
@@ -273,7 +250,7 @@
             <span class="post-date" title="2022-07-07 13:08:36">2022/07/07</span>
         </a>
         
-        <a  class="全部文章 课程相关 IT "
+        <a  class="全部文章 课程相关 "
            href="/2022/05/06/%E5%8C%BA%E9%97%B4%E7%BC%96%E7%A0%81-RangeCoding/"
            data-tag=""
            data-author="" >
@@ -281,44 +258,12 @@
             <span class="post-date" title="2022-05-06 13:47:52">2022/05/06</span>
         </a>
         
-        <a  class="全部文章 其他 "
-           href="/2022/05/04/%E7%BB%84%E5%9B%BE-Glorious-Years/"
-           data-tag=""
-           data-author="" >
-            <span class="post-title" title="(组图)Glorious Years">(组图)Glorious Years</span>
-            <span class="post-date" title="2022-05-04 12:40:16">2022/05/04</span>
-        </a>
-        
-        <a  class="全部文章 小工具 DD "
-           href="/2022/04/11/Disco-Diffusion-AI%E4%BD%9C%E7%94%BB/"
-           data-tag=""
-           data-author="" >
-            <span class="post-title" title="Disco Diffusion - AI作画">Disco Diffusion - AI作画</span>
-            <span class="post-date" title="2022-04-11 20:53:33">2022/04/11</span>
-        </a>
-        
-        <a  class="全部文章 课程相关 CO "
+        <a  class="全部文章 课程相关 "
            href="/2022/01/09/CO-%E8%AE%A1%E7%BB%84%E8%AF%BE%E8%AE%BE%E6%80%BB%E7%BB%93/"
            data-tag=""
            data-author="" >
             <span class="post-title" title="CO-计组课设总结">CO-计组课设总结</span>
             <span class="post-date" title="2022-01-09 23:05:31">2022/01/09</span>
-        </a>
-        
-        <a  class="全部文章 课程相关 CO "
-           href="/2021/12/25/CO-%E5%AD%98%E5%82%A8%E7%B3%BB%E7%BB%9F/"
-           data-tag=""
-           data-author="" >
-            <span class="post-title" title="CO-存储系统">CO-存储系统</span>
-            <span class="post-date" title="2021-12-25 23:59:06">2021/12/25</span>
-        </a>
-        
-        <a  class="全部文章 其他 "
-           href="/2021/12/04/Fibonacci/"
-           data-tag=""
-           data-author="" >
-            <span class="post-title" title="Fibonacci">Fibonacci</span>
-            <span class="post-date" title="2021-12-04 12:46:32">2021/12/04</span>
         </a>
         
         <a  class="全部文章 小工具 "
@@ -371,22 +316,31 @@
     }
 </style>
 </div>
-            <h1 id="Hwxywqw’s-Homepage"><a href="#Hwxywqw’s-Homepage" class="headerlink" title="Hwxywqw’s Homepage"></a>Hwxywqw’s Homepage</h1><blockquote>
-<p>今天听到一句话：程序设计语言的本质就是代数……思索良久。</p>
-</blockquote>
-<p>欢迎👋</p>
+            <h1 id="Hwxywqw’s-Homepage"><a href="#Hwxywqw’s-Homepage" class="headerlink" title="Hwxywqw’s Homepage"></a>Hwxywqw’s Homepage</h1><p>欢迎👋</p>
 <p><strong>使用说明：</strong></p>
 <ul>
-<li>文章目录右上角可切换目录&amp;大纲</li>
-<li>搜索栏默认标题搜索，“in:搜索内容”可进行全文搜索</li>
+<li>文章目录右上角可切换目录 or 大纲 Switch the directory or outline in the upper right corner of the article directory</li>
+<li>搜索栏默认标题搜索，“in:搜索内容”可进行全文搜索 “in: search content” can be used for full-text search</li>
 </ul>
 <h2 id="WHO"><a href="#WHO" class="headerlink" title="WHO"></a>WHO</h2><ul>
-<li>想学好数学……</li>
-<li>许巍的忠实听众🤗</li>
+<li>靓仔张</li>
+<li>🐈：orange cat 毛球(Woolball) &amp;&amp; black cat 煤球(Briquette)</li>
+<li>🎵：许巍 &amp;&amp; Los Palmeras</li>
+<li>⚽：Inter Milan &amp;&amp; Werder Bremen</li>
+<li>🖋️：Postcrosser</li>
 </ul>
-<p>联系方式：<a href="mailto:&#x68;&#119;&#x78;&#x79;&#x77;&#x71;&#119;&#x31;&#x39;&#54;&#53;&#64;&#x67;&#x6d;&#x61;&#x69;&#x6c;&#x2e;&#99;&#x6f;&#109;">&#x68;&#119;&#x78;&#x79;&#x77;&#x71;&#119;&#x31;&#x39;&#54;&#53;&#64;&#x67;&#x6d;&#x61;&#x69;&#x6c;&#x2e;&#99;&#x6f;&#109;</a></p>
-<h2 id="WHY"><a href="#WHY" class="headerlink" title="WHY"></a>WHY</h2><p>我在2021年首次尝试建立Homepage。最初自然是激动的——一个能够被长久维护的个人主页在当今的意义似乎总不止于一个存放思想的地方，更近于一次对碎片化的反叛。但或许因为没有经过长久的推敲，尝试性发布的几篇博客在不久之后便显得陈旧。它们并没能如期待，成为我所思所想的一个剖面。于是不禁思考：建立主页的目的，是什么？</p>
-<p>如果说，仅仅为了记录，那么主页似乎并非必须。互联网发达的今天能够让我们记录的平台实在太多：时兴的微博、QQ、微信暂且不谈，小众一些的博客app如简书、lofter甚至于知乎也方便至极。可它们非我所需——我期望的是自我；而非互动。</p>
+<p><a href="mailto:&#x68;&#x77;&#120;&#121;&#x77;&#x71;&#x77;&#49;&#x39;&#x36;&#x35;&#64;&#103;&#109;&#x61;&#105;&#x6c;&#46;&#99;&#x6f;&#109;">&#x68;&#x77;&#120;&#121;&#x77;&#x71;&#x77;&#49;&#x39;&#x36;&#x35;&#64;&#103;&#109;&#x61;&#105;&#x6c;&#46;&#99;&#x6f;&#109;</a></p>
+<h2 id="WHY"><a href="#WHY" class="headerlink" title="WHY"></a>WHY</h2><p>I tried to build a Homepage for the first time in 2021, and I was naturally excited at first—the significance of a personal homepage that can be maintained for a long time seems to be more than a place to store thoughts, and it is closer to a rebellion against fragmentation. But perhaps because there was no long-term scrutiny, the few blogs that were published tentatively became old after a while. They did not become a section of my thoughts as expected. So I can’t help but think: What is the purpose of establishing a homepage?</p>
+<p>If so, just for the record, a home page doesn’t seem necessary. With the development of the Internet today, there are too many platforms that allow us to record: not to mention the fashionable Weibo, QQ, and WeChat for the time being, some niche blogging apps such as lofter and even Zhihu are extremely convenient. But they’re not what I want - I want a self; not an interaction.</p>
+<p>This shows the necessity of a personal homepage. It must have at least the following characteristics:</p>
+<ul>
+<li><strong>Freedom</strong>: It is reflected in two aspects: being able to publish what I want to publish, and being able to publish in the way I want to publish.</li>
+<li>Freedom in content: Not only does it mean not being troubled by sensitive words, but also that the content described can be organized in an orderly way that fits my thinking.</li>
+<li>Freedom in form: more refers to the way of arrangement - the way is also a kind of content. For example, sort by keywords and sub-keywords, classify by tag, logically represent as a dendrogram or concave graph, etc.</li>
+<li><strong>Independent</strong>: Emphasize this point because the profile does away with social (I don’t assume readers exist). I want it to be organized entirely by me, to be a place of “inward reflection”. A person’s self is his most precious place.</li>
+</ul>
+<p>我在2021年首次尝试建立Homepage，最初自然是激动的——一个能够被长久维护的个人主页在当今的意义似乎总不止于一个存放思想的地方，更近于一次对碎片化的反叛。但或许因为没有经过长久的推敲，尝试性发布的几篇博客在不久之后便显得陈旧。它们并没能如期待，成为我所思所想的一个剖面。于是不禁思考：建立主页的目的，是什么？</p>
+<p>如果说，仅仅为了记录，那么主页似乎并非必须。互联网发达的今天能够让我们记录的平台实在太多：时兴的微博、QQ、微信暂且不谈，小众一些的博客app如lofter甚至于知乎也方便至极。可它们非我所需——我期望的是自我；而非互动。</p>
 <p>一个个人主页存在的必要性也就此展现。它至少要拥有以下特点：</p>
 <ul>
 <li><strong>自由</strong>：体现在两个方面：能够发表我想发表的内容、能够按照想发表的方式发表。<ul>
