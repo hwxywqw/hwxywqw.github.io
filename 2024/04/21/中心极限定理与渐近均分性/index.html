@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>中心极限定理与渐近均分性 | Hwxywqw</title>
+  <meta name="keywords" content="">
+  <meta name="description" content="中心极限定理与渐近均分性 | Hwxywqw">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="忽然想起来自己还有个博客，趁着假期整理一下。本来把这两年的一些小小的东西写了几篇文档，结果公式全乱了，扫兴。想起建博客时雄心壮志，建完就抛之脑后了，哈哈。能让我写点什么东西的几乎有且仅有DDL和偶尔复苏的文青之魂，更新一次博客又太麻烦。 此时坐在自己屋子的窗前，窗外是阴天，略有些冷。说是“自己屋子”，实际我这也是第一次住。自高考结束，只在去年五一假期匆匆回来陪室友看CP29玩了几天，好像成了游客一">
+<meta property="og:type" content="article">
+<meta property="og:title" content="重回上海">
+<meta property="og:url" content="http://example.com/2024/04/27/%E9%87%8D%E5%9B%9E%E4%B8%8A%E6%B5%B7/index.html">
+<meta property="og:site_name" content="Hwxywqw">
+<meta property="og:description" content="忽然想起来自己还有个博客，趁着假期整理一下。本来把这两年的一些小小的东西写了几篇文档，结果公式全乱了，扫兴。想起建博客时雄心壮志，建完就抛之脑后了，哈哈。能让我写点什么东西的几乎有且仅有DDL和偶尔复苏的文青之魂，更新一次博客又太麻烦。 此时坐在自己屋子的窗前，窗外是阴天，略有些冷。说是“自己屋子”，实际我这也是第一次住。自高考结束，只在去年五一假期匆匆回来陪室友看CP29玩了几天，好像成了游客一">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2024-04-27T07:43:09.000Z">
+<meta property="article:modified_time" content="2024-04-27T08:13:12.241Z">
+<meta property="article:author" content="hwxywqw">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="icon" href="/img/avatar.jpg">
+
+<link href="/css/style.css?v=1.1.0" rel="stylesheet">
+
+<link href="/css/hl_theme/atom-light.css?v=1.1.0" rel="stylesheet">
+
+<link href="//cdn.jsdelivr.net/npm/animate.css@4.1.0/animate.min.css" rel="stylesheet">
+
+<script src="//cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+<script src="/js/titleTip.js?v=1.1.0" ></script>
+
+<script src="//cdn.jsdelivr.net/npm/highlightjs@9.16.2/highlight.pack.min.js"></script>
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+
+<script src="//cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js"></script>
+
+
+
+<script src="//cdn.jsdelivr.net/npm/jquery.cookie@1.4.1/jquery.cookie.min.js" ></script>
+
+<script src="/js/iconfont.js?v=1.1.0" ></script>
+
+<meta name="generator" content="Hexo 6.0.0"></head>
+<div style="display: none">
+  <input class="theme_disqus_on" value="false">
+  <input class="theme_preload_comment" value="">
+  <input class="theme_blog_path" value="">
+  <input id="theme_shortcut" value="false" />
+  <input id="theme_highlight_on" value="true" />
+  <input id="theme_code_copy" value="true" />
+</div>
+
+
+
+<body>
+<aside class="nav">
+    <div class="nav-left">
+        <a href="/"
+   class="avatar_target">
+    <img class="avatar"
+         src="/img/avatar.jpg"/>
+</a>
+<div class="author">
+    <span>hwxywqw</span>
+</div>
+
+<div class="icon">
+    
+</div>
+
+
+
+
+<ul>
+    <li>
+        <div class="all active" data-rel="全部文章">全部文章
+            
+                <small>(7)</small>
+            
+        </div>
+    </li>
+    
+        
+            
+                <li>
+                    <div data-rel="随笔">
+                        
+                        随笔
+                        <small>(3)</small>
+                        
+                    </div>
+                    
+                </li>
+            
+        
+    
+        
+            
+                <li>
+                    <div data-rel="文档">
+                        
+                        文档
+                        <small>(2)</small>
+                        
+                    </div>
+                    
+                </li>
+            
+        
+    
+        
+            
+                <li>
+                    <div data-rel="小工具">
+                        
+                        小工具
+                        <small>(2)</small>
+                        
+                    </div>
+                    
+                </li>
+            
+        
+    
+</ul>
+<div class="left-bottom">
+    <div class="menus">
+        
+            
+            
+            
+    </div>
+    <div>
+        
+        
+    </div>
+</div>
+<input type="hidden" id="yelog_site_posts_number" value="7">
+
+<div style="display: none">
+    <span id="busuanzi_value_site_uv"></span>
+    <span id="busuanzi_value_site_pv"></span>
+</div>
+
+    </div>
+    <div class="nav-right">
+        <div class="friends-area">
+    <div class="friends-title">
+        友情链接
+        <i class="iconfont icon-left"></i>
+    </div>
+    <div class="friends-content">
+        <ul>
+            
+            <li><a target="_blank" href="http://yelog.org/">叶落阁</a></li>
+            
+        </ul>
+    </div>
+</div>
+        <div class="title-list">
+    <div class="right-top">
+        <div id="default-panel">
+            <i class="iconfont icon-search" data-title="搜索"></i>
+            <div class="right-title">全部文章</div>
+            <i class="iconfont icon-file-tree" data-title="切换到大纲视图"></i>
+        </div>
+        <div id="search-panel">
+            <i class="iconfont icon-left" data-title="返回"></i>
+            <input id="local-search-input" autocomplete="off"/>
+            <label class="border-line" for="input"></label>
+            <i class="iconfont icon-case-sensitive" data-title="大小写敏感"></i>
+            <i class="iconfont icon-tag" data-title="标签"></i>
+        </div>
+        <div id="outline-panel" style="display: none">
+            <div class="right-title">大纲</div>
+            <i class="iconfont icon-list" data-title="切换到文章列表"></i>
+        </div>
+    </div>
+
+    <div class="tags-list">
+    <input id="tag-search" />
+    <div class="tag-wrapper">
+        
+    </div>
+
+</div>
+
+    
+    <nav id="title-list-nav">
+        
+        <a  class="全部文章 随笔 "
+           href="/2024/04/27/%E9%87%8D%E5%9B%9E%E4%B8%8A%E6%B5%B7/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="重回上海">重回上海</span>
+            <span class="post-date" title="2024-04-27 15:43:09">2024/04/27</span>
+        </a>
+        
+        <a  class="全部文章 文档 "
+           href="/2024/04/21/%E4%B8%AD%E5%BF%83%E6%9E%81%E9%99%90%E5%AE%9A%E7%90%86%E4%B8%8E%E6%B8%90%E8%BF%91%E5%9D%87%E5%88%86%E6%80%A7/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="中心极限定理与渐近均分性">中心极限定理与渐近均分性</span>
+            <span class="post-date" title="2024-04-21 21:59:42">2024/04/21</span>
+        </a>
+        
+        <a  class="全部文章 随笔 "
+           href="/2023/08/25/%E7%BB%99%E5%A4%A9%E7%9A%84%E4%B8%80%E5%B0%81%E4%BF%A1/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="给天的一封信">给天的一封信</span>
+            <span class="post-date" title="2023-08-25 16:14:02">2023/08/25</span>
+        </a>
+        
+        <a  class="全部文章 随笔 "
+           href="/2023/06/11/UNESCO-China/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="UNESCO-China">UNESCO-China</span>
+            <span class="post-date" title="2023-06-11 21:08:47">2023/06/11</span>
+        </a>
+        
+        <a  class="全部文章 文档 "
+           href="/2022/05/06/%E5%8C%BA%E9%97%B4%E7%BC%96%E7%A0%81-RangeCoding/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="区间编码_RangeCoding">区间编码_RangeCoding</span>
+            <span class="post-date" title="2022-05-06 13:47:52">2022/05/06</span>
+        </a>
+        
+        <a  class="全部文章 小工具 "
+           href="/2021/07/18/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="正则表达式使用指南">正则表达式使用指南</span>
+            <span class="post-date" title="2021-07-18 23:07:28">2021/07/18</span>
+        </a>
+        
+        <a  class="全部文章 小工具 "
+           href="/2021/01/17/Shadowsocks%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="Shadowsocks使用指南">Shadowsocks使用指南</span>
+            <span class="post-date" title="2021-01-17 01:15:24">2021/01/17</span>
+        </a>
+        
+        <div id="no-item-tips">
+
+        </div>
+    </nav>
+    <div id="outline-list">
+    </div>
+</div>
+
+    </div>
+    <div class="hide-list">
+        <div class="semicircle" data-title="切换全屏">
+            <div class="brackets first"><</div>
+            <div class="brackets">&gt;</div>
+        </div>
+    </div>
+</aside>
+<div id="post">
+    <div class="pjax">
+        <article id="post-中心极限定理与渐近均分性" class="article article-type-post" itemscope itemprop="blogPost">
+    
+        <h1 class="article-title">中心极限定理与渐近均分性</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        <span class="book">
+            <i class="iconfont icon-category"></i>
+            
+            
+            <a  data-rel="文档">文档</a>
+            
+        </span>
+        
+        
+    </div>
+    <div class="article-meta">
+        
+            发布时间 : <time class="date" title='最后更新: 2024-04-30 22:19:21'>2024-04-21 21:59</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        
+        <span id="busuanzi_container_page_pv">
+            阅读 :<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E7%BB%8F%E9%AA%8C%E7%86%B5%EF%BC%8C%E6%B8%90%E8%BF%91%E5%9D%87%E5%88%86%E6%80%A7%E4%B8%8E%E5%BC%B1%E5%85%B8%E5%9E%8B%E9%9B%86"><span class="toc-text">1 经验熵，渐近均分性与弱典型集</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-%E6%B8%90%E8%BF%91%E5%9D%87%E5%88%86%E6%80%A7%E7%9A%84%E5%AE%9A%E4%B9%89"><span class="toc-text">1.1 渐近均分性的定义</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-%E4%BF%A1%E6%BA%90%E5%BA%8F%E5%88%97%E7%9A%84%E7%94%9F%E6%88%90%E4%B8%8E%E7%BB%9F%E8%AE%A1"><span class="toc-text">1.2 信源序列的生成与统计</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-%E5%BC%B1%E5%A4%A7%E6%95%B0%E5%AE%9A%E5%BE%8B%E4%B8%8E%E4%B8%AD%E5%BF%83%E6%9E%81%E9%99%90%E5%AE%9A%E7%90%86"><span class="toc-text">1.3  弱大数定律与中心极限定理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-4-%E5%BC%B1%E5%85%B8%E5%9E%8B%E9%9B%86%E4%B8%8E%E6%B8%90%E8%BF%91%E5%9D%87%E5%88%86%E6%80%A7"><span class="toc-text">1.4 弱典型集与渐近均分性</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E7%BB%8F%E9%AA%8C%E5%88%86%E5%B8%83%EF%BC%8C%E6%B8%90%E8%BF%91%E5%9D%87%E5%88%86%E6%80%A7%E4%B8%8E%E5%BC%BA%E5%85%B8%E5%9E%8B%E9%9B%86"><span class="toc-text">2 经验分布，渐近均分性与强典型集</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-%E7%BB%8F%E9%AA%8C%E5%88%86%E5%B8%83%E4%B8%8E%E7%BB%8F%E9%AA%8C%E7%86%B5"><span class="toc-text">2.1  经验分布与经验熵</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-%E5%BC%B1%E5%85%B8%E5%9E%8B%E9%9B%86%E4%B8%8E%E5%BC%BA%E5%85%B8%E5%9E%8B%E9%9B%86"><span class="toc-text">2.2  弱典型集与强典型集</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-%E5%BC%BA%E5%85%B8%E5%9E%8B%E9%9B%86%E4%B8%8E%E6%B8%90%E8%BF%91%E5%9D%87%E5%88%86%E6%80%A7"><span class="toc-text">2.3  强典型集与渐近均分性</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE"><span class="toc-text">3 参考文献</span></a></li></ol>
+    
+<style>
+    .left-col .switch-btn,
+    .left-col .switch-area {
+        display: none;
+    }
+    .toc-level-3 i,
+    .toc-level-3 ol {
+        display: none !important;
+    }
+</style>
+</div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>这本来已经写成了完整的文档——但博客是要去公式化的，于是贴几张有趣的图吧~~从第一次读信息论时就觉得典型集、渐近均分性是很有趣的东西，后面画了这几张图，果然很有趣欸！</p>
+<h2 id="1-经验熵，渐近均分性与弱典型集"><a href="#1-经验熵，渐近均分性与弱典型集" class="headerlink" title="1 经验熵，渐近均分性与弱典型集"></a>1 经验熵，渐近均分性与弱典型集</h2><p>信源编码很大程度上建立于大样本理论之上。以最基本的香农无损信源编码定理为例，其证明就采用了典型编码，基于码长趋于无穷时码字序列体现的渐近均分性：考虑某个信源的真实分布，它产生的独立同分布序列几乎只是所有可能序列中很小的一个子集，我们只需要对这一小部分编码即可。</p>
+<p>本章将从经验熵的角度出发，考虑信息论中渐近均分性的可视化。</p>
+<h3 id="1-1-渐近均分性的定义"><a href="#1-1-渐近均分性的定义" class="headerlink" title="1.1 渐近均分性的定义"></a>1.1 渐近均分性的定义</h3><p>渐近均分性（AEP，Asymptotic Equipartition Property）是弱大数定律在信息论领域中的直接应用：当序列长度充分大时，序列的经验熵将依概率收敛到信源分布的熵。在渐近均分性的基础上，仅选取经验熵相距信源真实熵只差$\varepsilon$以内的那些序列，定义典型集合，它具有性质：码长足够长时，典型集概率趋近于1；典型集中所有元素几乎等可能；典型集元素很少。</p>
+<p>我们可以从两个可视化的视角看待上述结论：</p>
+<ol>
+<li><strong>考虑序列的经验分布</strong>，相当于确定了一个概率单纯形平面。当固定真实分布时，产生的序列以一种什么规律分布在整个概率单纯形？method of types拿来考虑弱典型性固然是大材小用，但也更加清晰。问题在于：若字母表的符号超过3，就难以可视化了。</li>
+<li><strong>考虑序列的经验熵</strong>（可视作type的一个确定性函数）。此时同样固定一种真实分布，产生的序列以一种什么规律分布在经验熵的数轴？这相当于前者的降维考虑，用来分析弱典型差不多够用，强典型则难以为继。好处在于，无论字母表多大，都可以直接降到1维处理。</li>
+</ol>
+<p>综上考虑，本章先以第二种视角引入渐近均分性与弱典型集的可视化，随后在下一章中扩展到第一种视角，考虑渐近均分性与强典型集的可视化。</p>
+<h3 id="1-2-信源序列的生成与统计"><a href="#1-2-信源序列的生成与统计" class="headerlink" title="1.2 信源序列的生成与统计"></a>1.2 信源序列的生成与统计</h3><p>首先根据特定分布生成信源的独立同分布观察序列，有三个主要的参数：信源分布、序列长度、序列个数。本文中，将固定一个信源分布，然后改变序列长度和序列个数，探究其序列经验熵的分布情况。首先生成序列：</p>
+<pre><code class="python">import numpy as np
+
+# 定义指定的概率分布
+# probabilities = &#123;0: 0.05, 1: 0.05, 2: 0.1, 3: 0.1, 4: 0.2, 5: 0.2, 6: 0.3&#125;
+probabilities = &#123;0: 0.2, 1: 0.2, 2: 0.6&#125;
+
+# 生成服从指定概率分布的随机序列
+def generate_sequence(length, probabilities):
+    symbols, probs = zip(*probabilities.items())
+    sequence = np.random.choice(symbols, size=length, p=probs)
+    return sequence
+
+if __name__ == &#39;__main__&#39;:
+    # 生成100个长度为20的序列
+    num_sequences = 10000
+    sequence_length = 30000
+    sequences = [generate_sequence(sequence_length, probabilities) for _ in range(num_sequences)]
+
+    # 将序列写入文本文件
+    file_path = &quot;generated_sequences_4.txt&quot;
+    with open(file_path, &quot;w&quot;) as file:
+        for seq in sequences:
+            seq_str = &#39; &#39;.join(map(str, seq))  # 将序列转换为字符串形式
+            file.write(seq_str + &quot;\n&quot;)  # 写入文件，每个序列占一行
+
+    print(f&quot;生成的序列已写入文件: &#123;file_path&#125;&quot;)
+</code></pre>
+<p>然后根据对应的序列，分别计算每个序列的经验熵。在本文中，经验熵即可视为序列的统计量。举一个例子：假设信源分布为伯努利分布，此时序列的字母表为{0,1}，即一共有两个字符可能出现。那么序列的经验熵即计算该序列在{0,1}上的经验分布的熵。</p>
+<p>然后建立其积累分布函数和概率质量函数。下图为一个概率质量函数的简单的例子：其中信源分布{ 0.2,0.2,0.6}，序列长度500，序列个数10000。红色虚线为真实熵。以0.005为间隔，统计了经验熵落在间隔内的序列的个数。</p>
+<img src="信源产生序列的经验熵的概率质量函数.png" alt="信源产生序列的经验熵的概率质量函数" style="zoom:67%;" />
+
+<h3 id="1-3-弱大数定律与中心极限定理"><a href="#1-3-弱大数定律与中心极限定理" class="headerlink" title="1.3  弱大数定律与中心极限定理"></a>1.3  弱大数定律与中心极限定理</h3><p>回顾生成序列时的三个最主要的参数：信源分布、序列长度、序列个数。本章将讨论，改变序列个数时，统计结果变化的可视化。当然，直观来看，结果应该符号中心极限定理——独立同分布下，样本数逐渐增多时，归一化的变量和收敛于正态分布。</p>
+<p>首先确定参数：</p>
+<ol>
+<li>信源分布{0,1,0.1,0.1,0.2,0.2,0.3}</li>
+<li>序列长度 len=100</li>
+<li>第一个分布为 {0.2, 0.2, 0.6}；</li>
+<li>第二个分布为 {0.05, 0.05, 0.1, 0.1, 0.2, 0.2, 0.3}</li>
+</ol>
+<p>下面两幅图分别仿真了序列长度为500时，两个不同分布在改变样本数量时，其经验熵的分布。样本数量从左到右、从上到下分别为：30, 100, 300, 1000, 3000, 10000, 30000, 100000, 300000。观察发现，当序列数量增加时，分布从不显著的分布逐渐趋向于正态分布。</p>
+<p><img src="%E7%AC%AC%E4%BA%8C%E4%B8%AA%E5%88%86%E5%B8%83%E4%BA%A7%E7%94%9F%E7%9A%84%E5%BA%8F%E5%88%97%EF%BC%9A%E4%BB%85%E6%94%B9%E5%8F%98%E6%A0%B7%E6%9C%AC%E6%95%B0%E9%87%8F%E6%97%B6%E7%9A%84%E7%BB%8F%E9%AA%8C%E7%86%B5%E5%88%86%E5%B8%83.png" alt="第二个分布产生的序列：仅改变样本数量时的经验熵分布"></p>
+<p><img src="%E7%AC%AC%E4%BA%8C%E4%B8%AA%E5%88%86%E5%B8%83%E4%BA%A7%E7%94%9F%E7%9A%84%E5%BA%8F%E5%88%97%EF%BC%9A%E4%BB%85%E6%94%B9%E5%8F%98%E5%BA%8F%E5%88%97%E9%95%BF%E5%BA%A6%E6%97%B6%E7%9A%84%E7%BB%8F%E9%AA%8C%E7%86%B5%E5%88%86%E5%B8%83.png" alt="第二个分布产生的序列：仅改变序列长度时的经验熵分布"></p>
+<h3 id="1-4-弱典型集与渐近均分性"><a href="#1-4-弱典型集与渐近均分性" class="headerlink" title="1.4 弱典型集与渐近均分性"></a>1.4 弱典型集与渐近均分性</h3><p>本章将讨论，改变序列长度时，统计结果变化的可视化。对比一下使用弱大数定律[1] (cf. Section 3.1)和中心极限定理[2] (cf. Section 3.3)时分别得到的结论：前者刻画了经验熵趋近于真实熵，后者刻画了经验熵是如何趋近于真实熵的（收敛速率）。<br>$$<br>\begin{align}<br>\hat{\mathbb{H} }(x^n)\xrightarrow{p} &amp; \mathbb{H}(p) \<br> \sqrt{n}\left( \hat{\mathbb{H} }(x^n)-\mathbb{H}(p) \right)\xrightarrow{d} &amp; \mathcal{N}\left( 0,\mathbb{V}(p) \right)<br>\end{align}<br>$$<br>按照上述结论，序列长度越长，“经验熵的分布”收敛到“以真实熵为中心的正态分布”的收敛速率就越快，仿真结果也确实证实了这一点。下面是趋于正态分布的一个直观体现。</p>
+<img src="经验熵的分布趋于正态分布.png" alt="经验熵的分布趋于正态分布" style="zoom:67%;" />
+
+<p>下面两幅图分别仿真了序列数量为10000时，两个不同分布在改变序列长度时，其经验熵的分布。序列长度从左到右、从上到下分别为：30, 100, 300, 1000, 3000, 10000。</p>
+<p>需要额外注意的是，横轴经验熵的间隔始终是0.005。因此，柱的宽度同样反映了序列的分散程度。和1.3小节对比：当序列长度增加时，经验熵显著地向真实熵聚拢，且分布形状从偏离的正态分布趋向于标准的正态分布；当序列数量增加时，分布从不显著的分布逐渐趋向于正态分布。</p>
+<p><img src="%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%88%86%E5%B8%83%E4%BA%A7%E7%94%9F%E7%9A%84%E5%BA%8F%E5%88%97%EF%BC%9A%E4%BB%85%E6%94%B9%E5%8F%98%E5%BA%8F%E5%88%97%E9%95%BF%E5%BA%A6%E6%97%B6%E7%9A%84%E7%BB%8F%E9%AA%8C%E7%86%B5%E5%88%86%E5%B8%83.png" alt="第一个分布产生的序列：仅改变序列长度时的经验熵分布"></p>
+<p><img src="%E7%AC%AC%E4%BA%8C%E4%B8%AA%E5%88%86%E5%B8%83%E4%BA%A7%E7%94%9F%E7%9A%84%E5%BA%8F%E5%88%97%EF%BC%9A%E4%BB%85%E6%94%B9%E5%8F%98%E5%BA%8F%E5%88%97%E9%95%BF%E5%BA%A6%E6%97%B6%E7%9A%84%E7%BB%8F%E9%AA%8C%E7%86%B5%E5%88%86%E5%B8%83.png" alt="第二个分布产生的序列：仅改变序列长度时的经验熵分布"></p>
+<p>事实上，样本数量无关紧要，因为（至少在此处这个简化情景下）我们不做例如“用足够多的样本拟合出某个分布”这种事情——我们只处理可能很少的几个序列，并且希望这些序列都具有某些性质。幸运的是它们确实具有，这几乎就是从“渐近均分性”到“弱典型集”最核心的思想了。</p>
+<p>弱典型集采用“经验熵”作为选取阈值，在上面的概率质量分布中，差不多就是从横轴中截取了一小段。当序列长度渐渐变长时，典型集内聚拢了越来越多的序列，直到最后，几乎每一个序列都以概率1落在典型集内了。下面的图特别显示了这一点：每一个柱的经验熵宽度都是0.005，我们围绕真实熵（也就是红色虚线）选取四个柱作为典型集：n分别为100和10000时：左图中典型集占比仅0.09左右，右图则占比0.8左右。</p>
+<p><img src="%E5%BA%8F%E5%88%97%E9%95%BF%E5%BA%A6%E4%B8%8D%E5%90%8C%E6%97%B6%E7%9A%84%E5%85%B8%E5%9E%8B%E9%9B%86%E5%AF%B9%E6%AF%94.png" alt="序列长度不同时的典型集对比"></p>
+<h2 id="2-经验分布，渐近均分性与强典型集"><a href="#2-经验分布，渐近均分性与强典型集" class="headerlink" title="2 经验分布，渐近均分性与强典型集"></a>2 经验分布，渐近均分性与强典型集</h2><p>上一章从经验熵视角看渐近均分性，但归根到底，经验熵只是经验分布的一个确定性函数，正如行列式的值只是矩阵的一个确定性函数一样——它可以体现，也只能体现一部分的特征。渐近均分性的本质还需从经验分布的视角看。那么考虑经验分布与渐近均分性的关系，可直接拆解为两个相关问题：</p>
+<ol>
+<li>经验分布与经验熵的关系；</li>
+<li>经验熵与渐近均分性的关系（可视化在上一章中已经进行讨论）。</li>
+</ol>
+<h3 id="2-1-经验分布与经验熵"><a href="#2-1-经验分布与经验熵" class="headerlink" title="2.1  经验分布与经验熵"></a>2.1  经验分布与经验熵</h3><p>当一个序列确定时，它的经验分布就确定了，因此经验分布的熵就确定了，和产生该序列的真实分布没有关系；而经验熵则是经验分布的熵，加上经验分布和真实分布的相对熵，这是两个不同的概念。总结来说，经验熵与序列概率一一对应，且是真实分布和经验分布的函数。</p>
+<p>Method of Types的主要结论同样刻画了这一点：序列概率：<br>$$<br>Q^n\left( x \right)={2^{-n\left( D(P_X||Q)+H(P_X) \right)} }<br>$$<br>假设信源字母表阶数为3，下图在给定概率单纯形的基础上，画了两个不同信源分布时，序列概率的等值线。（左图的信源分布：{0.1, 0.3, 0.6}；右图的信源分布：{0.3, 0.3, 0.4}）另：黑色星号*标识了真实分布；红色星号*表示了在该真实分布下，概率最大的序列；蓝色星号*标识了概率单纯形的中心即均一分布。</p>
+<p>观察发现，当信源分布改变时，序列概率的等值线变化，但始终平行于某条直线。“经验熵度量下序列的分布”因此可视作“经验分布度量下序列的分布”沿着等值线的投影。</p>
+<p><img src="%E5%BA%8F%E5%88%97%E6%A6%82%E7%8E%87%EF%BC%88%E7%BB%8F%E9%AA%8C%E7%86%B5%EF%BC%89%E7%9A%84%E7%AD%89%E5%80%BC%E7%BA%BF.png" alt="序列概率（经验熵）的等值线"></p>
+<p>经验熵度量下的真实熵是数轴上的一个点；经验分布下的真实分布则是高维空间内的一个点。同样地，其他所有在经验熵度量下的量或概念，转换为经验分布度量时都将被降维，例如弱典型集。</p>
+<h3 id="2-2-弱典型集与强典型集"><a href="#2-2-弱典型集与强典型集" class="headerlink" title="2.2  弱典型集与强典型集"></a>2.2  弱典型集与强典型集</h3><p>这一章写了很多[4]的内容，我真的好喜欢这篇论文哈哈哈！公式太多不放了，主要结论：</p>
+<p>正如经验熵与经验分布，弱典型集和强典型集也具有维数上的差异。这从定义中就可以发现：</p>
+<ol>
+<li><strong>弱典型集</strong>以经验熵为阈值，划分了经验熵数轴上的一小段，所有经验熵落在这个小范围内的序列都在弱典型集内；</li>
+<li><strong>强典型集</strong>以经验分布的每个分量为阈值，框定了高维空间内一个小正方体内的所有，所有经验分布落在这个小范围内的序列都在强典型集内。</li>
+</ol>
+<p>还以上述这个三维空间内的概率单纯形为例，考虑在同一个真实分布下，弱典型集和强典型集分别框定的经验分布的范围。弱典型集对应着经验熵（概率单纯形向1维投影的一个点），在升维后就对应了比概率单纯形低1维的某个曲线。</p>
+<img src="概率单纯形上的强典型集与弱典型集.png" alt="概率单纯形上的强典型集与弱典型集" style="zoom:67%;" />
+
+<p>简单讨论下二者的异同（这部分总结参考了港中文的一个PPT，里面推导了第一条）：</p>
+<ol>
+<li>二者都具有AEP的性质，且强典型集的渐近性质强于弱典型集的；</li>
+<li>弱典型集中序列经验熵收敛于真实熵，强典型集中序列经验分布收敛于真实分布。这就是定义，当然，从上图中看起来非常地显然；</li>
+<li>弱典型集对可数无限字母表是良定义的，强典型集仅对有限字母表是良定义的；</li>
+</ol>
+<p>第三条性质并不显然，但很有意思。直觉上若一个序列属于强典型集，那么该序列肯定属于对应的弱典型集，但事实上这仅仅在有限字母表的情况下成立。可数无限字母表时，存在属于强典型的序列，并不属于对应的弱典型集[4]。</p>
+<p>用非常经典的典型集的示意图描述：</p>
+<img src="不同字母表时强弱典型集与全集的包含关系.png" alt="不同字母表时强弱典型集与全集的包含关系" style="zoom: 33%;" />
+
+<h3 id="2-3-强典型集与渐近均分性"><a href="#2-3-强典型集与渐近均分性" class="headerlink" title="2.3  强典型集与渐近均分性"></a>2.3  强典型集与渐近均分性</h3><p>method of types[1] (cf. Section 11.1)有4个主要结论，第一个关于序列概率的结论在前面经验熵一节已经阐述。考虑剩下2个：</p>
+<p>其二，型类的大小，对应下左图，画了分布的熵的等高线（指数）；<br>$$<br>\left| T(P) \right|\doteq { {2}^{nH(P)} }<br>$$<br>其三，型类的概率，对应下右图，画了确定某个分布时，其他分布到该分布的相对熵的等高线（指数）。<br>$$<br>{ {Q}^{n} }\left( T(P) \right)={ {2}^{-nD(P||Q)} }<br>$$<br><img src="%E5%9E%8B%E7%B1%BB%E7%9A%84%E5%A4%A7%E5%B0%8F%E5%92%8C%E6%A6%82%E7%8E%87.png" alt="型类的大小和概率"></p>
+<p>右图型类的概率就对应着强典型集的渐近均分性。相当于在弱典型集对应的切线中，只有真实分布附近一小撮经验分布（就是强典型集对应的区域）的概率特别高，其他的概率都不高。举个例子，假设真实分布为{0.1, 0.3, 0.6}，那么{0.6, 0.1, 0.3}同样在弱典型集内，但实际上出现的概率很小。这样的集合就被强典型集所摒弃了。</p>
+<p>备注：这里画的是指数，如果画真实概率的话，应当衰减得相当快。</p>
+<h2 id="3-参考文献"><a href="#3-参考文献" class="headerlink" title="3 参考文献"></a>3 参考文献</h2><p>[1] Cover T M, Thomas J A. Elements of Information Theory[M]. 1st ed. Wiley, 2005.</p>
+<p>[2] Tan V Y F. Asymptotic Estimates in Information Theory with Non-Vanishing Error Probabilities[M]. arXiv, 2015.</p>
+<p>[3] El Gamal A, Kim Y H. Network information theory[M]. 1. publ., repr. Cambridge: Cambridge University Press, 2012.</p>
+<p>[4] Ho S W, Yeung R W. On Information Divergence Measures and a Unified Typicality[J]. IEEE Transactions on Information Theory, 2010, 56(12): 5893-5905.</p>
+
+      
+       
+    </div>
+</article>
+
+
+
+
+
+
+
+    
+        <!-- MathJax配置，可通过单美元符号书写行内公式等 -->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+    "HTML-CSS": {
+        preferredFont: "TeX",
+        availableFonts: ["STIX","TeX"],
+        linebreaks: { automatic:true },
+        EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50)
+    },
+    tex2jax: {
+        inlineMath: [ ["$", "$"], ["\\(","\\)"] ],
+        processEscapes: true,
+        ignoreClass: "tex2jax_ignore|dno",
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+        equationNumbers: { autoNumber: "AMS" },
+        noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } },
+        Macros: { href: "{}" }
+    },
+    messageStyle: "none"
+    });
+</script>
+<!-- 给MathJax元素添加has-jax class -->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+<!-- 通过连接CDN加载MathJax的js代码 -->
+<script type="text/javascript" async
+        src="//cdn.jsdelivr.net/npm/mathjax@2.7.8/unpacked/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+<input type="hidden" id="MathJax-js"
+        value="//cdn.jsdelivr.net/npm/mathjax@2.7.8/unpacked/MathJax.js?config=TeX-MML-AM_CHTML">
+</input>
+    
+
+
+
+
+    </div>
+    <div class="copyright">
+        <p class="footer-entry">
+    ©2020-2022 Hwxywqw
+</p>
+<p class="footer-entry">Built with <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank">3-hexo</a> theme</p>
+
+    </div>
+    <div class="full-toc">
+        <button class="full" data-title="切换全屏"><span class="min "></span></button>
+<a class="" id="rocket" ></a>
+
+    </div>
+</div>
+
+</body>
+<script src="/js/jquery.pjax.js?v=1.1.0" ></script>
+
+<script src="/js/script.js?v=1.1.0" ></script>
+<script>
+    var img_resize = 'default';
+    function initArticle() {
+        /*渲染对应的表格样式*/
+        
+            $("#post .pjax table").addClass("green_title");
+        
+
+        /*渲染打赏样式*/
+        
+
+        /*高亮代码块行号*/
+        
+
+        /*访问数量*/
+        
+        $.getScript("//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js");
+        
+
+        /*代码高亮，行号对齐*/
+        $('.pre-numbering').css('line-height',$('.has-numbering').css('line-height'));
+
+        
+        
+    }
+
+    /*打赏页面隐藏与展示*/
+    
+
+</script>
+
+<!--加入行号的高亮代码块样式-->
+
+<!--自定义样式设置-->
+<style>
+    
+    
+    .nav {
+        width: 542px;
+    }
+    .nav.fullscreen {
+        margin-left: -542px;
+    }
+    .nav-left {
+        width: 120px;
+    }
+    
+    
+    @media screen and (max-width: 1468px) {
+        .nav {
+            width: 492px;
+        }
+        .nav.fullscreen {
+            margin-left: -492px;
+        }
+        .nav-left {
+            width: 100px;
+        }
+    }
+    
+    
+    @media screen and (max-width: 1024px) {
+        .nav {
+            width: 492px;
+            margin-left: -492px
+        }
+        .nav.fullscreen {
+            margin-left: 0;
+        }
+    }
+    
+    @media screen and (max-width: 426px) {
+        .nav {
+            width: 100%;
+        }
+        .nav-left {
+            width: 100%;
+        }
+    }
+    
+    
+    .nav-right .title-list nav a .post-title, .nav-right .title-list #local-search-result a .post-title {
+        color: #383636;
+    }
+    
+    
+    .nav-right .title-list nav a .post-date, .nav-right .title-list #local-search-result a .post-date {
+        color: #5e5e5f;
+    }
+    
+    
+    .nav-right nav a.hover, #local-search-result a.hover{
+        background-color: #e2e0e0;
+    }
+    
+    
+
+    /*列表样式*/
+    
+
+    /* 背景图样式 */
+    
+    
+
+
+    /*引用块样式*/
+    
+
+    /*文章列表背景图*/
+    
+
+    
+    #post .pjax article :not(pre) > code {
+        color: #24292e;
+        font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;
+        background-color: rgba(27,31,35,.05);
+        border-radius: 3px;
+        font-size: 85%;
+        margin: 0;
+        padding: .2em .4em;
+    }
+    
+</style>
+
+
+
+
+
+
+
+</html>
