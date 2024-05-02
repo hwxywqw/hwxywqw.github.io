@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Hwxywqw</title>
+  <title>一点关于Fibonacci的东西 | Hwxywqw</title>
   <meta name="keywords" content="">
-  <meta name="description" content="Hwxywqw">
+  <meta name="description" content="一点关于Fibonacci的东西 | Hwxywqw">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="忽然想起来自己还有个博客，趁着假期整理一下。本来把这两年的一些小小的东西写了几篇文档，结果公式全乱了，扫兴。想起建博客时雄心壮志，建完就抛之脑后了，哈哈。能让我写点什么东西的几乎有且仅有DDL和偶尔复苏的文青之魂，更新一次博客又太麻烦。 此时坐在自己屋子的窗前，窗外是阴天，略有些冷。说是“自己屋子”，实际我这也是第一次住。自高考结束，只在去年五一假期匆匆回来陪室友看CP29玩了几天，好像成了游客一">
 <meta property="og:type" content="article">
@@ -56,7 +56,7 @@
 
 
 <body>
-<aside class="nav mobile">
+<aside class="nav">
     <div class="nav-left">
         <a href="/"
    class="avatar_target">
@@ -279,12 +279,51 @@
         </div>
     </div>
 </aside>
-<div id="post" class="index">
+<div id="post">
     <div class="pjax">
-        <article class="index">
-            <div class="toc-ref">
+        <article id="post-一点关于Fibonacci的东西" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Hwxywqw%E2%80%99s-Homepage"><span class="toc-text">Hwxywqw’s Homepage</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#WHO"><span class="toc-text">WHO</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#WHY"><span class="toc-text">WHY</span></a></li></ol></li></ol>
+        <h1 class="article-title">一点关于Fibonacci的东西</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        <span class="book">
+            <i class="iconfont icon-category"></i>
+            
+            
+            <a  data-rel="文档">文档</a>
+            
+        </span>
+        
+        
+    </div>
+    <div class="article-meta">
+        
+            发布时间 : <time class="date" title='最后更新: 2024-05-02 17:34:25'>2022-01-20 11:15</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        
+        <span id="busuanzi_container_page_pv">
+            阅读 :<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%95%E8%A8%80"><span class="toc-text">引言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B0%8F%E5%85%AC%E5%BC%8F%E6%8E%A8%E5%AF%BC"><span class="toc-text">小公式推导</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A7%A3%E6%B3%95"><span class="toc-text">解法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B7%AE%E5%88%86%E8%BF%AD%E4%BB%A3%EF%BC%9F"><span class="toc-text">差分迭代？</span></a></li></ol></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -297,28 +336,216 @@
     }
 </style>
 </div>
-            <h1 id="Hwxywqw’s-Homepage"><a href="#Hwxywqw’s-Homepage" class="headerlink" title="Hwxywqw’s Homepage"></a>Hwxywqw’s Homepage</h1><p>欢迎 👋</p>
-<p><strong>使用说明：</strong></p>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h2><p>自小学第一次做Fibonacci找规律，就感受到森森恶意……高中第一次看见通项公式，也看不太懂。后来发现，二阶矩阵的迭代就可以表示。</p>
+<blockquote>
+<p>通项公式：</p>
+</blockquote>
+<p>$$<br>a_n=\frac{1}{\sqrt{5}}<br>    \left[<br>        \left(<br>            \frac{1+\sqrt{5}}{2}<br>        \right)^n -<br>        \left(<br>            \frac{1-\sqrt{5}}{2}<br>        \right)^n<br>    \right]<br>$$</p>
+<p>把解法完整地记录在这里。原理还是很简单的：通项公式记为矩阵A，将前两项记为列向量$v_0$，则Fibonacci两项就可以看为前两项的，关于A的一个线性变换。把$v_0$​拆成A特征向量的组合，不停乘以A就好了。很巧的是，Fibonacci的通项公式写成矩阵模式，刚好是个实对称矩阵，显然有两个线性无关的特征向量，那么随便给两个初项写成的列向量一定能被它俩表示，就一定有解。不知道是不是因为1还是很特殊的……</p>
+<p>总而言之就是，漂亮！太漂亮了！</p>
+<h2 id="小公式推导"><a href="#小公式推导" class="headerlink" title="小公式推导"></a>小公式推导</h2><p><img src="image-20240502173118173.png" alt="image-20240502173118173"></p>
 <ul>
-<li>文章目录右上角切换目录 or 大纲</li>
-<li>搜索栏默认标题搜索，“in:搜索内容”全文搜索</li>
+<li>就是迭代。利用矩阵的相似对角化，和$AX=kX$大批量化简迭代中的$P^{-1}P$部分，剩下的对角阵就会变得相当好看。</li>
 </ul>
-<h2 id="WHO"><a href="#WHO" class="headerlink" title="WHO"></a>WHO</h2><p>其亮</p>
-<ul>
-<li>🎵：baritone horn &amp;&amp; 许巍 &amp;&amp; 李宗盛</li>
-<li>⚽：Inter Milan</li>
-<li>🖋️：Postcrosser</li>
-<li>🏘：北京，上海，无锡……</li>
-<li>🍂：观鸟爱好者</li>
-</ul>
-<p><a href="mailto:&#x68;&#119;&#120;&#x79;&#x77;&#x71;&#x77;&#x31;&#x39;&#x36;&#53;&#x40;&#x67;&#109;&#x61;&#105;&#108;&#x2e;&#99;&#111;&#x6d;">&#x68;&#119;&#120;&#x79;&#x77;&#x71;&#x77;&#x31;&#x39;&#x36;&#53;&#x40;&#x67;&#109;&#x61;&#105;&#108;&#x2e;&#99;&#111;&#x6d;</a></p>
-<h2 id="WHY"><a href="#WHY" class="headerlink" title="WHY"></a>WHY</h2><p>这个主页在2021年第一次建立。最初自然是充满期待的——一个能够被长久维护的个人主页在当今的意义似乎总不止于一个存放思想的地方，更近于一次对碎片化的反叛。但它们并没能如愿成为所思所想的一个剖面。</p>
-<p>如果说，仅仅为了记录，那么主页似乎并非必须。互联网发达的今天能够让我们记录的平台实在太多：时兴的微博、QQ、微信暂且不谈，小众一些的博客app也方便至极。可它们非我所需。思来想去，也许我们还是需要一点完全属于个人的空间。</p>
-<p>我时常想不起来写些什么，那不写便也就不写了，就当它是一处并不久居的行宫。主页的latex支持也不太好，mathjax的排版总是会出奇怪的问题……那么就少写些公式，多看看生活吧！</p>
+<h2 id="解法"><a href="#解法" class="headerlink" title="解法"></a>解法</h2><p><img src="image-20240502173205719.png" alt="image-20240502173205719"></p>
+<h3 id="差分迭代？"><a href="#差分迭代？" class="headerlink" title="差分迭代？"></a>差分迭代？</h3><p>btw，上次解了一下银行的某些利率问题——在观察银行的利率周期从一年逐渐向一个月，一天……递减时，利率的值实际上是增加了的——事实上是趋向于e。这个从离散利率到连续利率的过渡可以很容易从e的定义式里找出。e的指数函数似乎总是比较特殊的，例如它求导形式不变，只改变系数的这一特点，很容易让人联想到矩阵最根本的特征值与特征向量——事实上他们确实很相关。在将单阵对角化以后，一个只与特征值和特征向量（或许可以写为标准正交阵的形式）相关的迭代方程就出现了。解就不贴在这里了，不很困难。</p>
+<p>数学公式寄了，源码贴在下面……</p>
+<pre><code class="latex">\begin&#123;align&#125;
+&amp;\color&#123;blue&#125;\textbf&#123;Formula:&#125;\\
+&amp;\text&#123;if matrix &#125;A=A_&#123;n\times n&#125;\text&#123; has n linearly independent eigenvecters &#125;X_1,X_2\cdots X_n，\\
+&amp;\color&#123;red&#125;&#123;\text&#123;any vector U in the space is the linear combination of A&#39;s eigenvectors.&#125;&#125; \\
+&amp;\qquad U=m_1X_1 +m_2X_2 +\cdots+m_nX_n = 
+    \left[\begin&#123;matrix&#125;
+        \ &amp;\ &amp;\ \\
+        X_1&amp;X_2&amp;\cdots&amp;X_n\\
+        \ &amp;\ &amp;\ \\
+    \end&#123;matrix&#125;\right]
+    \left[\begin&#123;matrix&#125;
+        m_1&amp;&amp;&amp;\\
+        &amp;m_2&amp;&amp;\\
+        &amp;&amp;\ddots&amp;\\
+        &amp;&amp;&amp;m_n
+    \end&#123;matrix&#125;\right]=PM\\
+&amp;\qquad \qquad P=\left[\begin&#123;matrix&#125;
+            \ &amp;\ &amp;\ \\
+            X_1&amp;X_2&amp;\cdots&amp;X_n\\
+            \ &amp;\ &amp;\ \\
+        \end&#123;matrix&#125;\right],\ 
+    M = \left[\begin&#123;matrix&#125;
+        m_1&amp;&amp;&amp;\\
+        &amp;m_2&amp;&amp;\\
+        &amp;&amp;\ddots&amp;\\
+        &amp;&amp;&amp;m_n
+    \end&#123;matrix&#125;\right] \text&#123;(diagonal matrix) &#125;\\
+    
+&amp;\qquad A=P\Lambda P^&#123;-1&#125; 
+        =P\left[\begin&#123;matrix&#125;
+          \lambda_1&amp;&amp;&amp;\\
+          &amp;\lambda_2&amp;&amp;\\
+          &amp;&amp;\ddots&amp;\\
+          &amp;&amp;&amp;\lambda_n
+      \end&#123;matrix&#125;\right] P^&#123;-1&#125;,\qquad\ 
+      \Lambda = \left[\begin&#123;matrix&#125;
+          \lambda_1&amp;&amp;&amp;\\
+          &amp;\lambda_2&amp;&amp;\\
+          &amp;&amp;\ddots&amp;\\
+          &amp;&amp;&amp;\lambda_n
+      \end&#123;matrix&#125;\right] \text&#123;(diagonal matrix) &#125;\\
+      
+&amp;\qquad \qquad\Longrightarrow\ 
+    AU\ =\ (P\Lambda P^&#123;-1&#125;)(PM)
+    \ =\ P\Lambda (P^&#123;-1&#125;P)M
+    \ =\ P\Lambda M\\
+&amp;\qquad \qquad \Longrightarrow
+    A^kU \ =\  (P\Lambda P^&#123;-1&#125;)(P\Lambda P^&#123;-1&#125;)\cdots(P\Lambda M)
+    \ =\ P\Lambda^&#123;k&#125;M\\
+    
+&amp;\qquad  
+    \color&#123;red&#125;&#123;\Lambda\ and\ M\text&#123; are both diagonal matrices, so &#125;&#125;
+    \Lambda M=M\Lambda\\ 
+&amp;\qquad \qquad\Longrightarrow\ 
+    \color&#123;red&#125;A^kU =P\Lambda^&#123;k&#125;M=(PM)\Lambda^&#123;k&#125;=U\Lambda^&#123;k&#125; 
+    \qquad=m_1\lambda_1^&#123;k&#125;X_1+m_2\lambda_2^&#123;k&#125;X_2+\cdots+m_n\lambda_n^&#123;k&#125;X_n\\
+    
+&amp;\\
+\end&#123;align&#125;
 
-        </article>
-        
-        
+
+\begin&#123;align&#125;
+
+&amp;\color&#123;blue&#125;Fibonacci:0,1,1,2,3,5,8,13,21\cdots\\
+&amp;recursion \ relation:F_&#123;n+2&#125;=F_&#123;n+1&#125;+F_&#123;n&#125;\\
+&amp;\qquad \text&#123;we can add another equation to form a linear system:&#125; 
+\color&#123;red&#125;
+\begin&#123;cases&#125;
+    F_&#123;n+2&#125;=F_&#123;n+1&#125;+F_&#123;n&#125;\\
+    F_&#123;n+1&#125;=F_&#123;n+1&#125;
+\end&#123;cases&#125;\\
+&amp;\color&#123;red&#125;
+U_n=\left[\begin&#123;array&#125;\\F_&#123;n+1&#125;\\F_&#123;n&#125;\end&#123;array&#125;\right],\ 
+    U_&#123;n+1&#125;=\left[\begin&#123;array&#125;\\F_&#123;n+2&#125;\\F_&#123;n+1&#125;\end&#123;array&#125;\right],\ 
+    U_&#123;n+1&#125; = \left[\begin&#123;matrix&#125;1&amp;1\\1&amp;0\end&#123;matrix&#125;\right]
+    \left[\begin&#123;array&#125;\\F_&#123;n+2&#125;\\F_&#123;n+1&#125;\end&#123;array&#125;\right]
+    =AU_n,\ 
+    A=\left[\begin&#123;matrix&#125;1&amp;1\\1&amp;0\end&#123;matrix&#125;\right]\\
+&amp;\qquad \text&#123;A is a symmetric matrix,which indicates that A has n linearly independent eigenvector.&#125;\\
+&amp;\qquad \text&#123;So any vector in the space is the linear combination of A&#39;s eigenvectors.&#125;\\
+&amp;A=\left[\begin&#123;matrix&#125;1&amp;1\\1&amp;0\end&#123;matrix&#125;\right]
+    \text&#123;, we can get&#125;
+    \begin&#123;cases&#125;
+        \lambda_1+\lambda_2=1=trace(A)\\
+        \lambda_1\cdot\lambda_2=-1=det(A)
+    \end&#123;cases&#125;\\
+&amp;\qquad T(A)=|\lambda I-A|=
+    \left|\begin&#123;matrix&#125;
+        \lambda-1&amp;-1\\
+        -1&amp;\lambda\\
+    \end&#123;matrix&#125;\right|
+    =\lambda^2-\lambda-1
+    \ \Longrightarrow\ 
+    \begin&#123;cases&#125;
+        \lambda_1=\frac&#123;1+\sqrt&#123;5&#125;&#125;&#123;2&#125;\qquad(\lambda_1&gt;1) \\
+        \lambda_2=\frac&#123;1-\sqrt&#123;5&#125;&#125;&#123;2&#125;\qquad(0&gt;\lambda_2&gt;-1)
+    \end&#123;cases&#125;\\
+    
+&amp;\qquad \text&#123;While eigenvalue &#125; \lambda_1 = \frac&#123;1+\sqrt&#123;5&#125;&#125;&#123;2&#125;,\ \ 
+    eigenvector\ X_1 = 
+    \left[\begin&#123;array&#125;\\\lambda_1\\1\end&#123;array&#125;\right]
+    =\left[\begin&#123;array&#125;\\\frac&#123;1+\sqrt&#123;5&#125;&#125;&#123;2&#125;\\1\end&#123;array&#125;\right]\\
+    
+&amp;\qquad \text&#123;While eigenvalue &#125; \lambda_2 = \frac&#123;1-\sqrt&#123;5&#125;&#125;&#123;2&#125;,\ \ 
+    eigenvector\ X_2 = 
+    \left[\begin&#123;array&#125;\\\lambda_2\\1\end&#123;array&#125;\right]
+    =\left[\begin&#123;array&#125;\\\frac&#123;1-\sqrt&#123;5&#125;&#125;&#123;2&#125;\\1\end&#123;array&#125;\right]\\
+    
+&amp;U_0=\left[\begin&#123;array&#125;\\1\\0\end&#123;array&#125;\right]
+    \text&#123;(write as the linear combination of A&#39;s eigenvectors)&#125;=
+    \frac&#123;1&#125;&#123;\sqrt&#123;5&#125;&#125; X_1 +(-\frac&#123;1&#125;&#123;\sqrt&#123;5&#125;&#125;) X_2
+    =m_1X_1+m_2X_2\\
+
+&amp;\text&#123;Use the upper formula &#125;
+    \color&#123;red&#125;A^kU=U\Lambda^&#123;k&#125;=m_1\lambda_1^&#123;k&#125;X_1+m_2\lambda_2^&#123;k&#125;X_2+\cdots+m_n\lambda_n^&#123;k&#125;X_n
+\\
+
+&amp;U_k=A^kU_0=m_1\lambda_1^&#123;k&#125;X_1+m_2\lambda_2^&#123;k&#125;X_2=
+    \frac&#123;1&#125;&#123;\sqrt&#123;5&#125;&#125; (\frac&#123;1+\sqrt&#123;5&#125;&#125;&#123;2&#125;)^k X_1 
+    +(-\frac&#123;1&#125;&#123;\sqrt&#123;5&#125;&#125;) (\frac&#123;1-\sqrt&#123;5&#125;&#125;&#123;2&#125;)^k X_2
+    
+\\
+&amp;\qquad While\ \ k\rightarrow+\infty,\ (\frac&#123;1-\sqrt&#123;5&#125;&#125;&#123;2&#125;)^k\rightarrow 0,
+    \color&#123;red&#125; \qquad U_k\approx\frac&#123;1&#125;&#123;\sqrt&#123;5&#125;&#125; (\frac&#123;1+\sqrt&#123;5&#125;&#125;&#123;2&#125;)^k X_1\\
+
+&amp;\text&#123;As a result, we can find that the growing speed of the numbers is mainly depended on the eigenvalue.&#125;\\
+
+&amp;\qquad \begin&#123;cases&#125;
+    eigenvalue\rightarrow growing\ speed \\
+    eigenvector\rightarrow direction
+\end&#123;cases&#125;\\
+
+    
+    
+\end&#123;align&#125;
+</code></pre>
+
+      
+       
+    </div>
+</article>
+
+
+
+
+
+
+
+    
+        <!-- MathJax配置，可通过单美元符号书写行内公式等 -->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+    "HTML-CSS": {
+        preferredFont: "TeX",
+        availableFonts: ["STIX","TeX"],
+        linebreaks: { automatic:true },
+        EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50)
+    },
+    tex2jax: {
+        inlineMath: [ ["$", "$"], ["\\(","\\)"] ],
+        processEscapes: true,
+        ignoreClass: "tex2jax_ignore|dno",
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+        equationNumbers: { autoNumber: "AMS" },
+        noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } },
+        Macros: { href: "{}" }
+    },
+    messageStyle: "none"
+    });
+</script>
+<!-- 给MathJax元素添加has-jax class -->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+<!-- 通过连接CDN加载MathJax的js代码 -->
+<script type="text/javascript" async
+        src="//cdn.jsdelivr.net/npm/mathjax@2.7.8/unpacked/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+<input type="hidden" id="MathJax-js"
+        value="//cdn.jsdelivr.net/npm/mathjax@2.7.8/unpacked/MathJax.js?config=TeX-MML-AM_CHTML">
+</input>
+    
+
+
+
+
     </div>
     <div class="copyright">
         <p class="footer-entry">
@@ -327,11 +554,11 @@
 <p class="footer-entry">Built with <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank">3-hexo</a> theme</p>
 
     </div>
-</div>
-<div class="full-toc">
-    <button class="full" data-title="切换全屏"><span class="min "></span></button>
+    <div class="full-toc">
+        <button class="full" data-title="切换全屏"><span class="min "></span></button>
 <a class="" id="rocket" ></a>
 
+    </div>
 </div>
 
 </body>
