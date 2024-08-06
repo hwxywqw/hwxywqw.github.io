@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>直线拟合与Fourier展开 | Hwxywqw</title>
+  <title>奇数阶反对称矩阵行列式为什么是0呢 | Hwxywqw</title>
   <meta name="keywords" content="">
-  <meta name="description" content="直线拟合与Fourier展开 | Hwxywqw">
+  <meta name="description" content="奇数阶反对称矩阵行列式为什么是0呢 | Hwxywqw">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="昨天从上海到陇南，又回到兰州，几乎奔波了整整一天。飞机上右边的小姑娘睡得颠三倒四，脑袋枕到我的肩膀上，于是一动不敢动，下飞机的时候感觉要落枕了。近一个月学习的时候不超过一周，飞机上看了一会儿论文，倒是效率很高。我读论文的时候小姑娘在看书，偷偷瞄了一眼，叫《我喜欢你的信息素》，感觉是甜甜的校园小说呢。我初高中的时候也看了很多小说，斗破苍穹神印王座凡人修仙传什么的，这玩意儿看起来简直上瘾，一本接一本几">
 <meta property="og:type" content="article">
@@ -314,9 +314,9 @@
 </aside>
 <div id="post">
     <div class="pjax">
-        <article id="post-直线拟合与Fourier展开" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-奇数阶反对称矩阵行列式为什么是0呢" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">直线拟合与Fourier展开</h1>
+        <h1 class="article-title">奇数阶反对称矩阵行列式为什么是0呢</h1>
     
     <div class="article-meta">
         
@@ -334,7 +334,7 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2024-08-06 10:35:25'>2021-02-04 11:15</time>
+            发布时间 : <time class="date" title='最后更新: 2024-08-06 10:37:03'>2022-03-06 10:33</time>
         
     </div>
     <div class="article-meta">
@@ -356,7 +356,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%9B%B4%E7%BA%BF%E6%8B%9F%E5%90%88%E4%B8%8EFourier%E5%B1%95%E5%BC%80"><span class="toc-text">直线拟合与Fourier展开</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%9B%B4%E7%BA%BF%E6%8B%9F%E5%90%88"><span class="toc-text">直线拟合</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-text">前言</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%9B%B4%E7%BA%BF%E6%8B%9F%E5%90%88%E6%98%AF%E4%BB%80%E4%B9%88%E5%91%A2%EF%BC%9F"><span class="toc-text">直线拟合是什么呢？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A2%98%E8%A7%A3"><span class="toc-text">题解</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B3%95%E4%B8%80%EF%BC%9A%E6%B1%82%E5%81%8F%E5%AF%BC"><span class="toc-text">法一：求偏导</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B3%95%E4%BA%8C%EF%BC%9A%E6%9C%80%E5%B0%8F%E4%BA%8C%E4%B9%98"><span class="toc-text">法二：最小二乘</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B3%95%E4%B8%89%EF%BC%9A%E6%A0%87%E5%87%86%E6%AD%A3%E4%BA%A4%E5%9F%BA%E6%B1%82%E6%8A%95%E5%BD%B1%E6%95%B0"><span class="toc-text">法三：标准正交基求投影数</span></a></li></ol></li></ol></li></ol></li></ol>
+        
     
 <style>
     .left-col .switch-btn,
@@ -372,113 +372,24 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="直线拟合与Fourier展开"><a href="#直线拟合与Fourier展开" class="headerlink" title="直线拟合与Fourier展开"></a>直线拟合与Fourier展开</h1><p>2021.2.4 写于广州市钦州市</p>
-<p>2024.5.2 翻电脑翻出来一个陈年老文档，好像还有点意思……</p>
-<h2 id="直线拟合"><a href="#直线拟合" class="headerlink" title="直线拟合"></a>直线拟合</h2><h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>记录一点关于直线拟合的内容，这部分归于最小二乘里。并不太懂，只能用这样雾里看花的方式写上几句了。从投影矩阵讲到直线拟合，从欧几里得空间演化为希尔伯特空间，从向量到函数，从无关多项式到正交的勒让德多项式……一个根本概念是如何演化的呢？在这个例子中，似乎能窥见一点。</p>
-<h3 id="直线拟合是什么呢？"><a href="#直线拟合是什么呢？" class="headerlink" title="直线拟合是什么呢？"></a>直线拟合是什么呢？</h3><p>从最初纯粹的数学角度看待，便是让一堆平方和最小。平方和是什么？我有的值到标准值的距离，也就是误差。误差怎么最小呢？求个导。当然，我们已经事先知道了一点东西，比如这个式子必定是正的，这很好解释：平方和必定是正的，所以误差最小也只能小到0。至于如何搞出一个最小值便是数学技巧上的东西了，我们也只是将它看作一个技术问题来解决。</p>
-<p>但是从矩阵的角度看，代数上的认识就附加了几何含义。这是一个从欧几里得空间向希尔伯特空间的拓展——将基向量都变成函数了。那么，任何一个函数不都能被一组基表示么？于是也就找到了直线拟合的几何意义：这个函数在${1,x}$这最基本的两个基函数上的投影。这两个函数形成了一个二维平面，那么投影矩阵也就是个$2\times 2$矩阵了，将其他不在这个平面上的函数通通投影到这个二维平面，也就是他的解空间（列向量生成空间）上。</p>
-<p>在此基础之上还可以进行正交化。将Schmidt正交应用于基函数，就成了勒让德多项式了。当然，这个正交化既然是基于内积的，在希尔伯特空间就要入乡随俗考虑积分，有了积分就要考虑积分上下限。这里的上下限由题目给出了：0和1。有了一组正交基后，向量的投影便也变得简单了起来：就是它在每个基向量的投影的和，我就可以把每个基向量拎出来算投影数。这里只有两个向量，那算出来的两个投影数自然就是直线的两个系数C和D了。</p>
-<p>观察到题解过程渐渐改变了模样。从求导——最经典的算误差方法；到投影矩阵$\overline x=(A^TA)^{-1}A^Tb$，显而易见的几何角度；到几何与代数重新结合，倒表现出了积分的形式——正交投影。这里Gram矩阵$(A^TA)^{-1}$成了单位阵，也可以写成$\overline x=A^Tb$的样子，不过完全可以摒弃了矩阵的表现形式，采用退化的向量形式，把基向量一个一个写出来，用$b_i=\frac{a_i^Tb}{a_i^Ta_i}$直截了当地求系数。</p>
-<p>这就成了微分到矩阵，矩阵到积分的过程。实际上讲的却都是一个东西，而拟合的追寻也只能止于追寻，永远不能到达。故而有从“看山是山”，到“看山不是山”，再度回到“看山又是山”一说。</p>
-<h3 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h3><p>例子：设$f(x)=\sqrt{x}, 0\leq x \leq 1$，现要求拟合为区间内的一条直线。</p>
-<h4 id="法一：求偏导"><a href="#法一：求偏导" class="headerlink" title="法一：求偏导"></a>法一：求偏导</h4><img src="image-20240502173558781.png" alt="image-20240502173558781" style="zoom:67%;" />
-
-
-
-<h4 id="法二：最小二乘"><a href="#法二：最小二乘" class="headerlink" title="法二：最小二乘"></a>法二：最小二乘</h4><p>这个思路就是最小二乘法的思路。在Hilbert空间里，向量以函数的形式存在，故而向量内积即函数乘积在区间内的连续积分。由于${1，x}$这一组向量是无关的（在0到1的区间内积分不为0），所以函数可以做在这一组基向量上的投影。直线拟合，本身就是找在解空间内的，和原函数最像的函数自然就是投影了。</p>
-<p>那么很简单，投影由两个基向量组成，自然有两个常系数，就是我们所求的$y=C+Dx$​中的C和D了。</p>
-<img src="image-20240502173620378.png" alt="image-20240502173620378" style="zoom:67%;" />
-
-<h4 id="法三：标准正交基求投影数"><a href="#法三：标准正交基求投影数" class="headerlink" title="法三：标准正交基求投影数"></a>法三：标准正交基求投影数</h4><p>这一部分的根本思路与法二是相似的。</p>
-<p>这两种方法都是在Hilbert空间里的函数的投影，而其基是由题设条件给出的：一次直线，所以是${1，x}$。不同的地方在于，法三在进行投影之前，先将基正交化了。众所周知，任何一个向量在一组正交基上的投影，是它在每一个基向量上的投影之和。</p>
-<p>那么我们只需要干两步：正交化${1，x}$，再求投影。</p>
-<p>正交化很简单，但需要注意区间$[0,1]$。在这个区间上求得，与1的乘积的积分为零的函数为$x-\frac{1}{2}$，那么现在的正交基就是${1，x-\frac{1}{2}}$​了（一组简单的勒让德多项式）。然后直接投影。在每个基向量的投影都是向一维空间，也就是一条直线的投影，那么投影矩阵可以退化成为向量内积。</p>
-<img src="image-20240502173656899.png" alt="image-20240502173656899" style="zoom:67%;" />
-
-
-
-
-
-<pre><code class="latex">\begin&#123;align&#125;
-&amp;E^2=\int_&#123;0&#125;^&#123;1&#125;(\sqrt&#123;x&#125;-C-Dx)^2\, dx=\frac&#123;1&#125;&#123;2&#125;-\frac&#123;4&#125;&#123;3&#125;C-\frac&#123;4&#125;&#123;5&#125;D+C^2+CD+\frac&#123;1&#125;&#123;3&#125;D^2\\
-&amp;\qquad \begin&#123;cases&#125;
-        \frac&#123;\partial E^2&#125;&#123;\partial C&#125;=-\frac&#123;4&#125;&#123;3&#125;+2C+D=0\\
-        \frac&#123;\partial E^2&#125;&#123;\partial D&#125;=-\frac&#123;4&#125;&#123;5&#125;+D+\frac&#123;2&#125;&#123;3&#125;D=0\\
-    \end&#123;cases&#125;
-    \Longrightarrow
-    \begin&#123;cases&#125;
-        C=\frac&#123;4&#125;&#123;15&#125;\\
-        D=\frac&#123;4&#125;&#123;5&#125;\\
-    \end&#123;cases&#125;
-\end&#123;align&#125;
-
-\begin&#123;align&#125;
-&amp;Ay=f \Longrightarrow 
-    \left[\begin&#123;matrix&#125;
-        1&amp;x
-    \end&#123;matrix&#125;\right]
-    \left[\begin&#123;matrix&#125;
-        C\\D
-    \end&#123;matrix&#125;\right]=
-    \left[\begin&#123;matrix&#125;
-        \sqrt&#123;x&#125;
-    \end&#123;matrix&#125;\right]
-    ,\qquad \overline&#123;y&#125;=
-    \left[\begin&#123;matrix&#125;
-        C\\D
-    \end&#123;matrix&#125;\right]=
-    (A^&#123;T&#125;A)^&#123;-1&#125;A^&#123;T&#125;f\\
-&amp;A^&#123;T&#125;A=\left[\begin&#123;matrix&#125;
-        1^&#123;T&#125;1&amp;1^&#123;T&#125;x\\
-        x^&#123;T&#125;1&amp;x^&#123;T&#125;x\\
-    \end&#123;matrix&#125;\right]=
-    \left[\begin&#123;matrix&#125;
-        1&amp;\frac&#123;1&#125;&#123;2&#125;\\
-        \frac&#123;1&#125;&#123;2&#125;&amp;\frac&#123;1&#125;&#123;3&#125;\\
-    \end&#123;matrix&#125;\right]
-    \Longrightarrow
-    (A^&#123;T&#125;A)^&#123;-1&#125;=
-    \left[\begin&#123;matrix&#125;
-        4&amp;-6\\
-        -6&amp;12
-    \end&#123;matrix&#125;\right]\\
-&amp;A^&#123;T&#125;f=\left[\begin&#123;matrix&#125;
-        1^&#123;T&#125;\sqrt&#123;x&#125;\\
-        x^&#123;T&#125;\sqrt&#123;x&#125;
-    \end&#123;matrix&#125;\right]=
-    \left[\begin&#123;matrix&#125;
-        \frac&#123;2&#125;&#123;3&#125;\\
-        \frac&#123;2&#125;&#123;5&#125;
-    \end&#123;matrix&#125;\right]\\
-&amp;\overline&#123;y&#125;=
-    \left[\begin&#123;matrix&#125;
-        C\\D
-    \end&#123;matrix&#125;\right]=
-    \left[\begin&#123;matrix&#125;
-        4&amp;-6\\
-        -6&amp;12
-    \end&#123;matrix&#125;\right]
-    \left[\begin&#123;matrix&#125;
-        \frac&#123;2&#125;&#123;3&#125;\\
-        \frac&#123;2&#125;&#123;5&#125;
-    \end&#123;matrix&#125;\right]=
-    \left[\begin&#123;matrix&#125;
-        \frac&#123;4&#125;&#123;15&#125;\\
-        \frac&#123;4&#125;&#123;5&#125;
-    \end&#123;matrix&#125;\right]
-\end&#123;align&#125;
-
-\begin&#123;align&#125;
-&amp;y=\frac&#123;(\sqrt&#123;x&#125;)^T 1&#125;&#123;1^T 1&#125;+
-\frac&#123;(\sqrt&#123;x&#125;)^T(x-\frac&#123;1&#125;&#123;2&#125;)&#125;&#123;(x-\frac&#123;1&#125;&#123;2&#125;)^T(x-\frac&#123;1&#125;&#123;2&#125;)&#125;(x-\frac&#123;1&#125;&#123;2&#125;)\\
-&amp;\qquad=\frac&#123;2&#125;&#123;3&#125;+
-    \frac&#123;\int_&#123;0&#125;^&#123;1&#125; (\sqrt&#123;x&#125;)^T(x-\frac&#123;1&#125;&#123;2&#125;)\, dx&#125;
-    &#123;\int_&#123;0&#125;^&#123;1&#125; (x-\frac&#123;1&#125;&#123;2&#125;)^T(x-\frac&#123;1&#125;&#123;2&#125;)\, dx&#125;
-    (x-\frac&#123;1&#125;&#123;2&#125;)\\
-&amp;\qquad=\frac&#123;2&#125;&#123;3&#125;+\frac&#123;4&#125;&#123;5&#125;(x-\frac&#123;1&#125;&#123;2&#125;)\\
-&amp;\qquad=\frac&#123;4&#125;&#123;15&#125;+\frac&#123;4&#125;&#123;5&#125;x
-\end&#123;align&#125;
-</code></pre>
+        <blockquote>
+<p>证明：奇数阶反对称矩阵的行列式是0。</p>
+</blockquote>
+<p>助教答疑的时候，有同学问了这个问题，刚开始不假思索地用行列式证了一遍。同学走了，我开始无聊地想，为什么呢？简单地写一下吧，下次有人再问我的时候就可以给他多讲一讲了。去年上课的时候乱翻书，看到一个有趣的小结论——《矩阵论教程》54页。习题是这么说的：</p>
+<blockquote>
+<p>设A是n阶实矩阵，证明A是正规阵的充要条件是：存在n阶正交阵Q，使$Q^HAQ=R=diag{R_1,R_2,\cdots,R_n}$，其中$R_i(i=1,\cdots,t)$是1阶或2阶的实阵$[a\ b;-b\ a]$。</p>
+</blockquote>
+<p>想起来当年翻线代书的时候看到一个差不多的东西——李尚志的《线性代数》429页。这书上用的是Jordan型证明实方阵可以实相似到上面的那个对角矩阵，还用了点什么不变子空间，什么初等因子的知识。</p>
+<blockquote>
+<p>证明：实数域上的有限维线性空间的线性变换必有1维或2维的不变子空间。</p>
+</blockquote>
+<p>其实到这儿已经能看出来是咋回事儿了，但我其实看不懂什么初等因子，于是换个说法。有个定理叫代数基本定理，然后就能引出多项式在R上的唯一分解：</p>
+<blockquote>
+<p>$p(x)=c(x-\lambda_1)\cdots(x-\lambda_m)(x^2+b_1x+c_1)\cdots(x^2+b_mx+c_m)$</p>
+</blockquote>
+<p>那就是说n阶矩阵的特征多项式也可以写成上面那个样子（当然，复数域上是一样的）。因为奇数阶，就必然至少有一个x是落单的，不能写进一个二次的因子里边去。接下来说明这个落单的x（特征根）一定是0。</p>
+<p>一个hermite矩阵一定可以酉相似到一个对角阵，对角元还都是实数（用schur定理，转置一下就可以证明了），其实就是说它的特征根都是实数；因此，一个skew-hermite矩阵必然特征根都是纯虚数，而一个反对称阵显然是一个skew-hermite矩阵，所以反对称阵的特征根都是虚数。最后，一个不能写进一个二次的因子里边的纯虚数，显然就是0。所以奇数阶反对称阵肯定有一个特征根为0。</p>
+<p>这种东西竟然可以用行列式就写出来，真是殊途同归。</p>
 
       
        
